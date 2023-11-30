@@ -1,0 +1,135 @@
+.carouselSwiper {
+  height: 100%;
+  width: 100%;
+}
+.carouselSwiper .swiper-wrapper {
+  height: 100%;
+}
+.carouselSwiper .swiper-slide {
+  height: 100%;
+}
+@media screen and (max-width: 991.98px) {
+  .carouselSwiper .swiper-slide {
+    padding-bottom: 30vh;
+  }
+}
+.carouselSwiper .swiper-slide > div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+@media screen and (min-width: 1401px) {
+  .carouselSwiper .swiper-slide > div {
+    padding-right: 171px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .carouselSwiper .swiper-slide > div {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+.carouselSwiper .slide-caption {
+  color: var(--default-white, #fff);
+  font-size: 65px;
+  font-weight: 700;
+  line-height: normal;
+}
+@media screen and (max-width: 991.98px) {
+  .carouselSwiper .slide-caption {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+.carouselSwiper .swiper-pagination .swiper-pagination-bullet {
+  height: 5px;
+  width: 19.79px;
+  background-color: rgba(58, 80, 177, 0.6);
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+@media screen and (min-width: 992px) {
+  .carouselSwiper .swiper-pagination .swiper-pagination-bullet {
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 19.79px;
+  }
+}
+.carouselSwiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 36.39px;
+  background-color: rgb(58, 80, 177);
+}
+@media screen and (min-width: 992px) {
+  .carouselSwiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: rgb(255, 255, 255);
+    height: 36.39px;
+    width: 5px;
+  }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  height: 5px;
+  width: 19.79px;
+  background-color: rgba(196, 196, 196, 0.5);
+  transition: all 0.3s linear;
+  border-radius: 10px;
+}
+@media screen and (max-width: 991.98px) {
+  .swiper-pagination .swiper-pagination-bullet {
+    background-color: rgba(58, 80, 177, 0.5);
+  }
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  width: 36.39px;
+  background-color: rgb(196, 196, 196);
+}
+@media screen and (max-width: 991.98px) {
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: rgb(58, 80, 177);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .swiper-pagination-vertical.swiper-pagination-bullets,
+  .swiper-vertical > .swiper-pagination-bullets {
+    right: 0 !important;
+  }
+}
+
+.logoSwiper .swiper-wrapper {
+  height: 60px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 991.98px) {
+  .logoSwiper .swiper-wrapper {
+    height: 43px;
+    padding-bottom: 10px;
+  }
+}
+.logoSwiper a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.logoSwiper .imageWrapper {
+  transition: all 0.3s linear;
+  height: 100%;
+}
+.logoSwiper .imageWrapper img {
+  filter: blur(1.6px) opacity(0.5) grayscale(1);
+  transition: filter 0.5s ease;
+  max-width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 991.98px) {
+  .logoSwiper .imageWrapper img {
+    filter: grayscale(1);
+  }
+}
+@media screen and (min-width: 992px) {
+  .logoSwiper .imageWrapper:hover img {
+    filter: blur(0) opacity(1) grayscale(1);
+  }
+}/*# sourceMappingURL=swiper-custom.css.map */

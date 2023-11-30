@@ -1,0 +1,65 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+  xxxl:1506px
+) !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl:1600px
+) !default;
+
+$primary:rgba(71, 102, 244, 1);
+
+$enable-negative-margins: true;
+
+@import "sass/bootstrap/scss/bootstrap";
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "sass/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "sass/bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "sass/bootstrap/scss/maps";
+@import "sass/bootstrap/scss/mixins";
+@import "sass/bootstrap/scss/root";
+
+@import "sass/bootstrap/scss/dropdown";
+
+.line-clamp {
+    &-1{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+    }
+    &-2{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+    }
+    &-3{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+    }
+  }
+
+
+

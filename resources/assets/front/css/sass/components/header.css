@@ -1,0 +1,50 @@
+header {
+  transition: all 0.3s linear;
+  z-index: 9;
+}
+header.fixed {
+  position: fixed;
+  width: 100vw;
+  background-color: #ffffff !important;
+  padding-top: 0 !important;
+  box-shadow: 0 8px 46px rgba(0, 0, 0, 0.1019607843);
+}
+header a {
+  text-decoration: none;
+}
+header.bgNone .navbar-brand img, header.fixed .navbar-brand img {
+  display: none !important;
+}
+header.bgNone .navbar-brand img.d-none, header.fixed .navbar-brand img.d-none {
+  display: block !important;
+}
+header.bgNone .socialMedia a span:before, header.fixed .socialMedia a span:before {
+  color: rgb(173, 181, 189) !important;
+}
+header.bgNone .btn-light, header.fixed .btn-light {
+  background: var(--primary-color, #4766F4) !important;
+  color: #ffffff !important;
+}
+@media screen and (max-width: 991.98px) {
+  header .navbar-brand {
+    width: 160px;
+    padding-right: 12px;
+    padding-top: 0;
+  }
+  header .navbar-brand img {
+    height: auto;
+  }
+}
+
+.socialMedia a {
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .socialMedia a:hover {
+    opacity: 0.8;
+  }
+}
+.socialMedia a + a {
+  margin-left: 18px;
+}/*# sourceMappingURL=header.css.map */
