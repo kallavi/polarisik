@@ -13822,6 +13822,40 @@ footer .socialMedia a + a {
   color: var(--primary-color, #4766F4);
 }
 
+.nav .nav-pills,
+.nav .nav-link {
+  border-radius: 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--secondary-color, #D7D7D7);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: normal;
+}
+.nav .nav-pills.active,
+.nav .nav-link.active {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--primary-color, #4766F4);
+}
+.nav .nav-pills button,
+.nav .nav-link button {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--secondary-color, #D7D7D7);
+}
+.nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+.nav .nav-item + .nav-item:before {
+  content: "/";
+  overflow: hidden;
+  color: var(--secondary-color, #D7D7D7);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../../fonts/iconFont.eot?fi83uu");
