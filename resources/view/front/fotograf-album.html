@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+        <title>Polaris IK</title>
+        <!--Favicon start-->
+        <link rel="shortcut icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../public/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../public/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../public/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../public/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../public/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../public/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../public/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../public/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../public/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../public/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../public/favicon-32x32.png" >
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../public/favicon-96x96.png" >
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../public/favicon-16x16.png">
+        <link rel="manifest" href="../../../public/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../../public/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--Favicon end-->
+
+        <!---outfit google fonts start-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!---outfit google fonts end-->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+        <link rel="stylesheet" href="../../assets/front/css/app.css">
+    </head>
+    <body>
+        <div id="app" class="app">
+            <div id="burgerBtn" class="primaryBtn"></div>
+            <div id="mobileMenu" class="d-lg-none">
+                <ul class="navbar-nav">
+                   <li class="nav-item">
+                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="festivaller-konserler.html">Festivaller ve Konserler</a></li>
+                            <li><a class="dropdown-item" href="kongre-toplantilari.html">Kongre ve Toplantılar</a></li>
+                            <li><a class="dropdown-item" href="resmi-torenler.html">Resmi Törenler ve Anma Programları</a></li>
+                            <li><a class="dropdown-item" href="tanitim-lansmanlar.html">Tanıtım ve Lansmanlar</a></li>
+                            <li><a class="dropdown-item" href="fuar-standlar.html">Fuar ve Standlar</a></li>
+                            <li><a class="dropdown-item" href="vip-karsilama.html">Vip Karşılama ve Transfer</a></li>
+                            <li><a class="dropdown-item" href="lcv-sms-mailing-hizmetleri.html">LCV, Sms ve Mailing Hizmetleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medya.html">Medya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+                <div class="menuBottom">
+                    <a href="javascript:;" class="language nav-link">ENGLISH</a>
+                    <div class="socialMedia hstack">
+                        <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-linkedin"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <main class="bg-white">
+                <!----bg-white class ı sadece anasayfada ekli degildir tüm ic sayfalarda eklidir-->
+                <header class="pt-4 bgNone w-100">
+                    <div class="container-xxxl px-xxxl-0 pe-0 pt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid px-0">
+                                <a class="navbar-brand col-lg-2 pe-lg-4" href="index.html">
+                                    <img height="60px" class="w-100" src="../../../public/assets/statics/logo-light.svg" alt="">
+                                    <img height="60px" class="w-100 d-none" src="../../../public/assets/statics/logo-dark.svg" alt="">
+                                </a>
+                                <ul class="ps-3 navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="medya.html">Medya</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                                    </li>
+                                </ul>
+                                <div class="hstack d-none d-lg-flex">
+                                    <div class="socialMedia pe-xxl-5 pe-3 me-2 hstack">
+                                        <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-twitter"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-linkedin"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-facebook"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-youtube"></span></a>
+                                    </div>
+                                    <button class="btn btn-light rounded-pill text-primary" type="submit">Bize Katılın</button>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+                <div class="centerBg">
+                    <img src="../../../public/assets/statics/contentBg.png" alt="">
+                </div>
+                <div class="center pt-lg-5 pt-3">
+                    <div class="contentHead pt-4 container-xxxl px-5">
+                        <h1>Qualita Lansman</h1>
+                        <a href="medya.html">Geri Dön</a>
+                    </div>
+                    <div class="content pt-lg-4">
+                        <div class="container-xxxl px-xxxl-0">
+                            <div class="row g-4 cards type2 big mt-1 pt-lg-3 pt-1">
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image4.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image4.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image5.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image2.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image3.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image5.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image6.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image6.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image7.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image7.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image7.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image7.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image4.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image4.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image5.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image2.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image3.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image5.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image6.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image6.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image7.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image7.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                 <div class="col-md-4 col-sm-6 col-10">
+                                    <a class="card border-0 p-0 pb-3" href="../../../public/assets/front/images/media/photos/image7.jpg" data-fancybox="photoGallery">
+                                        <div class="card-top text-bg-light position-relative">
+                                            <img src="../../../public/assets/front/images/media/photos/image7.jpg" class="card-img" alt="...">
+                                            <div class="card-img-overlay h-100 d-flex align-items-center justify-content-center">
+                                                <span class="icon-plus"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <footer class="bg-primary">
+                    <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
+                        <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
+                            <a href="index.html" class="logo"><img src="../../../public/assets/statics/logo-light-2.svg" alt=""></a>
+                            <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
+                                <a href="bizkimiz.html">Biz Kimiz?</a>
+                                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                                <a href="medya.html">Medya</a>
+                                <a href="referanslar.html">Referanslar</a>
+                                <a href="iletisim.html">İletişim</a>
+                            </div>
+                            <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
+                                <a class="pt-2" href="javascript:;">
+                                    Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul, Türkiye
+                                </a>
+                                <a class="pt-3" href="callto:02167663187">0 (216) 766 3187</a>
+                                <a href="mailto:info@ikpolaris.com">info@ikpolaris.com</a>
+                            </div>
+                            <div class="socialMedia pt-3 hstack justify-content-center">
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-instagram"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-twitter"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-linkedin"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-facebook"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-youtube"></span></a>
+                            </div>
+                        </div>
+                        <div class="text-center bottom pb-4 pt-2">
+                            <span>© 2023 btikreatifajans.com </span>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
+        <script src="../../assets/front/js/app.js"></script>
+
+        <script>
+             Fancybox.bind('[data-fancybox]', {
+                compact: false,
+                Carousel: {
+                },
+                Toolbar: false,
+                Thumbs:false
+            });
+        </script>
+    </body>
+</html>

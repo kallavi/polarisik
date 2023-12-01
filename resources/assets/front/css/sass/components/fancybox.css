@@ -1,0 +1,110 @@
+.f-button.is-close-btn {
+  width: 69px;
+  height: 82px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 100px 100px;
+  background: var(--primary-color, #4766f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1 !important;
+  right: -34.5px !important;
+  top: 0 !important;
+}
+.f-button.is-close-btn:before {
+  content: "\e906";
+  font-family: "icomoon" !important;
+  font-size: 28.12px;
+  display: block;
+  transform: rotate(45deg);
+  transition: all 0.3s linear;
+}
+@media screen and (max-width: 991.98px) {
+  .f-button.is-close-btn {
+    border-radius: 100px 0px 0 100px;
+    top: -24.5px !important;
+    right: 0 !important;
+    width: 60px;
+    height: 49px;
+  }
+  .f-button.is-close-btn:before {
+    font-size: 18.12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .f-button.is-close-btn {
+    background: var(--primary-color, #4766f4) !important;
+  }
+  .f-button.is-close-btn:hover:before {
+    transform: rotate(-45deg);
+  }
+}
+.f-button.is-close-btn svg {
+  display: none;
+}
+
+.fancybox__nav .f-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 69px;
+}
+@media screen and (max-width: 991.98px) {
+  .fancybox__nav .f-button {
+    width: 60px;
+    height: 49px;
+  }
+}
+.fancybox__nav .f-button svg {
+  display: none;
+}
+.fancybox__nav .f-button:after {
+  content: "\e907";
+  font-family: "icomoon" !important;
+  color: #ffffff;
+  font-size: 18.13px;
+  display: block;
+  transition: all 0.3s linear;
+  position: relative;
+  z-index: 99;
+}
+@media screen and (max-width: 991.98px) {
+  .fancybox__nav .f-button:after {
+    font-size: 9.13px;
+  }
+}
+.fancybox__nav .f-button:before {
+  width: 82px;
+  height: 69px;
+  flex-shrink: 0;
+  background: var(--gray-500, #ADB5BD);
+  top: -4px !important;
+  bottom: 0 !important;
+}
+@media screen and (max-width: 991.98px) {
+  .fancybox__nav .f-button:before {
+    width: 60px;
+    height: 49px;
+  }
+}
+.fancybox__nav .f-button.is-next:before {
+  border-radius: 100px 0 0 100px;
+  right: 0 !important;
+  left: auto !important;
+}
+.fancybox__nav .f-button.is-prev:before {
+  border-radius: 0 100px 100px 0;
+  left: 0 !important;
+}
+.fancybox__nav .f-button.is-prev:after {
+  transform: rotate(180deg);
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-next, .is-horizontal .fancybox__nav .f-button.is-next {
+  right: 0;
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-prev, .is-horizontal .fancybox__nav .f-button.is-prev {
+  left: 0;
+}/*# sourceMappingURL=fancybox.css.map */

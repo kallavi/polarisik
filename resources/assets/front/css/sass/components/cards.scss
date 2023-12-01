@@ -81,4 +81,94 @@
             }
         }
     }
+
+    //type2 ornek fotograflar sayfasında kullanılmıstır
+    &.type2{
+        @media screen and (max-width:575.98px) {
+            .col-10{
+                margin: 0 auto;
+            }
+        }
+
+        .card{
+            width: 100%;
+            height: 100%;
+            display: block;
+ 
+            .icon-plus,
+            .icon-play{
+                width: 60px;
+                height: 60px;
+                background-color: rgba(71, 102, 244, 1);
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(300px);
+                transition: all .7s ease;
+                &:before{
+                    font-size: 19.71px;
+                    color: #ffffff;
+                }
+            }
+            .card-top{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                aspect-ratio: 8/4.4;
+                overflow: hidden;
+                border-radius: 30px;
+                @media screen and (max-width:991.98px) {
+                    aspect-ratio: 8/4.5;
+                    border-radius: 15px;
+                }
+                img{
+                    transform: scale(1.1);
+                    transition: all .7s ease;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            @media screen and (min-width:992px) {
+                &:hover{
+                    .icon-plus,
+                    .icon-play{
+                        transform: translateY(0);
+                    }
+                    .card-top{
+                        img{
+                            transform: scale(1);
+                        }
+                    }
+                    .card-title{
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+        .card-body{
+            height: 94px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 32px;
+            @media screen and (max-width:991.98px) {
+                height: 66px;
+                padding: 3px 12px;
+            }
+            .card-title{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+                transition: all .7s ease;
+            }
+        }
+        &.big{
+            .card-top{
+                aspect-ratio: 8/5.3;
+            }
+        }
+    }
 }
