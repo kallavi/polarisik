@@ -104,8 +104,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transform: translateY(300px);
+                transform: translateY(100px);
                 transition: all .7s ease;
+                opacity: 0;
                 &:before{
                     font-size: 19.71px;
                     color: #ffffff;
@@ -135,6 +136,7 @@
                     .icon-plus,
                     .icon-play{
                         transform: translateY(0);
+                        opacity: 1;
                     }
                     .card-top{
                         img{
@@ -168,6 +170,28 @@
         &.big{
             .card-top{
                 aspect-ratio: 8/5.3;
+            }
+        }
+    }
+    &.effect2{
+        .card-body{
+            overflow: hidden;
+            @media screen and (min-width:992px) {
+                .card-title{
+                    transform: translateY(-30px);
+                    transition: all .7s ease;
+                    opacity: 0;
+                }
+            }
+        }
+        .card{
+            @media screen and (min-width:992px) {
+                &:hover{
+                    .card-title{
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
             }
         }
     }
