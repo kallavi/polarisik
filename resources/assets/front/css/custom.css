@@ -12898,4 +12898,8 @@ textarea.form-control-lg {
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 3;
+}
+
+.preLine {
+  white-space: pre-line;
 }/*# sourceMappingURL=custom.css.map */

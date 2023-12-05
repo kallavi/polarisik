@@ -12900,6 +12900,10 @@ textarea.form-control-lg {
   -webkit-line-clamp: 3;
 }
 
+.preLine {
+  white-space: pre-line;
+}
+
 header {
   transition: all 0.3s linear;
   z-index: 9;
@@ -13246,7 +13250,7 @@ section {
   }
 }
 section#referencesSection {
-  padding-bottom: 197px;
+  padding-bottom: 175px;
 }
 @media screen and (max-width: 991.98px) {
   section#referencesSection {
@@ -13880,12 +13884,45 @@ footer .socialMedia a + a {
 .center .contact-adress p {
   color: rgb(108, 117, 125) !important;
 }
+@media screen and (max-width: 991.98px) {
+  .center .contact-adress .socialMedia {
+    justify-content: center;
+  }
+}
+.center .contact-adress .socialMedia a + a {
+  margin-left: 22px;
+}
 .center .contact-adress .socialMedia :before {
   color: rgb(108, 117, 125) !important;
 }
+.center .contact-adress a {
+  letter-spacing: 0.9px;
+}
+@media screen and (max-width: 991.98px) {
+  .center .contact-adress a {
+    justify-content: center;
+  }
+}
+.center .mapBg {
+  margin-top: 55px;
+}
 .center .map {
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  padding-top: 87px;
+  height: 565px;
+}
+@media screen and (max-width: 1200px) {
+  .center .map {
+    padding-top: 0;
+    height: 400px;
+  }
+}
+.center .map .rounded-pill {
+  border-radius: 500px 0px 0px 500px !important;
+  background: var(--default-white, #FFF);
+  padding: 20px;
+}
+.center .map .rounded-pill iframe {
+  border-radius: 500px 0px 0px 500px !important;
 }
 
 .centerBg {
@@ -14194,21 +14231,30 @@ form .form-floating label {
   color: rgb(173, 181, 189);
   font-size: 18px;
   font-weight: 400;
+  padding-left: 40px;
+}
+form .form-floating input,
+form .form-floating .form-control {
+  padding-left: 30px;
 }
 form .form-check {
-  padding-left: 2em;
+  padding-left: 1.6em;
 }
-form .form-check-label {
+form .form-check .form-check-label {
   color: var(--gray-500, #ADB5BD);
   font-size: 18px;
   font-weight: 400;
   line-height: normal;
-  margin-top: 0.15em;
+  letter-spacing: -0.3px;
 }
-form .form-check-input {
+form .form-check .form-check-input {
   vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  margin-left: -1.4em;
 }
-form .form-check-input:focus {
+form .form-check .form-check-input:focus {
   box-shadow: none;
 }
 form button,
@@ -14226,6 +14272,10 @@ form .btn {
   font-weight: 600;
   line-height: 18px;
 }
+form textarea {
+  resize: none !important;
+  height: auto !important;
+}
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 1;
@@ -14235,6 +14285,28 @@ form .btn {
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
   opacity: 1;
   transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+}
+
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  box-shadow: none;
+}
+
+.was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus,
+.was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
+  box-shadow: none;
+}
+
+.invalid-tooltip {
+  color: rgba(220, 53, 69, 0.9);
+  background: #ffffff;
+  padding: 0.1rem 0.5rem;
+  margin-top: -0.8rem;
+  font-weight: 500;
+  left: 26px;
 }
 
 @font-face {

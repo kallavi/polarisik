@@ -64,12 +64,45 @@
 .center .contact-adress p {
   color: rgb(108, 117, 125) !important;
 }
+@media screen and (max-width: 991.98px) {
+  .center .contact-adress .socialMedia {
+    justify-content: center;
+  }
+}
+.center .contact-adress .socialMedia a + a {
+  margin-left: 22px;
+}
 .center .contact-adress .socialMedia :before {
   color: rgb(108, 117, 125) !important;
 }
+.center .contact-adress a {
+  letter-spacing: 0.9px;
+}
+@media screen and (max-width: 991.98px) {
+  .center .contact-adress a {
+    justify-content: center;
+  }
+}
+.center .mapBg {
+  margin-top: 55px;
+}
 .center .map {
-  border-top-right-radius: 0 !important;
-  border-bottom-right-radius: 0 !important;
+  padding-top: 87px;
+  height: 565px;
+}
+@media screen and (max-width: 1200px) {
+  .center .map {
+    padding-top: 0;
+    height: 400px;
+  }
+}
+.center .map .rounded-pill {
+  border-radius: 500px 0px 0px 500px !important;
+  background: var(--default-white, #FFF);
+  padding: 20px;
+}
+.center .map .rounded-pill iframe {
+  border-radius: 500px 0px 0px 500px !important;
 }
 
 .centerBg {
