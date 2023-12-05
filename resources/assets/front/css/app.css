@@ -13871,9 +13871,25 @@ footer .socialMedia a + a {
 .center .referans a:hover img {
   filter: blur(0) grayscale(1) opacity(0.5);
 }
+.center .contact-adress {
+  border-radius: 0px 500px 500px 0px;
+  background: radial-gradient(151.07% 139.76% at 77.81% 100%, #F6F6F6 0%, rgba(255, 255, 255, 0) 100%);
+}
+.center .contact-adress a,
+.center .contact-adress span,
+.center .contact-adress p {
+  color: rgb(108, 117, 125) !important;
+}
+.center .contact-adress .socialMedia :before {
+  color: rgb(108, 117, 125) !important;
+}
+.center .map {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
 
 .centerBg {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
@@ -14155,6 +14171,70 @@ footer .socialMedia a + a {
 
 .is-horizontal .f-carousel__nav .f-button.is-prev, .is-horizontal .fancybox__nav .f-button.is-prev {
   left: 0;
+}
+
+form input,
+form .form-control {
+  color: var(--gray-500, #ADB5BD);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid var(--secondary-color, #D7D7D7);
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+form input:focus,
+form .form-control:focus {
+  box-shadow: none;
+  outline: 0;
+}
+form .form-floating label {
+  color: rgb(173, 181, 189);
+  font-size: 18px;
+  font-weight: 400;
+}
+form .form-check {
+  padding-left: 2em;
+}
+form .form-check-label {
+  color: var(--gray-500, #ADB5BD);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 0.15em;
+}
+form .form-check-input {
+  vertical-align: middle;
+}
+form .form-check-input:focus {
+  box-shadow: none;
+}
+form button,
+form .btn {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  display: flex;
+  width: 171.288px;
+  padding: 16px 30px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--secondary-light-color, #F6F6F6);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+  opacity: 1;
+  transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+}
+
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
+  opacity: 1;
+  transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
 }
 
 @font-face {

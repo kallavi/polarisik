@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+        <title>Polaris IK</title>
+        <!--Favicon start-->
+        <link rel="shortcut icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../public/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../public/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../public/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../public/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../public/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../public/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../public/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../public/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../public/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../public/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../public/favicon-32x32.png" >
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../public/favicon-96x96.png" >
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../public/favicon-16x16.png">
+        <link rel="manifest" href="../../../public/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../../public/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--Favicon end-->
+
+        <!---outfit google fonts start-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!---outfit google fonts end-->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+        <link rel="stylesheet" href="../../assets/front/css/app.css">
+    </head>
+    <body>
+        <div id="app" class="app">
+            <div id="burgerBtn" class="primaryBtn"></div>
+            <div id="mobileMenu" class="d-lg-none">
+                <ul class="navbar-nav">
+                   <li class="nav-item">
+                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="festivaller-konserler.html">Festivaller ve Konserler</a></li>
+                            <li><a class="dropdown-item" href="kongre-toplantilari.html">Kongre ve Toplantılar</a></li>
+                            <li><a class="dropdown-item" href="resmi-torenler.html">Resmi Törenler ve Anma Programları</a></li>
+                            <li><a class="dropdown-item" href="tanitim-lansmanlar.html">Tanıtım ve Lansmanlar</a></li>
+                            <li><a class="dropdown-item" href="fuar-standlar.html">Fuar ve Standlar</a></li>
+                            <li><a class="dropdown-item" href="vip-karsilama.html">Vip Karşılama ve Transfer</a></li>
+                            <li><a class="dropdown-item" href="lcv-sms-mailing-hizmetleri.html">LCV, Sms ve Mailing Hizmetleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medya.html">Medya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+                <div class="menuBottom">
+                    <a href="javascript:;" class="language nav-link">ENGLISH</a>
+                    <div class="socialMedia hstack">
+                        <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-linkedin"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <main class="bg-white">
+                <!----bg-white class ı sadece anasayfada ekli degildir tüm ic sayfalarda eklidir-->
+                <header class="pt-4 bgNone w-100">
+                    <div class="container-xxxl px-xxxl-0 pe-0 pt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid px-0">
+                                <a class="navbar-brand col-lg-2 pe-lg-4" href="index.html">
+                                    <img height="60px" class="w-100" src="../../../public/assets/statics/logo-light.svg" alt="">
+                                    <img height="60px" class="w-100 d-none" src="../../../public/assets/statics/logo-dark.svg" alt="">
+                                </a>
+                                <ul class="ps-3 navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="festivaller-konserler.html">Hizmetlerimiz</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="medya.html">Medya</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                                    </li>
+                                </ul>
+                                <div class="hstack d-none d-lg-flex">
+                                    <div class="socialMedia pe-xxl-5 pe-3 me-2 hstack">
+                                        <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-twitter"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-linkedin"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-facebook"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-youtube"></span></a>
+                                    </div>
+                                    <a href="bize-katilin.html" class="btn btn-light rounded-pill text-primary d-flex align-items-center justify-content-center">Bize Katılın</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+                <div class="centerBg">
+                    <img src="../../../public/assets/statics/contentBg.png" alt="">
+                </div>
+                <div class="center pt-lg-5 pt-3">
+                    <div class="contentHead pt-4">
+                        <h1>Bize Katılın</h1>
+                    </div>
+                    <div class="content pt-lg-4 pb-0">
+                        <div class="row">
+                            <div class="col-lg-6 mx-auto">
+                                <form method="POST" action="#" id="bizeKatilimForm" class="row g-3 needs-validation" novalidate>
+                                    <div class="form-floating mb-3 col-12">
+                                        <input type="text" class="form-control textMask" id="name" placeholder="Adınız Soyadınız" required>
+                                        <label for="namesurname">Adınız Soyadınız</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Adınızı Soyadınızı Giriniz
+                                        </div>
+                                    </div>
+
+                                    <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Cinsiyet Seçiniz</option>
+                                            <option>Kadın</option>
+                                            <option>Erkek</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Cinsiyet Seçimi Yapınız
+                                          </div>
+                                      </div>
+
+
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control textMask" id="surname" placeholder="Soyadınız" required>
+                                        <label for="surname">Soyadınız</label>
+                                        <div class="invalid-tooltip">
+                                            Doğum Tarihi Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control phoneMask" id="phone" placeholder="Telefon Numaranız" required>
+                                        <label for="surname">Telefon</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Telefon Numaranızı Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="email" class="form-control emailMask" id="eposta" placeholder="E-Postanız" required>
+                                        <label for="eposta">E-Posta</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen E-Postanızı Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">Boy Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Boy Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">Kilo Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Kilo Giriniz
+                                        </div>
+                                    </div>
+
+                                    <div class="position-relative mb-3 col-12">
+                                        <input type="file" class="form-control" aria-label="Fotoğraf Yükleyiniz" required>
+                                        <div class="invalid-tooltip">Example invalid form file feedback</div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">Yabancı Dil Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Yabancı Dil Giriniz
+                                        </div>
+                                    </div>
+
+                                    <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Yabancı Dil Seviyeniz</option>
+                                            <option>Kadın</option>
+                                            <option>Erkek</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Yabancı Dil Seviyenizi Seçiniz
+                                          </div>
+                                      </div>
+
+
+                                      <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Ehliyetiniz Var mı?</option>
+                                            <option>Evet</option>
+                                            <option>Hayır</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Seçim Seçiniz
+                                          </div>
+                                      </div>
+                                      <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Konaklama Durumu</option>
+                                            <option>Kadın</option>
+                                            <option>Erkek</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Konaklama Durumu Seçiniz
+                                          </div>
+                                      </div>
+                                      <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Takım Elbiseniz Var mı?</option>
+                                            <option>Evet</option>
+                                            <option>Hayır</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Seçim Yapınız
+                                          </div>
+                                      </div>
+                                      <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">Eksik Parça Belirtiniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Eksik Parça Giriniz
+                                        </div>
+                                    </div>
+
+
+                                      <div class="position-relative col-6">
+                                        <select class="form-select" id="gender" required>
+                                            <option selected disabled value="">Semt Seçiniz</option>
+                                            <option>Sarıyer</option>
+                                            <option>Beşiktaş</option>
+                                            <option>Kağıthane</option>
+                                            <option>Şişli</option>
+                                          </select>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Semt Seçiniz
+                                          </div>
+                                      </div>
+
+                                      <div class="form-floating mb-3 col-6">
+                                        <input type="text" class="form-control tcNo" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">T.C. Kimlik No</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen T.C. Kimlik No Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="form-floating mb-3 col-12">
+                                        <input type="text" class="form-control tcNo" id="messageSubject" placeholder="Mesaj Konusu" required>
+                                        <label for="messageSubject">IBAN Bilgileri   Ad Soyad - IBAN Şeklinde Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Iban Giriniz Giriniz
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="position-relative col-7 hstack">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="kvkkCheck" required>
+                                            <label class="form-check-label" for="kvkkCheck">
+                                                KVKK Aydınlatma Metnini Okudum
+                                            </label>
+                                            <div class="invalid-tooltip">
+                                                Lütfen KVKK Metnini Onaylayınızı
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 ms-auto">
+                                        <button class="btn btn-primary rounded-pill text-white ms-auto" type="submit"> Gönder</button>
+                                    </div>
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="bg-primary">
+                    <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
+                        <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
+                            <a href="index.html" class="logo"><img src="../../../public/assets/statics/logo-light-2.svg" alt=""></a>
+                            <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
+                                <a href="bizkimiz.html">Biz Kimiz?</a>
+                                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                                <a href="medya.html">Medya</a>
+                                <a href="referanslar.html">Referanslar</a>
+                                <a href="iletisim.html">İletişim</a>
+                            </div>
+                            <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
+                                <a class="pt-2" href="javascript:;">
+                                    Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul, Türkiye
+                                </a>
+                                <a class="pt-3" href="callto:02167663187">0 (216) 766 3187</a>
+                                <a href="mailto:info@ikpolaris.com">info@ikpolaris.com</a>
+                            </div>
+                            <div class="socialMedia pt-3 hstack justify-content-center">
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-instagram"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-twitter"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-linkedin"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-facebook"></span></a>
+                                <a href="javascript:;"><span class="fs-lg-5 fs-6 icon-youtube"></span></a>
+                            </div>
+                        </div>
+                        <div class="text-center bottom pb-4 pt-2">
+                            <span>© 2023 btikreatifajans.com </span>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="successModalLabel">New message</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Recipient:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Message:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
+        <script src="../../../public/assets/front/js/jquery.mask.min.js"></script>
+        <script src="../../assets/front/js/app.js"></script>
+        <script type="text/javascript">
+
+           document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('bizeKatilimForm');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    if (form.checkValidity()) {
+                        // Bootstrap form validation
+                        if (!form.classList.contains('was-validated')) {
+                            form.classList.add('was-validated');
+                        }
+
+                        const formData = new FormData(form);
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'action.php',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (response) {
+                                if (response === 'ok') {
+                                    // If the response is 'ok', open Bootstrap modal
+                                    $('#successModal').modal('show');
+                                } else {
+                                    // Handle other success cases or show an alert
+                                    $('#successModal').modal('show');
+                                    // alert('Form başarıyla gönderildi. Sunucu cevabı: ' + response);
+                                }
+                            },
+                            error: function () {
+                                $('#successModal').modal('show');
+                            }
+                        });
+                    } else {
+                        // Bootstrap form validation
+                        if (!form.classList.contains('was-validated')) {
+                            form.classList.add('was-validated');
+                        }
+
+                        alert('Form validasyonu başarısız oldu. Lütfen girişlerinizi kontrol edin.');
+                    }
+                });
+            });
+
+            $('.tcNo').mask('00000000000');
+
+            //Telefon mask
+            $('.phoneMask').mask('0(000) 000 00 00', {
+                onKeyPress: function(value, event, currentField, options) {
+                // Eğer ilk karakter 0 değilse, otomatik olarak bir 0 ekleyin
+                if (value.charAt(0) !== '0') {
+                    currentField.val('0' + value.substring(1));
+                }
+            
+                // Maskeyi güncelle
+                currentField.mask(options.mask, options);
+                }
+            });
+            
+            // sadece metin girilmesi icin kullanılan mask
+            $('.textMask').mask('A', {
+                translation: {
+                    'A': {
+                        pattern: /[A-Za-zÇçĞğİıÖöŞşÜü ]/,
+                        recursive: true
+                    }
+                }
+            });
+
+            //email Mask
+            $('.emailMask').on('input', function() {
+                var emailValue = $(this).val();
+                var isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue);
+
+                if (!isValid) {
+                    $(this).addClass('error'); // Hatalı girişleri belirginleştirmek için bir class ekleyebilirsiniz
+                } else {
+                    $(this).removeClass('error');
+                }
+            });
+
+            //sadece numara girilebilmesin icin mask
+            $('.allNumber').mask('0', {
+                translation: {
+                    '0': {
+                        pattern: /[0-9]/,
+                        recursive: true
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>

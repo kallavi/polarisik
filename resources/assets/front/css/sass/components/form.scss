@@ -1,0 +1,60 @@
+form{
+    input,
+    .form-control{
+        color: var(--gray-500, #ADB5BD);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+        outline: 0;
+        border-bottom: 1px solid var(--secondary-color, #D7D7D7);
+        border-radius: 0;
+        background-color: rgba(0,0,0,0);
+        &:focus{
+            box-shadow: none;
+            outline: 0;
+        }
+    }
+    .form-floating{
+        label{
+            color:rgba(173, 181, 189, 1);
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+    .form-check{
+        padding-left: 2em;
+    }
+    .form-check-label{
+        color: var(--gray-500, #ADB5BD);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 0.15em;
+    }
+    .form-check-input{
+        vertical-align: middle;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+    button,
+    .btn{
+        border-top-right-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+        display: flex;
+        width: 171.288px;
+        padding: 16px 30px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 8px;
+        color: var(--secondary-light-color, #F6F6F6);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px; 
+    }
+}
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label{
+    opacity: 1;
+    transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+}

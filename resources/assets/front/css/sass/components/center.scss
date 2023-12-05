@@ -57,9 +57,28 @@
             }
         }
     }
+    .contact-adress{
+        border-radius: 0px 500px 500px 0px;
+        background: radial-gradient(151.07% 139.76% at 77.81% 100%, #F6F6F6 0%, rgba(255, 255, 255, 0.00) 100%);
+        a,
+        span,
+        p{
+            color:rgba(108, 117, 125, 1)!important;
+        }
+
+        .socialMedia{
+            :before{
+                color:rgba(108, 117, 125, 1)!important;
+            }
+        }
+    }
+    .map{
+        border-top-right-radius: 0!important;
+        border-bottom-right-radius: 0!important;
+    }
 }
 .centerBg {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
