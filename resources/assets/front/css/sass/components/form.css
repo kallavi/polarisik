@@ -15,18 +15,44 @@ form .form-control:focus {
   box-shadow: none;
   outline: 0;
 }
+@media screen and (max-width: 991.98px) {
+  form input,
+  form .form-control {
+    font-size: 14px;
+    height: calc(2.8rem + 2px);
+  }
+}
 form .form-floating label {
   color: rgb(173, 181, 189);
   font-size: 18px;
   font-weight: 400;
   padding-left: 40px;
 }
+@media screen and (max-width: 991.98px) {
+  form .form-floating label {
+    font-size: 14px;
+    padding-left: 27px;
+  }
+}
 form .form-floating input,
 form .form-floating .form-control {
   padding-left: 30px;
 }
+@media screen and (max-width: 991.98px) {
+  form .form-floating input,
+  form .form-floating .form-control {
+    font-size: 14px;
+    height: calc(2.8rem + 2px);
+    padding-left: 16px;
+  }
+}
 form .form-check {
   padding-left: 1.6em;
+}
+@media screen and (max-width: 991.98px) {
+  form .form-check {
+    padding-left: 3.3em;
+  }
 }
 form .form-check .form-check-label {
   color: var(--gray-500, #ADB5BD);
@@ -34,6 +60,11 @@ form .form-check .form-check-label {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.3px;
+}
+@media screen and (max-width: 991.98px) {
+  form .form-check .form-check-label {
+    font-size: 14px;
+  }
 }
 form .form-check .form-check-input {
   vertical-align: middle;
@@ -44,6 +75,13 @@ form .form-check .form-check-input {
 }
 form .form-check .form-check-input:focus {
   box-shadow: none;
+}
+@media screen and (max-width: 991.98px) {
+  form .form-check .form-check-input {
+    font-size: 14px;
+    margin-left: -1.8em;
+    margin-top: 0.1em;
+  }
 }
 form button,
 form .btn {
@@ -60,9 +98,25 @@ form .btn {
   font-weight: 600;
   line-height: 18px;
 }
+@media screen and (max-width: 991.98px) {
+  form button,
+  form .btn {
+    width: auto;
+    padding: 10px 29px;
+    font-size: 14px;
+    margin: 7px auto;
+    border-top-right-radius: var(--bs-border-radius-pill) !important;
+    border-bottom-right-radius: var(--bs-border-radius-pill) !important;
+  }
+}
 form textarea {
   resize: none !important;
   height: auto !important;
+}
+@media screen and (max-width: 991.98px) {
+  form textarea {
+    max-height: 84px;
+  }
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
@@ -73,6 +127,14 @@ form textarea {
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
   opacity: 1;
   transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+}
+@media screen and (max-width: 991.98px) {
+  .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
+    transform: scale(0.85) translateY(-1rem) translateX(0.35rem);
+  }
+  .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
+    transform: scale(0.85) translateY(-1rem) translateX(0.35rem);
+  }
 }
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
@@ -95,4 +157,13 @@ form textarea {
   margin-top: -0.8rem;
   font-weight: 500;
   left: 26px;
+}
+
+@media screen and (max-width: 991.98px) {
+  .form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+    padding-top: 1.225rem;
+  }
+  .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown) {
+    padding-top: 1.225rem;
+  }
 }/*# sourceMappingURL=form.css.map */

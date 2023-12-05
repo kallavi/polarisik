@@ -83,6 +83,10 @@
             letter-spacing: 0.9px;
             @media screen and (max-width:991.98px) {
                 justify-content:center;
+                white-space: normal;
+                font-size: 14px;
+                letter-spacing: 0px;
+                line-height: 17px;
             }
         }
     }
@@ -94,15 +98,26 @@
         height: 565px;
         @media screen and (max-width:1200px) {
             padding-top: 0;
-            height: 400px;
+            height: 453px;
+        }
+        @media screen and (max-width:991.98px) {
+            margin-bottom: -90px;
         }
         .rounded-pill{
-            border-radius:500px 0px 0px 500px!important;
-            background: var(--default-white, #FFF);
-            padding: 20px;
-            iframe{
-            border-radius:500px 0px 0px 500px!important;
-
+            border-radius: 0!important;
+            @media screen and (min-width:992px) {
+                border-radius:500px 0px 0px 500px!important;
+                background: var(--default-white, #FFF);
+                padding: 20px;
+                iframe{
+                border-radius:500px 0px 0px 500px!important;
+    
+                }
+            }
+        }
+        iframe{
+            @media screen and (max-width:991.98px) {
+                filter: grayscale(1);
             }
         }
     }

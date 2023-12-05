@@ -6,7 +6,9 @@ footer{
         background-size: 100% 100%;
         padding-top: 37px;
         &.bg-primary{
-            background-color: #ffffff!important;
+            background-color: rgba(0,0,0,0)!important;
+            position: relative;
+            z-index: 2;
         }
     }
     .container-xxxl{
@@ -19,18 +21,20 @@ footer{
                 width: 100%;
             }
         }
-        &:before{
-            content: "";
-            position: absolute;
-            background-image: url('../images/footer-logo-bg.png');
-            background-repeat: no-repeat;
-            background-size:contain;
-            background-position: bottom center;
-            width: 328px;
-            height: 211px;
-            bottom: 0;
-            z-index: -1;
-            left: -156px;
+        @media screen and (min-width:992px) {
+            &:before{
+                content: "";
+                position: absolute;
+                background-image: url('../images/footer-logo-bg.png');
+                background-repeat: no-repeat;
+                background-size:contain;
+                background-position: bottom center;
+                width: 328px;
+                height: 211px;
+                bottom: 0;
+                z-index: -1;
+                left: -156px;
+            }
         }
     }
     .nav{

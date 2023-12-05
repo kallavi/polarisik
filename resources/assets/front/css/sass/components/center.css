@@ -81,6 +81,10 @@
 @media screen and (max-width: 991.98px) {
   .center .contact-adress a {
     justify-content: center;
+    white-space: normal;
+    font-size: 14px;
+    letter-spacing: 0px;
+    line-height: 17px;
   }
 }
 .center .mapBg {
@@ -93,16 +97,31 @@
 @media screen and (max-width: 1200px) {
   .center .map {
     padding-top: 0;
-    height: 400px;
+    height: 453px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .center .map {
+    margin-bottom: -90px;
   }
 }
 .center .map .rounded-pill {
-  border-radius: 500px 0px 0px 500px !important;
-  background: var(--default-white, #FFF);
-  padding: 20px;
+  border-radius: 0 !important;
 }
-.center .map .rounded-pill iframe {
-  border-radius: 500px 0px 0px 500px !important;
+@media screen and (min-width: 992px) {
+  .center .map .rounded-pill {
+    border-radius: 500px 0px 0px 500px !important;
+    background: var(--default-white, #FFF);
+    padding: 20px;
+  }
+  .center .map .rounded-pill iframe {
+    border-radius: 500px 0px 0px 500px !important;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .center .map iframe {
+    filter: grayscale(1);
+  }
 }
 
 .centerBg {
