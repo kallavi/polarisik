@@ -63,5 +63,9 @@ $enable-negative-margins: true;
 .preLine{
   white-space: pre-line;
 }
+.rounded-end-0{
+  border-top-right-radius: 0!important;
+  border-bottom-right-radius: 0!important;
+}
 
 

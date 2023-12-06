@@ -1,5 +1,8 @@
+@charset "UTF-8";
 form input,
-form .form-control {
+form .form-control,
+form .form-select,
+form select {
   color: var(--gray-500, #ADB5BD);
   font-size: 18px;
   font-weight: 400;
@@ -9,17 +12,36 @@ form .form-control {
   border-bottom: 1px solid var(--secondary-color, #D7D7D7);
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0);
+  height: calc(3.5rem + 2px);
+  padding-left: 32px;
 }
 form input:focus,
-form .form-control:focus {
+form .form-control:focus,
+form .form-select:focus,
+form select:focus {
   box-shadow: none;
   outline: 0;
+  border-color: var(--secondary-color, #D7D7D7);
+  background-color: rgba(0, 0, 0, 0);
 }
 @media screen and (max-width: 991.98px) {
   form input,
-  form .form-control {
+  form .form-control,
+  form .form-select,
+  form select {
     font-size: 14px;
-    height: calc(2.8rem + 2px);
+    height: calc(2.7rem + 2px);
+  }
+}
+@media screen and (max-width: 991.98px) {
+  form #ibanNo {
+    height: auto;
+    padding-top: 52px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  form .ibanNo {
+    white-space: normal;
   }
 }
 form .form-floating label {
@@ -35,14 +57,16 @@ form .form-floating label {
   }
 }
 form .form-floating input,
-form .form-floating .form-control {
+form .form-floating .form-control,
+form .form-floating .form-select {
   padding-left: 30px;
 }
 @media screen and (max-width: 991.98px) {
   form .form-floating input,
-  form .form-floating .form-control {
+  form .form-floating .form-control,
+  form .form-floating .form-select {
     font-size: 14px;
-    height: calc(2.8rem + 2px);
+    height: calc(2.7rem + 2px);
     padding-left: 16px;
   }
 }
@@ -54,7 +78,8 @@ form .form-check {
     padding-left: 3.3em;
   }
 }
-form .form-check .form-check-label {
+form .form-check .form-check-label,
+form .form-check a {
   color: var(--gray-500, #ADB5BD);
   font-size: 18px;
   font-weight: 400;
@@ -62,7 +87,8 @@ form .form-check .form-check-label {
   letter-spacing: -0.3px;
 }
 @media screen and (max-width: 991.98px) {
-  form .form-check .form-check-label {
+  form .form-check .form-check-label,
+  form .form-check a {
     font-size: 14px;
   }
 }
@@ -72,6 +98,7 @@ form .form-check .form-check-input {
   height: 16px;
   border-radius: 0;
   margin-left: -1.4em;
+  padding-left: 0;
 }
 form .form-check .form-check-input:focus {
   box-shadow: none;
@@ -81,6 +108,22 @@ form .form-check .form-check-input:focus {
     font-size: 14px;
     margin-left: -1.8em;
     margin-top: 0.1em;
+  }
+}
+form .form-check .form-check-label ~ .invalid-tooltip {
+  margin-top: -0.4rem;
+}
+form .form-check.type2 {
+  padding-left: 53px;
+}
+@media screen and (max-width: 991.98px) {
+  form .form-check.type2 {
+    padding-left: 27px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  form .form-check.type2 .form-check-input {
+    margin-top: 0.3em;
   }
 }
 form button,
@@ -118,6 +161,45 @@ form textarea {
     max-height: 84px;
   }
 }
+form select,
+form .form-select {
+  -moz-appearance: none;
+  /* Firefox için kendi ok (arrow) stilini eklemek */
+  background-image: url("../images/dd-arrow.svg");
+  background-position: calc(100% - 45px) center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+}
+@media screen and (max-width: 1700px) {
+  form select,
+  form .form-select {
+    background-position: calc(100% - 11px) center;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  form select,
+  form .form-select {
+    background-position: calc(100% - 20px) calc(100% - 14px);
+  }
+}
+form select::-webkit-inner-spin-button, form select::-webkit-outer-spin-button,
+form .form-select::-webkit-inner-spin-button,
+form .form-select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media screen and (max-width: 991.98px) {
+  form.type2 .form-floating label {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  form.type2 .form-select,
+  form.type2 select {
+    padding-left: 15px;
+    padding-top: 1em;
+  }
+}
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 1;
@@ -138,16 +220,23 @@ form textarea {
 }
 
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus {
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus,
+.form-select:focus {
   border-top: none;
   border-right: none;
   border-left: none;
   box-shadow: none;
+  border-color: var(--secondary-color, #D7D7D7);
 }
 
 .was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus,
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus {
   box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked {
+  background-color: #198754 !important;
 }
 
 .invalid-tooltip {
@@ -159,11 +248,77 @@ form textarea {
   left: 26px;
 }
 
+.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown) {
+  background-color: rgba(0, 0, 0, 0);
+}
 @media screen and (max-width: 991.98px) {
   .form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
     padding-top: 1.225rem;
   }
   .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown) {
     padding-top: 1.225rem;
+  }
+}
+
+.custom-file {
+  border-bottom: 1px solid var(--secondary-color, #D7D7D7);
+  color: rgb(173, 181, 189);
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 32px;
+  height: calc(3.5rem + 2px);
+  padding-left: 32px;
+  padding-right: 37px;
+}
+@media screen and (max-width: 1700px) {
+  .custom-file {
+    padding-right: 11px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .custom-file {
+    font-size: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: calc(2.7rem + 2px);
+  }
+}
+.custom-file button {
+  display: inline-flex;
+  padding: 0;
+  width: auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 991.98px) {
+  .custom-file button {
+    margin-right: 0 !important;
+  }
+}
+.custom-file button :before {
+  color: var(--gray-500, #ADB5BD);
+}
+.custom-file .icon-plus {
+  font-size: 14px;
+}
+
+.custom-birthday .icon-calendar {
+  position: absolute;
+  right: 46px;
+  bottom: 20px;
+  font-size: 22px;
+}
+@media screen and (max-width: 1700px) {
+  .custom-birthday .icon-calendar {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .custom-birthday .icon-calendar {
+    right: 16px;
+    bottom: 7px;
   }
 }/*# sourceMappingURL=form.css.map */

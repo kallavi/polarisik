@@ -1,6 +1,8 @@
 form{
     input,
-    .form-control{
+    .form-control,
+    .form-select,
+    select{
         color: var(--gray-500, #ADB5BD);
         font-size: 18px;
         font-weight: 400;
@@ -10,13 +12,29 @@ form{
         border-bottom: 1px solid var(--secondary-color, #D7D7D7);
         border-radius: 0;
         background-color: rgba(0,0,0,0);
+        height: calc(3.5rem + 2px);
+        padding-left: 32px;
+        
         &:focus{
             box-shadow: none;
             outline: 0;
+            border-color: var(--secondary-color, #D7D7D7);
+            background-color: rgba(0,0,0,0);
         }
         @media screen and (max-width:991.98px) {
             font-size: 14px;
-            height:calc(2.8rem + 2px);
+            height:calc(2.7rem + 2px);
+        }
+    }
+    #ibanNo{
+        @media screen and (max-width:991.98px) {
+            height: auto;
+            padding-top: 52px;
+        }
+    }
+    .ibanNo{
+        @media screen and (max-width:991.98px) {
+            white-space: normal;
         }
     }
     .form-floating{
@@ -31,12 +49,13 @@ form{
             }
         }
         input,
-        .form-control{
+        .form-control,
+        .form-select{
             padding-left: 30px;
 
             @media screen and (max-width:991.98px) {
                 font-size: 14px;
-                height:calc(2.8rem + 2px);
+                height:calc(2.7rem + 2px);
                 padding-left: 16px;
             }
         }
@@ -46,7 +65,8 @@ form{
         @media screen and (max-width:991.98px) {
             padding-left:3.3em;
         }
-        .form-check-label{
+        .form-check-label,
+        a{
             color: var(--gray-500, #ADB5BD);
             font-size: 18px;
             font-weight: 400;
@@ -62,6 +82,7 @@ form{
             height: 16px;
             border-radius: 0;
             margin-left: -1.4em;
+            padding-left: 0;
             &:focus{
                 box-shadow: none;
             }
@@ -69,6 +90,20 @@ form{
                 font-size: 14px;
                 margin-left: -1.8em;
                 margin-top: 0.1em;
+            }
+        }
+        .form-check-label ~ .invalid-tooltip{
+            margin-top: -0.4rem;
+        }
+        &.type2{
+            padding-left: 53px;
+            @media screen and (max-width:991.98px) {
+                padding-left: 27px;
+            }
+            .form-check-input{
+                @media screen and (max-width:991.98px) {
+                    margin-top: 0.3em;
+                }
             }
         }
     }
@@ -103,6 +138,42 @@ form{
             max-height: 84px;
         }
     }
+    select,
+    .form-select{
+        -moz-appearance: none;
+        /* Firefox için kendi ok (arrow) stilini eklemek */
+        background-image: url('../images/dd-arrow.svg');
+        background-position: calc(100% - 45px) center;
+        background-repeat: no-repeat;
+        background-size: 12px;
+        @media screen and (max-width:1700px) {
+            background-position: calc(100% - 11px) center;
+        }
+        @media screen and (max-width:991.98px) {
+            background-position:calc(100% - 20px) calc(100% - 14px)
+        }
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+    &.type2{
+        .form-floating {
+            label {
+                @media screen and (max-width:991.98px) {
+                    padding-left: 15px;
+                }
+            }
+        }
+        .form-select,
+        select{
+            @media screen and (max-width:991.98px) {
+                padding-left: 15px;
+                padding-top: 1em;
+            }
+        }
+    }
 }
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label{
     opacity: 1;
@@ -112,15 +183,21 @@ form{
     }
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus,
-.was-validated .form-control:valid:focus, .form-control.is-valid:focus{
+.was-validated .form-control:valid:focus, .form-control.is-valid:focus,
+.form-select:focus{
     border-top: none;
     border-right: none;
     border-left: none;
     box-shadow: none;
+    border-color: var(--secondary-color, #D7D7D7);
 }
 .was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus,
 .was-validated .form-check-input:valid:focus, .form-check-input.is-valid:focus{
     box-shadow: none;
+    background-color: rgba(0,0,0,0);
+}
+.was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked{
+    background-color: #198754!important;
 }
 .invalid-tooltip{
     color: rgba(220, 53, 69, 0.9);
@@ -132,7 +209,58 @@ form{
 }
 
 .form-floating > .form-control:focus, .form-floating > .form-control:not(:placeholder-shown), .form-floating > .form-control-plaintext:focus, .form-floating > .form-control-plaintext:not(:placeholder-shown){
+    background-color: rgba(0,0,0,0);
     @media screen and (max-width:991.98px) {
         padding-top: 1.225rem;
+    }
+}
+
+.custom-file{
+    border-bottom: 1px solid var(--secondary-color, #D7D7D7);
+    color:rgba(173, 181, 189, 1);
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 32px;
+    height: calc(3.5rem + 2px);
+    padding-left: 32px;
+    padding-right: 37px;
+    @media screen and (max-width:1700px) {
+        padding-right: 11px;
+    }
+    @media screen and (max-width:991.98px) {
+        font-size: 14px;
+        padding-left: 16px;
+        padding-right: 16px;
+        height: calc(2.7rem + 2px);
+    }
+    button{
+        display: inline-flex;
+        padding: 0;
+        width: auto;
+        margin-left: auto;
+        @media screen and (max-width:991.98px) {
+            margin-right: 0!important;
+        }
+        :before{
+            color: var(--gray-500, #ADB5BD);
+        }
+    }
+    .icon-plus{
+        font-size: 14px;
+    }
+}
+.custom-birthday{
+    .icon-calendar{
+        position: absolute;
+        right: 46px;
+        bottom: 20px;
+        font-size: 22px;
+        @media screen and (max-width:1700px) {
+            right: 20px;
+        }
+        @media screen and (max-width:991.98px) {
+            right: 16px;
+            bottom: 7px;
+        }
     }
 }
