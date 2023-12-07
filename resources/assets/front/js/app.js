@@ -1,3 +1,9 @@
+$(window).on('load', function () {
+  if ($('.preloader').length) {
+    $('.preloader').remove();
+  }
+});
+
 var app = document.querySelector('.app');
 var main = document.querySelector('main');
 var menuBtn = document.getElementById("burgerBtn");
