@@ -5,7 +5,7 @@
 }
 .leftMenu .leftMenuList {
   max-width: 395px;
-  padding-left: 58px;
+  padding-left: 0;
 }
 .leftMenu a {
   border-radius: 0px 100px 100px 0px;

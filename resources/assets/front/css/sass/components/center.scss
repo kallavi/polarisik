@@ -1,7 +1,7 @@
 .center {
-    min-height: calc(100vh - 118px - 187px);
+    min-height: calc(100vh - 118px - 183px);
     @media screen and (max-width: 991.98px) {
-        min-height: calc(100vh - 98px - 388px);
+        min-height: calc(100vh - 98px - 360px);
     }
     .content {
         @media screen and (min-width: 992px) {
@@ -89,6 +89,20 @@
                 line-height: 17px;
             }
         }
+        .contactInfo{
+            @media screen and (min-width:1921px) {
+                padding-left: 1rem!important;
+                padding-right: 1rem!important;
+                .ms-xl-n2 {
+                    margin-left: 0!important;
+                }
+            }
+        }
+    }
+    #contactForm{
+        @media screen and (min-width:1921px) {
+            max-width: 790px;
+        }
     }
     .mapBg{
         margin-top: 55px;
@@ -129,12 +143,12 @@
     width: 36.5vw;
     height: 36vw;
     max-width: 701px;
-    max-height: 64vh;
+    max-height: 699px;
     @media screen and (max-width: 991.98px) {
         width: 37.1vw;
         height: 41vw;
     }
-    @media screen and (min-width: 1921px) {
+    @media screen and (min-width: 1920px) {
         max-height: 699px;
     }
     img {
@@ -231,4 +245,11 @@
     max-height: 177px;
     width: 9.21875vw;
     height: 9.21875vw;
+}
+
+@media screen and (max-width:991.98px) {
+    .mobileCenter{
+        margin-left: auto!important;
+        margin-right: auto!important;
+    }
 }

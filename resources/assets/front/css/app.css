@@ -12910,7 +12910,7 @@ textarea.form-control-lg {
 }
 
 .text-justify {
-  text-align: justify !important;
+  text-align: justify;
 }
 
 header {
@@ -12998,7 +12998,7 @@ header.bgNone .btn-light, header.fixed .btn-light {
 }
 @media screen and (max-width: 1200px) {
   .navbar-nav .nav-link {
-    padding: 6px 8px 14px 8px !important;
+    padding: 6px 5px 14px 5px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -13039,7 +13039,8 @@ header.bgNone .navbar-nav .nav-link.active {
     width: 28px;
     left: 0;
     background: #ffffff;
-    top: 8px;
+    top: 50%;
+    margin-top: -2px;
     transition: all 0.3s ease-in;
   }
   #burgerBtn:after {
@@ -13836,11 +13837,11 @@ footer .socialMedia a + a {
 }
 
 .center {
-  min-height: calc(100vh - 118px - 187px);
+  min-height: calc(100vh - 118px - 183px);
 }
 @media screen and (max-width: 991.98px) {
   .center {
-    min-height: calc(100vh - 98px - 388px);
+    min-height: calc(100vh - 98px - 360px);
   }
 }
 @media screen and (min-width: 992px) {
@@ -13924,6 +13925,20 @@ footer .socialMedia a + a {
     line-height: 17px;
   }
 }
+@media screen and (min-width: 1921px) {
+  .center .contact-adress .contactInfo {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .center .contact-adress .contactInfo .ms-xl-n2 {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .center #contactForm {
+    max-width: 790px;
+  }
+}
 .center .mapBg {
   margin-top: 55px;
 }
@@ -13968,7 +13983,7 @@ footer .socialMedia a + a {
   width: 36.5vw;
   height: 36vw;
   max-width: 701px;
-  max-height: 64vh;
+  max-height: 699px;
 }
 @media screen and (max-width: 991.98px) {
   .centerBg {
@@ -13976,7 +13991,7 @@ footer .socialMedia a + a {
     height: 41vw;
   }
 }
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1920px) {
   .centerBg {
     max-height: 699px;
   }
@@ -14092,13 +14107,19 @@ footer .socialMedia a + a {
 }
 
 @media screen and (max-width: 991.98px) {
+  .mobileCenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+@media screen and (max-width: 991.98px) {
   .leftMenu {
     margin: 0 auto !important;
   }
 }
 .leftMenu .leftMenuList {
   max-width: 395px;
-  padding-left: 58px;
+  padding-left: 0;
 }
 .leftMenu a {
   border-radius: 0px 100px 100px 0px;
@@ -14358,8 +14379,11 @@ form .form-check {
 }
 @media screen and (max-width: 991.98px) {
   form .form-check {
-    padding-left: 3.3em;
+    padding-left: 1.3em;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 form .form-check .form-check-label,
@@ -14374,6 +14398,7 @@ form .form-check a {
   form .form-check .form-check-label,
   form .form-check a {
     font-size: 14px;
+    padding-left: 10px;
   }
 }
 form .form-check .form-check-input {
@@ -14984,7 +15009,7 @@ main {
 }
 @media screen and (max-width: 991.98px) {
   .paragraph {
-    padding: 26px 16px;
+    padding: 26px 0;
   }
 }
 .paragraph h4, .paragraph .h4 {

@@ -59,8 +59,11 @@ form{
     .form-check{
         padding-left: 1.6em;
         @media screen and (max-width:991.98px) {
-            padding-left:3.3em;
+            padding-left:1.3em;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .form-check-label,
         a{
@@ -71,6 +74,7 @@ form{
             letter-spacing: -0.3px;
             @media screen and (max-width:991.98px) {
                 font-size: 14px;
+                padding-left: 10px;
             }
         }
         .form-check-input{

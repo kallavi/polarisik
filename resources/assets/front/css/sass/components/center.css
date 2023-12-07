@@ -1,9 +1,9 @@
 .center {
-  min-height: calc(100vh - 118px - 187px);
+  min-height: calc(100vh - 118px - 183px);
 }
 @media screen and (max-width: 991.98px) {
   .center {
-    min-height: calc(100vh - 98px - 388px);
+    min-height: calc(100vh - 98px - 360px);
   }
 }
 @media screen and (min-width: 992px) {
@@ -87,6 +87,20 @@
     line-height: 17px;
   }
 }
+@media screen and (min-width: 1921px) {
+  .center .contact-adress .contactInfo {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .center .contact-adress .contactInfo .ms-xl-n2 {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (min-width: 1921px) {
+  .center #contactForm {
+    max-width: 790px;
+  }
+}
 .center .mapBg {
   margin-top: 55px;
 }
@@ -131,7 +145,7 @@
   width: 36.5vw;
   height: 36vw;
   max-width: 701px;
-  max-height: 64vh;
+  max-height: 699px;
 }
 @media screen and (max-width: 991.98px) {
   .centerBg {
@@ -139,7 +153,7 @@
     height: 41vw;
   }
 }
-@media screen and (min-width: 1921px) {
+@media screen and (min-width: 1920px) {
   .centerBg {
     max-height: 699px;
   }
@@ -252,4 +266,11 @@
   max-height: 177px;
   width: 9.21875vw;
   height: 9.21875vw;
+}
+
+@media screen and (max-width: 991.98px) {
+  .mobileCenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }/*# sourceMappingURL=center.css.map */
