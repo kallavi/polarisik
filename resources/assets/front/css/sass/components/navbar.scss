@@ -173,7 +173,10 @@ header {
         justify-content: space-between;
         transform: translateX(-100%);
         @include transition(all 0.3s ease-in);
-
+        & > .navbar-nav{
+            height: calc(100% - 66px);
+            place-content: center;
+        }
         a {
             text-decoration: none;
         }

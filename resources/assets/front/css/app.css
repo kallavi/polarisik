@@ -13079,6 +13079,10 @@ header.bgNone .navbar-nav .nav-link.active {
     transform: translateX(-100%);
     transition: all 0.3s ease-in;
   }
+  #mobileMenu > .navbar-nav {
+    height: calc(100% - 66px);
+    place-content: center;
+  }
   #mobileMenu a {
     text-decoration: none;
   }
