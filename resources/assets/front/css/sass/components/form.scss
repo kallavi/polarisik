@@ -14,6 +14,13 @@ form{
         background-color: rgba(0,0,0,0);
         height: calc(3.5rem + 2px);
         padding-left: 32px;
+        &.error{
+            color:  rgba(220, 53, 69, 0.9)!important;
+            border-color: rgba(220, 53, 69, 0.9)!important;
+        }
+        &.error ~.invalid-tooltip.maskError{
+            display: block!important;
+        }
         
         &:focus{
             box-shadow: none;
@@ -24,17 +31,6 @@ form{
         @media screen and (max-width:991.98px) {
             font-size: 14px;
             height:calc(2.7rem + 2px);
-        }
-    }
-    #ibanNo{
-        @media screen and (max-width:991.98px) {
-            height: auto;
-            padding-top: 52px;
-        }
-    }
-    .ibanNo{
-        @media screen and (max-width:991.98px) {
-            white-space: normal;
         }
     }
     .form-floating{
@@ -51,7 +47,7 @@ form{
         input,
         .form-control,
         .form-select{
-            padding-left: 30px;
+            padding-left: 24px;
 
             @media screen and (max-width:991.98px) {
                 font-size: 14px;
@@ -64,6 +60,7 @@ form{
         padding-left: 1.6em;
         @media screen and (max-width:991.98px) {
             padding-left:3.3em;
+            margin: 0 auto;
         }
         .form-check-label,
         a{
@@ -199,6 +196,9 @@ form{
 .was-validated .form-check-input:valid:checked, .form-check-input.is-valid:checked{
     background-color: #198754!important;
 }
+.was-validated .form-check-input:invalid ~ label a, .form-check-input.is-invalid label a{
+    color: #dc3545;
+}
 .invalid-tooltip{
     color: rgba(220, 53, 69, 0.9);
     background: #ffffff;
@@ -257,6 +257,16 @@ form{
         padding-right: 16px;
         height: calc(2.7rem + 2px);
     }
+    .custom-file-label{
+        flex: 1;
+    }
+    #imagePreview{
+        margin: 0;
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
     button{
         display: inline-flex;
         padding: 0;
@@ -267,6 +277,9 @@ form{
         }
         :before{
             color: var(--gray-500, #ADB5BD);
+        }
+        &#deleteButton{
+            transform:rotate(45deg);
         }
     }
     .icon-plus{

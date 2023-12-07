@@ -166,12 +166,18 @@
                                         <div class="invalid-tooltip">
                                             Lütfen Telefon Numaranızı Giriniz
                                         </div>
+                                        <div class="invalid-tooltip maskError">
+                                            Lütfen Başına 0 Girmeden Sadece Rakam Giriniz.
+                                        </div>
                                     </div>
                                     <div class="form-floating col-lg-6 mb-1 mb-lg-0">
                                         <input type="email" class="form-control emailMask" id="eposta" placeholder="E-Postanız" required>
                                         <label for="eposta">E-Posta</label>
                                         <div class="invalid-tooltip">
                                             Lütfen E-Postanızı Giriniz
+                                        </div>
+                                        <div class="invalid-tooltip maskError">
+                                            Lütfen E-Postanızı info@info.com Formatında Giriniz
                                         </div>
                                     </div>
                                     <div class="form-floating col-lg-6 mb-1 mb-lg-0">
@@ -190,9 +196,11 @@
                                     </div>
                                     <div class="position-relative col-12 mb-1 mb-lg-0">
                                         <div class="custom-file d-flex align-items-center">
-                                            <input type="file" id="fileInput" class="custom-file-input" aria-label="Fotoğraf Yükleyiniz" required style="display: none;" onchange="displayFileName()">
+                                            <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" class="custom-file-input" aria-label="Fotoğraf Yükleyiniz" required style="display: none;" onchange="displayFileName()">
+                                            <img id="imagePreview" style="max-width: 100px; max-height: 100px; display: none;" />
                                             <label class="custom-file-label" for="fileInput" id="customFileLabel">Dosyanızı Yükleyiniz</label>
-                                            <button type="button" class="ms-auto btn" onclick="document.getElementById('fileInput').click()"><span class="icon-plus"></span></button>
+                                            <button type="button" id="addButton" class="ms-auto btn" onclick="document.getElementById('fileInput').click()"><span class="icon-plus"></span></button>
+                                            <button type="button" id="deleteButton" class="ms-auto btn" onclick="deleteImage()" style="display: none;"><span class="icon-plus"></span></button>
                                             <div class="invalid-tooltip">Geçersiz dosya geri bildirimi örneği</div>
                                         </div>
                                     </div>
@@ -212,9 +220,9 @@
                                           </select>
                                         <div class="invalid-tooltip">
                                             Lütfen Yabancı Dil Seviyenizi Seçiniz
-                                          </div>
-                                      </div>
-                                      <div class="position-relative col-lg-6 mb-1 mb-lg-0">
+                                        </div>
+                                    </div>
+                                    <div class="position-relative col-lg-6 mb-1 mb-lg-0">
                                         <select class="form-select" id="gender" required>
                                             <option selected disabled value="">Ehliyetiniz Var mı?</option>
                                             <option>Ehliyetim Yok</option>
@@ -234,12 +242,12 @@
                                             <option>D</option>
                                             <option>DE</option>
                                             <option>F</option>
-                                          </select>
+                                        </select>
                                         <div class="invalid-tooltip">
                                             Lütfen Seçim Seçiniz
-                                          </div>
-                                      </div>
-                                      <div class="position-relative col-lg-6 mb-1 mb-lg-0">
+                                        </div>
+                                    </div>
+                                    <div class="position-relative col-lg-6 mb-1 mb-lg-0">
                                         <select class="form-select" id="gender" required>
                                             <option selected disabled value="">Konaklama Durumu</option>
                                             <option>Ev</option>
@@ -248,19 +256,19 @@
                                         <div class="invalid-tooltip">
                                             Lütfen Konaklama Durumu Seçiniz
                                           </div>
-                                      </div>
-                                      <div class="position-relative col-lg-6 mb-1 mb-lg-0">
+                                    </div>
+                                    <div class="position-relative col-lg-6 mb-1 mb-lg-0">
                                         <select class="form-select" id="gender" required>
                                             <option selected disabled value="">Takım Elbiseniz Var mı?</option>
                                             <option>Evet</option>
                                             <option>Hayır</option>
                                             <option>Eksik</option>
-                                          </select>
+                                        </select>
                                         <div class="invalid-tooltip">
                                             Lütfen Seçim Yapınız
-                                          </div>
-                                      </div>
-                                      <div class="form-floating col-lg-6 mb-1 mb-lg-0">
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-lg-6 mb-1 mb-lg-0">
                                         <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
                                         <label for="messageSubject">Eksik Parça Belirtiniz</label>
                                         <div class="invalid-tooltip">
@@ -285,15 +293,28 @@
                                         <div class="invalid-tooltip">
                                             Lütfen T.C. Kimlik No Giriniz
                                         </div>
-                                    </div>
-                                    <div class="form-floating col-12 mb-1 mb-lg-0">
-                                        <input type="text" class="form-control ibanMask" id="ibanNo" placeholder="Mesaj Konusu" required>
-                                        <label for="ibanNo" class="ibanNo">IBAN Bilgileri   Ad Soyad - IBAN Şeklinde Giriniz</label>
-                                        <div class="invalid-tooltip">
-                                            Lütfen Iban Giriniz Giriniz
+                                        <div class="invalid-tooltip maskError">
+                                            Lütfen Sadece Rakam Giriniz
                                         </div>
                                     </div>
-                                    <div class="position-relative col-lg-7 pt-2 hstack mb-1 mb-lg-0 text-center col-12 justify-content-center">
+                                    <div class="form-floating col-12 mb-1 mb-lg-0">
+                                        <input type="text" class="form-control textMask" id="ibanName" placeholder="Hesap Adı Giriniz" required>
+                                        <label for="ibanName">Hesap Adı Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Hesap Adı
+                                        </div>
+                                    </div>
+                                    <div class="form-floating col-12 mb-1 mb-lg-0">
+                                        <input type="text" class="form-control ibanMask" id="ibanNo" placeholder="IBAN Giriniz" required>
+                                        <label for="ibanNo">IBAN Giriniz</label>
+                                        <div class="invalid-tooltip">
+                                            Lütfen Iban Giriniz
+                                        </div>
+                                        <div class="invalid-tooltip maskError">
+                                            Lütfen Başına TR Girmeden Sadece Rakam Giriniz
+                                        </div>
+                                    </div>
+                                    <div class="position-relative col-lg-7 pt-2 hstack mb-1 mb-lg-0 col-12">
                                         <div class="form-check type2 position-relative">
                                             <input class="form-check-input" type="checkbox" value="" id="kvkkCheck" required>
                                             <label class="form-check-label" for="kvkkCheck">
@@ -391,122 +412,178 @@
             function displayFileName() {
                 const fileInput = document.getElementById('fileInput');
                 const customFileLabel = document.getElementById('customFileLabel');
+                const imagePreview = document.getElementById('imagePreview');
+                const deleteButton = document.getElementById('deleteButton');
+                const addButton = document.getElementById('addButton');
 
-                // Dosya seçildiğinde dosya adını etikete ekleyin
-                customFileLabel.textContent = fileInput.files[0].name;
+                // Dosya seçildiğinde dosya adını ve önizlemeyi ekleyin
+                if (fileInput.files && fileInput.files[0]) {
+                    const file = fileInput.files[0];
+                    const fileName = file.name;
+                    const fileExtension = fileName.split('.').pop().toLowerCase();
+                    const allowedExtensions = ['jpg', 'jpeg', 'png'];
+
+                    if (allowedExtensions.includes(fileExtension)) {
+                        // Dosya adını etikete ekleyin
+                        customFileLabel.textContent = fileName;
+
+                        // Resim önizlemesini göster
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            imagePreview.src = e.target.result;
+                            addButton.style.display = 'none'; // Display the delete button
+                            imagePreview.style.display = 'block'; // Display the image preview
+                            deleteButton.style.display = 'block'; // Display the delete button
+                        };
+
+                        reader.readAsDataURL(file);
+                    } else {
+                        // Uyarı ver, geçersiz dosya türü
+                        alert('Sadece JPG ve PNG dosyaları yüklenebilir.');
+                        fileInput.value = ''; // Temizle seçilen dosyayı
+                    }
+                }
+            }
+
+            function deleteImage() {
+                const fileInput = document.getElementById('fileInput');
+                const customFileLabel = document.getElementById('customFileLabel');
+                const imagePreview = document.getElementById('imagePreview');
+                const addButton = document.getElementById('addButton');
+                const deleteButton = document.getElementById('deleteButton');
+
+                fileInput.value = ''; // Clear the file input
+                customFileLabel.textContent = 'Dosyanızı Yükleyiniz';
+                imagePreview.src = '';
+                imagePreview.style.display = 'none'; // Hide the image preview
+                deleteButton.style.display = 'none'; // Hide the delete button
+                addButton.style.display = 'block'; // Hide the delete button
+            }
+            // Fonksiyonu tanımla
+            function checkValidity(inputElement, mask) {
+                var inputValue = inputElement.val();
+                var isValid = mask.test(inputValue);
+
+                if (!isValid) {
+                    inputElement.addClass('error');
+                } else {
+                    inputElement.removeClass('error');
+                }
             }
 
             $('.emailMask').on('input', function() {
-    var emailDegeri = $(this).val();
-    var gecerliMi = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(emailDegeri);
+                checkValidity($(this), /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
+            });
 
-    if (!gecerliMi) {
-        $(this).addClass('error'); // Hatalı girişleri belirtmek için bir class ekleyebilirsiniz
-    } else {
-        $(this).removeClass('error');
-    }
-});
+            $('.tcNo').mask('00000000000').on('input', function() {
+                checkValidity($(this), /^[0-9]{11}$/);
+            });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('bizeKatilimForm');
+            $('.ibanMask').mask('TR00 0000 0000 0000 0000 0000 00').on('input', function() {
+                checkValidity($(this), /^TR\d{2}\s\d{4}\s\d{4}\s\d{4}\s\d{4}\s\d{4}\s\d{2}$/);
+            });
+            // Telefon numarası maskı: (000) 000-0000
+            // Telefon numarası maskı: 0 (000) 000-0000
+            $('.phoneMask').mask('0 (000) 000-0000').on('input', function() {
+                var inputValue = $(this).val();
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+                // Başında 0 yoksa otomatik olarak ekle
+                if (inputValue.length > 2 && inputValue.charAt(2) !== '0') {
+                    inputValue = '0 ' + inputValue.substring(2);
+                    $(this).val(inputValue);
+                }
 
-        if (form.checkValidity()) {
-            // Bootstrap form validasyonu
-            if (!form.classList.contains('was-validated')) {
-                form.classList.add('was-validated');
-            }
+                // Doğrulama işlemi
+                checkValidity($(this), /^0 \([0-9]{3}\) [0-9]{3}-[0-9]{4}$/);
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('bizeKatilimForm');
 
-            const formData = new FormData(form);
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
 
-            $.ajax({
-                type: 'POST',
-                url: 'action.php',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function (response) {
-                    if (response === 'ok') {
-                        // Eğer cevap 'ok' ise, Bootstrap modal'ı aç
-                        $('#successModal').modal('show');
+                     // Bootstrap form validasyonu
+                // if (!form.checkValidity()) {
+                //     // Hata sınıfı içeren bir input varsa, genel form validasyonunu başarısız kabul et
+                //     if ($('.error').length > 0) {
+                //         return;
+                //     }
+                // }
+
+                    if (form.checkValidity()) {
+                        // Bootstrap form validasyonu
+                        if (!form.classList.contains('was-validated')) {
+                            form.classList.add('was-validated');
+                        }
+
+                        const formData = new FormData(form);
+
+                        $.ajax({
+                            type: 'POST',
+                            url: 'action.php',
+                            data: formData,
+                            processData: false,
+                            contentType: false,
+                            success: function (response) {
+                                if (response === 'ok') {
+                                    // Eğer cevap 'ok' ise, Bootstrap modal'ı aç
+                                    $('#successModal').modal('show');
+                                } else {
+                                    // Diğer başarı durumlarını ele al veya bir uyarı göster
+                                    $('#successModal').modal('show');
+                                    // alert('Form başarıyla gönderildi. Sunucu cevabı: ' + response);
+                                }
+                            },
+                            error: function () {
+                                //  $('#successModal').modal('show');
+                                alert("hata")
+                            }
+                        });
                     } else {
-                        // Diğer başarı durumlarını ele al veya bir uyarı göster
-                        $('#successModal').modal('show');
-                        // alert('Form başarıyla gönderildi. Sunucu cevabı: ' + response);
+                        // Bootstrap form validasyonu
+                        if (!form.classList.contains('was-validated')) {
+                            form.classList.add('was-validated');
+                        }
+
+                        // alert('Form validasyonu başarısız oldu. Lütfen girişlerinizi kontrol edin.');
                     }
-                },
-                error: function () {
-                    //  $('#successModal').modal('show');
-                    alert("hata")
+                });
+            });
+  
+            // sadece metin girilmesi icin kullanılan mask
+            $('.textMask').mask('A', {
+                translation: {
+                    'A': {
+                        pattern: /[A-Za-zÇçĞğİıÖöŞşÜü ]/,
+                        recursive: true
+                    }
                 }
             });
-        } else {
-            // Bootstrap form validasyonu
-            if (!form.classList.contains('was-validated')) {
-                form.classList.add('was-validated');
-            }
-
-            // alert('Form validasyonu başarısız oldu. Lütfen girişlerinizi kontrol edin.');
-        }
-    });
-});
-             
-                $('.tcNo').mask('00000000000');
-    
-                //Telefon mask
-                $('.phoneMask').mask('0(000) 000 00 00', {
-                    onKeyPress: function(value, event, currentField, options) {
-                    // Eğer ilk karakter 0 değilse, otomatik olarak bir 0 ekleyin
-                    if (value.charAt(0) !== '0') {
-                        currentField.val('0' + value.substring(1));
-                    }
-                
-                    // Maskeyi güncelle
-                    currentField.mask(options.mask, options);
-                    }
-                });
-                
-                // sadece metin girilmesi icin kullanılan mask
-                $('.textMask').mask('A', {
-                    translation: {
-                        'A': {
-                            pattern: /[A-Za-zÇçĞğİıÖöŞşÜü ]/,
-                            recursive: true
-                        }
-                    }
-                });
-                // $('.ibanMask').mask('A Z - TR00 0000 0000 0000 0000 0000 00', {
-                //     translation: {
-                //         'A': { pattern: /[A-Za-zğüşıöçĞÜŞİÖÇ]+/ },
-                //         'Z': { pattern: /[\s]{0,2}/ }
-                //     },
-                // });
                 //sadece numara girilebilmesin icin mask
-                $('.allNumber').mask('0', {
-                    translation: {
-                        '0': {
-                            pattern: /[0-9]/,
-                            recursive: true
-                        }
+            $('.allNumber').mask('0', {
+                translation: {
+                    '0': {
+                        pattern: /[0-9]/,
+                        recursive: true
                     }
-                });
-                $('.birthdayMask').mask('00/00/00', {
-                    translation: {
-                        '0': { pattern: /\d/ },
-                    }
-                });
-                $('#birthday').datepicker({
-                    changeMonth: true,
-                    changeYear: true,
-                    dateFormat: 'dd/mm/yy',
-                    yearRange: "-100:+0",
-                    onSelect: function(dateText, inst) {
-                        checkAge(dateText);
-                    }
-                });
-        
+                }
+            });
+            $('.birthdayMask').mask('00/00/00', {
+                translation: {
+                    '0': { pattern: /\d/ },
+                }
+            });
+            $('#birthday').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                dateFormat: 'dd/mm/yy',
+                yearRange: "-100:+0",
+                onSelect: function(dateText, inst) {
+                    checkAge(dateText);
+                }
+            });
+    
 
             function checkAge(dateText) {
                 var dateParts = dateText.split("/");
