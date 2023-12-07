@@ -118,10 +118,9 @@
     border-radius: 500px 0px 0px 500px !important;
   }
 }
-@media screen and (max-width: 991.98px) {
-  .center .map iframe {
-    filter: grayscale(1);
-  }
+.center .map iframe {
+  filter: grayscale(1);
+  mix-blend-mode: luminosity;
 }
 
 .centerBg {
