@@ -12909,6 +12909,10 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0 !important;
 }
 
+.text-justify {
+  text-align: justify !important;
+}
+
 header {
   transition: all 0.3s linear;
   z-index: 9;
@@ -14519,7 +14523,8 @@ form .form-select::-webkit-outer-spin-button {
   padding: 0.1rem 0.5rem;
   margin-top: -0.8rem;
   font-weight: 500;
-  left: 26px;
+  left: 0;
+  font-size: 12px;
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
@@ -14884,6 +14889,16 @@ main {
 @media screen and (max-width: 991.98px) {
   .paragraph {
     padding: 26px 16px;
+  }
+}
+.paragraph h4, .paragraph .h4 {
+  color: rgb(71, 102, 244);
+  font-size: 22px;
+  font-weight: 600;
+}
+@media screen and (max-width: 991.98px) {
+  .paragraph h4, .paragraph .h4 {
+    font-size: 18px;
   }
 }
 .paragraph p,
