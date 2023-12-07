@@ -73,7 +73,7 @@
                     <div class="socialMedia hstack">
                         <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
                         <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
-                        <a href="javascript:;"><span class="fs-6 icon-linkedin"></span></a>
+                        <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
                         <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
                         <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
                     </div>
@@ -110,7 +110,7 @@
                                     <div class="socialMedia pe-xxl-5 pe-3 me-2 hstack">
                                         <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
                                         <a href="javascript:;"><span class="fs-5 icon-twitter"></span></a>
-                                        <a href="javascript:;"><span class="fs-5 icon-linkedin"></span></a>
+                                        <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
                                         <a href="javascript:;"><span class="fs-5 icon-facebook"></span></a>
                                         <a href="javascript:;"><span class="fs-5 icon-youtube"></span></a>
                                     </div>
@@ -143,7 +143,7 @@
                                             <div class="socialMedia pt-4 hstack ms-xl-n2 pb-3">
                                                 <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
                                                 <a href="javascript:;"><span class="fs-5 icon-twitter"></span></a>
-                                                <a href="javascript:;"><span class="fs-5 icon-linkedin"></span></a>
+                                                <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
                                                 <a href="javascript:;"><span class="fs-5 icon-facebook"></span></a>
                                             </div>
                                         </div>
@@ -234,7 +234,7 @@
                             <div class="socialMedia pt-3 hstack justify-content-center">
                                 <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
                                 <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
-                                <a href="javascript:;"><span class="fs-6 icon-linkedin"></span></a>
+                                <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
                                 <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
                                 <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
                             </div>
@@ -288,23 +288,24 @@
 
                         $.ajax({
                             type: 'POST',
-                            url: 'action.php',
+                            url: '../../../action.php',
                             data: formData,
                             processData: false,
                             contentType: false,
                             success: function (response) {
-                                if (response === 'ok') {
-                                    // If the response is 'ok', open Bootstrap modal
-                                    $('#successModal').modal('show');
-                                } else {
-                                    // Handle other success cases or show an alert
-                                    $('#successModal').modal('show');
-                                    // alert('Form başarıyla gönderildi. Sunucu cevabı: ' + response);
-                                }
-                            },
-                            error: function () {
-                                $('#successModal').modal('show');
-                            }
+                                 if (response === 'ok') {
+                                     // If the response is 'ok', open Bootstrap modal
+                                     $('#successModal').modal('show');
+                                 } else {
+                                     // Handle other success cases or show an alert
+                                     $('#successModal').modal('show');
+                                     // alert('Form başarıyla gönderildi. Sunucu cevabı: ' + response);
+                                 }
+                             },
+                             error: function () {
+                                //  $('#successModal').modal('show');
+                                 alert("hata")
+                             }
                         });
                     } else {
                         // Bootstrap form validation

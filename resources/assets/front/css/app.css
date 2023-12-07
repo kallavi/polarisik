@@ -14538,6 +14538,33 @@ form .form-select::-webkit-outer-spin-button {
   }
 }
 
+.was-validated .form-control:valid.error,
+.form-control.is-valid.error {
+  background-image: none !important;
+  border-color: rgba(220, 53, 69, 0.9) !important;
+}
+.was-validated .form-control:valid.error ~ .invalid-tooltip,
+.form-control.is-valid.error ~ .invalid-tooltip {
+  display: block;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid,
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
+  background-image: none !important;
+}
+
+.was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
+  background-image: url("../images/dd-arrow.svg") !important;
+}
+
+.was-validated .form-select:valid:focus, .form-select.is-valid:focus,
+.was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
+  box-shadow: none;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+}
+
 .custom-file {
   border-bottom: 1px solid var(--secondary-color, #D7D7D7);
   color: rgb(173, 181, 189);

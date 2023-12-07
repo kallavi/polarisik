@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
+        <title>Polaris IK</title>
+        <!--Favicon start-->
+        <link rel="shortcut icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../public/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="57x57" href="../../../public/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../../../public/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../../../public/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../public/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../../../public/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../../../public/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../../../public/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../../../public/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../public/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../../public/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../public/favicon-32x32.png" >
+        <link rel="icon" type="image/png" sizes="96x96" href="../../../public/favicon-96x96.png" >
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../public/favicon-16x16.png">
+        <link rel="manifest" href="../../../public/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="../../../public/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!--Favicon end-->
+
+        <!---outfit google fonts start-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!---outfit google fonts end-->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+        <link rel="stylesheet" href="../../assets/front/css/app.css">
+    </head>
+    <body>
+        <div id="app" class="app">
+            <div id="burgerBtn" class="primaryBtn"></div>
+            <div id="mobileMenu" class="d-lg-none">
+                <ul class="navbar-nav">
+                   <li class="nav-item">
+                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Hizmetlerimiz
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="festivaller-konserler.html">Festivaller ve Konserler</a></li>
+                            <li><a class="dropdown-item" href="kongre-toplantilari.html">Kongre ve Toplantılar</a></li>
+                            <li><a class="dropdown-item" href="resmi-torenler.html">Resmi Törenler ve Anma Programları</a></li>
+                            <li><a class="dropdown-item" href="tanitim-lansmanlar.html">Tanıtım ve Lansmanlar</a></li>
+                            <li><a class="dropdown-item" href="fuar-standlar.html">Fuar ve Standlar</a></li>
+                            <li><a class="dropdown-item" href="vip-karsilama.html">Vip Karşılama ve Transfer</a></li>
+                            <li><a class="dropdown-item" href="lcv-sms-mailing-hizmetleri.html">LCV, Sms ve Mailing Hizmetleri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="medya.html">Medya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+                <div class="menuBottom">
+                    <a href="javascript:;" class="language nav-link">ENGLISH</a>
+                    <div class="socialMedia hstack">
+                        <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
+                        <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
+                        <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
+                    </div>
+                </div>
+            </div>
+            <main class="bg-white">
+                <!----bg-white class ı sadece anasayfada ekli degildir tüm ic sayfalarda eklidir-->
+                <header class="pt-4 bgNone w-100">
+                    <div class="container-xxxl px-xxxl-0 pe-0 pt-2">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid px-0">
+                                <a class="navbar-brand col-lg-2 pe-lg-4" href="index.html">
+                                    <img height="60px" class="w-100" src="../../../public/assets/statics/logo-light.svg" alt="">
+                                    <img height="60px" class="w-100 d-none" src="../../../public/assets/statics/logo-dark.svg" alt="">
+                                </a>
+                                <ul class="ps-3 navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="festivaller-konserler.html">Hizmetlerimiz</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="medya.html">Medya</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="referanslar.html">Referanslar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                                    </li>
+                                </ul>
+                                <div class="hstack d-none d-lg-flex">
+                                    <div class="socialMedia pe-xxl-5 pe-3 me-2 hstack">
+                                        <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-twitter"></span></a>
+                                        <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-facebook"></span></a>
+                                        <a href="javascript:;"><span class="fs-5 icon-youtube"></span></a>
+                                    </div>
+                                    <a href="bize-katilin.html" class="btn btn-light rounded-pill text-primary d-flex align-items-center justify-content-center">Bize Katılın</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+                <div class="centerBg">
+                    <img src="../../../public/assets/statics/contentBg.png" alt="">
+                </div>
+                <div class="center pt-lg-5 pt-3">
+                    <div class="contentHead pt-4">
+                        <h1>KVKK</h1>
+                    </div>
+                    <div class="content pt-lg-4">
+                        <div class="row">
+                            <div class="col-xxl-8 col-lg-10 col-sm-11 col-10 mx-auto px-lg-5 pt-lg-2">
+                                <div class="paragraph text-lg-center text-justify px-lg-4 pt-lg-4 pt-3 px-1">
+                                    
+                                    <h4>1. Giriş</h4>
+                                    <p>T.C. Anayasası barındırdığı birçok hükümle kişilerin temel haklarını güvence altına almış ve her geçen gün yeni güvenceler getirmiştir. 2010 yılında 5982 sayılı Kanun’la yapılan Anayasa değişikliği ile Anayasanın 20. maddesine ilave bir fıkra eklenerek kişisel veriler, “özel hayatın gizliliği ve korunması hakkı” kapsamında Anayasal güvenceye kavuşmuştur. Söz konusu fıkrada; “Herkes, kendisiyle ilgili kişisel verilerin korunmasını isteme hakkına sahiptir. Bu hak; kişinin kendisiyle ilgili kişisel veriler hakkında bilgilendirilme, bu verilere erişme, bunların düzeltilmesini veya silinmesini talep etme ve amaçları doğrultusunda kullanılıp kullanılmadığını öğrenmeyi de kapsar. Kişisel veriler, ancak kanunda öngörülen hallerde veya kişinin açık rızasıyla işlenebilir. Kişisel verilerin korunmasına ilişkin esas ve usuller kanunla düzenlenir.” hükmüne yer verilmiştir. Bahse konu Anayasa hükmüne göre;</p>
+                                    <ul>
+                                        <li>Herkes, kendisiyle ilgili kişisel verilerin korunmasını isteme hakkına sahiptir.</li><ul></ul>
+                                        <li>Bu anlamda bireyler temel olarak, kendileri ile ilgili kişisel verilerin ilgisiz üçüncü kişilerin eline geçmemesi konusunda gerekli tedbirlerin alınmasını isteme hakkına sahiptirler.</li><ul></ul>
+                                        <li>Bu hak; kişinin kendisiyle ilgili kişisel veriler hakkında bilgilendirilme, bu verilere erişme, bunların düzeltilmesini veya silinmesini talep etme ve amaçları doğrultusunda kullanılıp kullanılmadığını öğrenmeyi de kapsar. Bu anlamda bireyler, hangi amaçla hangi kişisel verilerinin k<ul></ul>ullanıldığını öğrenme hakkına sahip olduğu gibi söz konusu kişisel verilerde herhangi bir yanlışlık bulunması halinde bu durumun düzeltilmesini ya da verilerinin silinmesini isteme hakkına da sahiptirler.</li>
+                                        <li>Kişisel veriler, ancak kanunda öngörülen hallerde veya kişinin açık rızasıyla işlenebilir. Yasal bir düzenleme bulunmaması ya da bireyin kendisine ait kişisel verilerin işlenmesi yönünde açık bir irade beyanının olmaması durumunda kişisel verilerin işlenebilmesi mümkün değildir.</li>
+                                    </ul>
+                                    <h4>2. Amaç ve Kapsam</h4>
+                                    <p>olitika ile Polaris İnsan Kaynakları içerisinde işlenen kişisel verilerin işlenmesi ve korunması için her türlü idari ve teknik tedbir alınacak, çalışanlar ve partnerler KVKK süreçlerine yönelik bilgilendirilecek ve uygun ve etkin bir denetim mekanizması kurulacaktır.</p>
+                                    <h4>3. Tanımlar</h4>
+                                    <ul>
+                                        <li>3.1. Açık rıza: Belirli bir konuya ilişkin, bilgilendirilmeye dayanan ve özgür iradeyle açıklanan rızayı, 3.2. Anonim hâle getirme: Kişisel verilerin, başka verilerle eşleştirilerek dahi hiçbir surette kimliği belirli veya belirlenebilir bir gerçek kişiyle ilişkilendirilemeyecek hâle getirilmesini,</li>
+                                        <li>3.3. İlgili kişi: Kişisel verisi işlenen gerçek kişiyi,</li>
+                                        <li>3.4. Kişisel veri: Kimliği belirli veya belirlenebilir gerçek kişiye ilişkin her türlü bilgiyi,</li>
+                                        <li>3.5. Kişisel verilerin işlenmesi:  Kişisel verilerin tamamen veya kısmen otomatik olan ya da herhangi bir veri kayıt sisteminin parçası olmak kaydıyla otomatik olmayan yollarla elde edilmesi, kaydedilmesi, depolanması, muhafaza edilmesi, değiştirilmesi, yeniden düzenlenmesi, açıklanması, aktarılması, devralınması, elde edilebilir hâle getirilmesi, sınıflandırılması ya da kullanılmasının engellenmesi gibi veriler üzerinde gerçekleştirilen her türlü işlemi,</li>
+                                        <li>3.6. Veri işleyen: Veri sorumlusunun verdiği yetkiye dayanarak onun adına kişisel verileri işleyen gerçek veya tüzel kişiyi,</li>
+                                        <li>3.7. Veri kayıt sistemi: Kişisel verilerin belirli kriterlere göre yapılandırılarak işlendiği kayıt sistemini, 3.8. Veri sorumlusu: Kişisel verilerin işleme amaçlarını ve vasıtalarını belirleyen, veri kayıt sisteminin kurulmasından ve yönetilmesinden sorumlu olan gerçek veya tüzel kişiyi, ifade eder.</li>
+                                        <li>4. Kişisel Verileri İşleme İlkelerimiz Firmamız tarafından işlenen kişisel veriler, KVKK ve ilgili mevzuata uygun olarak işlenmektedir. KVKK 4. maddesi uyarınca kişisel verilerinizi işlerken ilke edindiğimiz temel ilke ve prensipler aşağıda belirtildiği gibidir: • Hukuka ve Dürüstlük Kuralına Uygun İşleme • Kişisel Verilerin Doğru ve Gerektiğinde Güncel Olmasını Sağlama • Belirli, Açık ve Meşru Amaçlarla İşleme • İlgili Mevzuatta Öngörülen veya İşlendikleri Amaç için Gerekli Olan Süre Kadar Muhafaza Etme</li>
+                                    </ul>
+                                        <h4>5. Kişisel Verilerin İşlenme Şartları</h4>
+                                        <p>KVKK’nın 5. Maddesi kişisel verilerin işlenme şartlarını düzenlemektedir. Firmamız tarafından kişisel verilerin işlenme süreçleri KVKK ile belirtilen aşağıdaki şartlara uygun olarak işlenmektedir. Ancak KVKK gereği ilgili kişilerin açık rızası olmasa dahi kişisel verilerin mevzuat hükümleri gereği işlenmesinin zorunlu olduğu durumlarda veri işleme faaliyetleri gerekli diğer kriterlerin sağlanması şartı ile hukuka uygun kabul edilecektir. “Aşağıdaki şartlardan birinin varlığı hâlinde, ilgili kişinin açık rızası aranmaksızın kişisel verilerinin işlenmesi mümkündür:</p>
+                                    <ul>
+                                        <li>a) Kanunlarda açıkça öngörülmesi.</li>
+                                        <li>b) Fiili imkânsızlık nedeniyle rızasını açıklayamayacak durumda bulunan veya rızasına hukuki geçerlilik tanınmayan kişinin kendisinin ya da bir başkasının hayatı veya beden bütünlüğünün korunması için zorunlu olması.</li>
+                                        <li>c) Bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması.</li>
+                                        <li>ç) Veri sorumlusunun hukuki yükümlülüğünü yerine getirebilmesi için zorunlu olması.</li>
+                                        <li>d) İlgili kişinin kendisi tarafından alenileştirilmiş olması.</li>
+                                        <li>e) Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması.</li>
+                                        <li>f) İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla, veri sorumlusunun meşru menfaatleri için veri işlenmesinin zorunlu olması.”</li>
+                                        <li>6. Özel Nitelikli Verilerin İşlenme Şartları KVKK kişisel verilerin işlenmesine ek olarak ayrı bir madde ile özel nitelikli kişisel verilerin işlenmesini düzenlemiştir. Söz konusu madde hükmü gereği etnik kökeni, siyasi düşüncesi, felsefi inancı, dini, mezhebi veya diğer inançları, kılık ve kıyafeti, dernek, vakıf ya da sendika üyeliği, sağlığı, cinsel hayatı, ceza mahkûmiyeti ve güvenlik tedbirleriyle ilgili verileri ile biyometrik ve genetik verileri özel nitelikli kişisel veri statüsündedir ve Özel nitelikli kişisel verilerin, ilgilinin açık rızası olmaksızın işlenmesi yasaktır. Firmamız bu statüde yer alan kişisel verileri titizlikle belirlemekte ve sınıflandırmaktadır.</li>
+                                    </ul>
+                                    <h4>7. Kişisel Verilerin Aktarılması</h4>
+                                    <ul>
+                                        <li>7.1. Kişisel Verilerin Yurt İçinde Aktarılması Kişisel veriler yurt içinde ilgili kişinin açık rızası olmaksızın üçüncü şahıslara aktarılamaz. Kişisel verilerin üçüncü şahıslara aktarılmasında çeşitli şartlara uygun olması gerekmektedir. Ana kural ilgili kişinin açı rızasıdır ancak İlgili kişinin kişisel verilerinin yurt içinde aktarılmasına dair açık rızasının bulunmadığı hallerde, KVKK’nın 5. maddesinin 2. fıkrası ile düzenlenen koşullarda kişisel verilerin üçüncü şahıslara aktarılması mümkündür.</li>
+                                        <li>7.2. Kişisel Verilerin Yurt Dışında Aktarılması KVKK’nun 9. maddesi gereği kişisel veriler ana kural olarak ilgili kişinin açık rızası olmaksızın yurt dışına aktarılamaz. Bu nedenle Firmamız tarafından kişisel verilerin yurt dışına aktarılması için ilgili kişinin açık rızasının alınması temel esas olarak uygulanacaktır. İlgili kişinin kişisel verilerinin yurt dışına aktarılmasına dair açık rızasının bulunmadığı hallerde KVKK’nın 5. maddesinin 2. fıkrası ile düzenlenen koşullarda kişisel verilerin yurt dışında üçüncü şahıslara aktarılması Kişisel Veri Koruma Kurulu’nun yayınlayacağı güvenli ülke listesi dikkate alınarak mümkündür. KVKK’nın 9. maddesi uyarınca yurt dışına kişisel verilerin aktarılması için ayrıca, verilerin aktarılacağı ülkede yeterli korumanın bulunması gerekmektedir.</li>
+                                    </ul>
+                                    <h4>8. Kişisel Verilerin Silinmesi</h4>
+                                    <p>Yok Edilmesi Veya Anonim Hale Getirilmesi 6698 Sayılı Kişisel Verileri Koruma Kanunu’nun 7. Maddesi “Bu Kanun ve ilgili diğer kanun hükümlerine uygun olarak işlenmiş olmasına rağmen, işlenmesini gerektiren sebeplerin ortadan kalkması hâlinde kişisel veriler resen veya ilgili kişinin talebi üzerine veri sorumlusu tarafından silinir, yok edilir veya anonim hâle getirilir.” Şeklindedir. Buna göre; Kişisel verileri işlemeye esas teşkil eden taraflar arasındaki sözleşmenin geçerli olmaması, kendiliğinden sona ermesi, sözleşmenin feshi veya dönülmesi, hiç kurulmamış olması, kişisel verilerin işlenmesini gerektiren amacın ortadan kalkması, kişisel verileri işlemeye esas teşkil eden ilgili mevzuat hükümlerinin değiştirilmesi veya ilgası, Kişisel verileri işlemenin hukuka veya dürüstlük kuralına aykırı olduğunun tespit edilmesi, Kişisel verisi rıza üzerine işlenen ilgili kişinin rızasını geri alması, İlgili kişinin, Kanunun 11. maddesinin 1. fıkrasının (e) ve (f) bentlerindeki hakları çerçevesinde kişisel verileri işleme faaliyetine ilişkin yaptığı başvurunun veri sorumlusu tarafından kabul edilmesi, Kişisel verilerin saklanmasını gerektiren azami sürenin geçmiş olmasına rağmen, kişisel verileri daha uzun süre saklamayı haklı kılacak herhangi bir şartın mevcut olmaması, Kanunun ilgili maddeleriyle belirlenen kişisel verilerin işlenmesini gerektiren şartların ortadan kalkması, Veri sorumlusunun, ilgili kişi tarafından kişisel verilerinin silinmesi veya yok edilmesi talebi ile kendisine yapılan başvuruyu reddetmesi, verdiği cevabın yetersiz bulunması veya Kanunda öngörülen süre içinde cevap vermemesi hallerinde; Kurula şikâyette bulunulması ve bu talebin Kurul tarafından uygun bulunması durumlarında Firma kişisel veri işleme envanteri doğrultusunda işlenen kişisel veriler durumlarına göre silinir, yok edilir veya anonim hale getirilir.</p>
+
+                                    <ul>
+                                        <li>8.1. Kişisel Verilerin Silinmesi Yöntemleri</li>
+                                    <li> 8.1.2. Kağıt Ortamında Bulunan Kişisel Veriler Kâğıt ortamında bulunan kişisel veriler karartma yöntemi kullanılarak silinmektedir. Karartma işlemi, karartılmak istenen kişisel verilerin kesilmesi veya bu mümkün değilse geri döndürülemeyecek ve teknolojik çözümlerle okunamayacak şekilde sabit mürekkep kullanılarak ilgili kullanıcılara görünemez hale getirilmesi şeklinde yapılmaktadır.</li>
+                                    <li>8.1.3. Merkezi Sunucuda Yer Alan Ofis Dosyaları Dosyanın işletim sistemindeki silme komutu ile silinmesi veya dosya ya da dosyanın bulunduğu dizin üzerinde ilgili kullanıcının erişim haklarının kaldırılması suretiyle gerçekleştirilmektedir.</li>
+                                    <li>8.1.4. Flash Tabanlı Medyada Bulunan Kişisel Veriler Flash tabanlı saklama ortamlarındaki kişisel veriler bu ortamlara uygun yazılımlar kullanılarak silinmektedir.</li>
+                                    <li> 8.2. Kişisel Verilerin Yok Edilmesi Yöntemleri</li>
+                                    <li> 8.2.1. De-manyetize Etme De-manyelize etme yöntemi kullanılmak suretiyle manyetik medya içerisinde bulunan veriler okunamayacak hale getirilerek bozulmaktadır. Bu işlem kullanılarak şirket için manyetik medya ile saklanan kişisel veriler imha edilmektedir.</li>
+                                    <li>8.2.2. Kağıt Ortamlar Kâğıt ortamda bulunan kişisel veriler, kâğıt imha veya kırpma makinaları ile veri anlaşılamayacak şekilde, yatay veya dikey olarak, geri birleştirilemeyecek şekilde küçük parçalara bölünmektedir.</li>
+                                    </ul>
+                                    <h4>9. İlgili Kişinin Hakları</h4>
+                                    <p>Kanun’un 11. maddesi uyarınca herkes, veri sorumlusuna başvurarak kendisiyle ilgili;</p>
+                                    <ul>
+                                        <li>a) Kişisel verilerinin işlenip işlenmediğini öğrenme, </li>
+                                        <li>b) Kişisel verileri işlenmişse buna ilişkin bilgi talep etme, </li>
+                                        <li>c) Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme, </li>
+                                        <li>ç) Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme, </li>
+                                        <li>d) Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme, </li>
+                                        <li>e) Kanun’un 7. maddede öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+                                        <li>f) (d) ve (e) bentleri uyarınca yapılan işlemlerin, kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme, </li>
+                                        <li>g) İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme, </li>
+                                        <li>ğ) Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme, haklarına sahiptir.</li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="bg-primary">
+                    <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
+                        <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
+                            <a href="index.html" class="logo"><img src="../../../public/assets/statics/logo-light-2.svg" alt=""></a>
+                            <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
+                                <a href="bizkimiz.html">Biz Kimiz?</a>
+                                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                                <a href="medya.html">Medya</a>
+                                <a href="referanslar.html">Referanslar</a>
+                                <a href="iletisim.html">İletişim</a>
+                            </div>
+                            <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
+                                <a class="pt-2" href="javascript:;">
+                                    Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul, Türkiye
+                                </a>
+                                <a class="pt-3" href="callto:02167663187">0 (216) 766 3187</a>
+                                <a href="mailto:info@ikpolaris.com">info@ikpolaris.com</a>
+                            </div>
+                            <div class="socialMedia pt-3 hstack justify-content-center">
+                                <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
+                                <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
+                                <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
+                                <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
+                                <a href="javascript:;"><span class="fs-6 icon-youtube"></span></a>
+                            </div>
+                        </div>
+                        <div class="text-center bottom pb-4 pt-2 mt-n1">
+                            <span>© 2023 polarisik.com </span>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
+        <script src="../../assets/front/js/app.js"></script>
+    </body>
+</html>
