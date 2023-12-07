@@ -32,12 +32,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         <!---outfit google fonts end-->
 
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
         <link rel="stylesheet" href="../../assets/front/css/app.css">
     </head>
     <body>
         <div id="app" class="app">
+            <!-- <div class="preloader">
+                <div class="preloader-spin">
+                    <div>
+                        <img src="../../../public/assets/statics/logo-dark.svg" alt="">
+                    </div>
+                </div>
+            </div> -->
             <div id="burgerBtn"></div>
             <div id="mobileMenu" class="d-lg-none">
                 <ul class="navbar-nav">
@@ -81,7 +89,7 @@
             </div>
             <main class="bg-white">
                 <!---Header da position-absolute sadece anasayfa ıcın gecerli bir class-->
-                <header class="pt-4 position-absolute w-100">
+                <header class="pt-4 position-absolute w-100" data-aos="fade-down"  data-aos-duration="1000" data-aos-easing="ease">
                     <div class="container-xxxl px-xxxl-0 pe-0 pt-2 ps-5 ps-xxxl-0">
                         <nav class="navbar navbar-expand-lg">
                             <div class="container-fluid px-0">
@@ -120,7 +128,7 @@
                         </nav>
                     </div>
                 </header>
-                <section id="homeSection" class="vh-100 bg-primary">
+                <section id="homeSection" class="vh-100 bg-primary" data-aos="fade-in"  data-aos-duration="1000" data-aos-easing="ease">
                     <div class="swiper carouselSwiper container-xxl px-0">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -172,17 +180,17 @@
                 <section>
                     <div class="container-fluid pe-lg-0">
                         <div class="row mx-0 hstack">
-                            <div class="col-xxl-4 col-lg-5 offset-xxl-2 offset-lg-1 text-center text-lg-start pb-3">
-                            <div class="imageWrapper pt-1 d-lg-block d-none">
-                                    <img src="../../../public/assets/statics/logo-dark.svg" alt="">
+                            <div class="col-xxl-4 col-lg-5 offset-xxl-2 offset-lg-1 text-center text-lg-start pb-3"  data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease">
+                                <div class="imageWrapper pt-1 d-lg-block d-none">
+                                        <img src="../../../public/assets/statics/logo-dark.svg" alt="">
+                                </div>
+                                <div class="paragraph">
+                                        <p>Sahip olduğumuz genç ve dinamik kadromuz ile firmaların, kurumların ve organizasyonların dönemsel insan kaynakları ihtiyaçlarına, özellikle günlük/part-time insan kaynağı pozisyonlarında yaşadıkları sorunlarına tanıklık etmiş bir ekip olarak bizler, sizlerin işinizi, kültürünüzü, yönetim stratejinizi anlamaya çalışan ve size özel İK hizmetleri üreten bir firmayız.</p>
+                                        <p>Kadrolarımızda genç arkadaşlara yer vererek onlara istihdam sağlamak, iş hayatına adım atmalarına ve kendilerini geliştirmelerine katkıda bulunmak, ayrıca sektörde yapılan bir organizasyonun her birimini görmüş deneyimli personeller yetiştirmeyi hedeflemekteyiz.</p>
+                                </div>
+                                <a href="bizkimiz.html" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
                             </div>
-                            <div class="paragraph">
-                                    <p>Sahip olduğumuz genç ve dinamik kadromuz ile firmaların, kurumların ve organizasyonların dönemsel insan kaynakları ihtiyaçlarına, özellikle günlük/part-time insan kaynağı pozisyonlarında yaşadıkları sorunlarına tanıklık etmiş bir ekip olarak bizler, sizlerin işinizi, kültürünüzü, yönetim stratejinizi anlamaya çalışan ve size özel İK hizmetleri üreten bir firmayız.</p>
-                                    <p>Kadrolarımızda genç arkadaşlara yer vererek onlara istihdam sağlamak, iş hayatına adım atmalarına ve kendilerini geliştirmelerine katkıda bulunmak, ayrıca sektörde yapılan bir organizasyonun her birimini görmüş deneyimli personeller yetiştirmeyi hedeflemekteyiz.</p>
-                            </div>
-                            <a href="bizkimiz.html" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
-                            </div>
-                            <div class="col-lg-6 px-0 pe-lg-0 ps-lg-2 pt-4 pt-lg-0 ">
+                            <div class="col-lg-6 px-0 pe-lg-0 ps-lg-2 pt-4 pt-lg-0" data-aos="fade-left"  data-aos-duration="1000" data-aos-easing="ease">
                                 <div class="videoCover ps-lg-1 pt-1 pt-lg-0">
                                     <div class="imageWrapper">
                                         <img class="img-fluid w-100" src="../../../public/assets/statics/video-cover.jpg" alt="">
@@ -198,43 +206,43 @@
                 <section>
                     <div class="container-xxl">
                         <div class="cards row row-cols-4 justify-content-center mx-0 px-4">
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="100" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Festival ve Konserler</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Kongre ve Toplantılar</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Resmi Törenler ve Anma Programları</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Tanıtım ve Lansmanlar</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Fuar ve Standlar</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>Vip Karşılama ve Transferler</span>
                                 </a>
                             </div>
-                            <div class="card border-0">
+                            <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="700" data-aos-easing="ease">
                                 <a href="javascript:;">
                                     <img class="d-lg-none" width="29" src="../../../public/assets/statics/big-logo.png" alt="">
                                     <span>LCV, SMS ve Mailing Hizmetleri</span>
@@ -247,68 +255,68 @@
                     <div class="container-xxl">
                         <div class="swiper logoSwiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="100" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/maruf.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/arma.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/qualita.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/careas.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/btik.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/maruf.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="700" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/arma.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="800" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/qualita.svg" alt="">
                                         </div>
                                     </a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="900" data-aos-easing="ease">
                                     <div class="imageWrapper">
                                         <img src="../../../public/assets/statics/logos/careas.svg" alt="">
                                     </div>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="1000" data-aos-easing="ease">
                                     <a href="javascript:;">
                                         <div class="imageWrapper">
                                             <img src="../../../public/assets/statics/logos/btik.svg" alt="">
@@ -321,32 +329,7 @@
                         </div>
                     </div>
                 </section>
-                    <!-- <h4>video</h4>
-                    <div class="d-flex">
-                        <a href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox="gallery">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                        <a href="https://www.youtube.com/watch?v=dZRqB0JLizw&t=40s" data-fancybox="gallery">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                        <a href="https://vimeo.com/259411563" data-fancybox="gallery">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                    </div>
-                    <h4>image galeri</h4>
-                    <div class="d-flex">
-                        <a href="../../../public/assets/front/images/image21.jpg" data-fancybox="gallery2">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                        <a href="../../../public/assets/front/images/image21.jpg" data-fancybox="gallery2">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                        <a href="../../../public/assets/front/images/image21.jpg" data-fancybox="gallery2">
-                            <img src="../../../public/assets/front/images/image21.jpg">
-                        </a>
-                    </div>
-                    <div class="vh-100 bg-green"></div> -->
-                <footer class="bg-primary">
+                <footer class="bg-primary" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
                     <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
                         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
                             <a href="index.html" class="logo"><img src="../../../public/assets/statics/logo-light-2.svg" alt=""></a>
@@ -381,6 +364,7 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
@@ -401,6 +385,11 @@
             //     app.classList.remove('fixed');
             // }
             // });
+            AOS.init({
+                offset: 50,
+                once: true,
+            });
+
             document.getElementById('scroll-animate').addEventListener('click', function() {
                 // Sayfanın aşağı kaymasını sağlayan kod
                 window.scrollBy({
