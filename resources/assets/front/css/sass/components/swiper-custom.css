@@ -42,6 +42,11 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 580px) {
+  .carouselSwiper .swiper-pagination {
+    bottom: 12vh !important;
+  }
+}
 .carouselSwiper .swiper-pagination .swiper-pagination-bullet {
   height: 5px;
   width: 19.79px;

@@ -44,6 +44,9 @@
       left: auto;
       bottom: 6.7vh;
     }
+    @media screen and (max-width:580px) {
+      bottom: 12vh;
+    }
     .socialMedia {
       a {
         & + a {

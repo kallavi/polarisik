@@ -149,6 +149,10 @@ header.bgNone .navbar-nav .nav-link.active {
     font-weight: 500;
     padding: 1.9px 14px;
   }
+  #mobileMenu .dropdown-menu .dropdown-item:hover, #mobileMenu .dropdown-menu .dropdown-item:focus {
+    background-color: rgba(0, 0, 0, 0);
+    background: none;
+  }
   #mobileMenu ul {
     list-style-type: none;
     padding: 0;
@@ -158,6 +162,9 @@ header.bgNone .navbar-nav .nav-link.active {
   }
   #mobileMenu .menuBottom {
     position: relative;
+  }
+  #mobileMenu .btn {
+    font-size: 14px;
   }
   .menuAnimate #mobileMenu {
     transform: translateX(0);
@@ -186,8 +193,7 @@ header.bgNone .navbar-nav .nav-link.active {
     min-height: 100vh;
   }
   .app.menuAnimate main {
-    -khtml-transform: scale(0.81);
-    transform: scale(0.81);
+    transform: translateY(-5.5vh) scale(0.81);
     margin-left: 250px;
     border-radius: 36px 0 0 36px;
     overflow: hidden;

@@ -35,6 +35,9 @@
     }
 
     .swiper-pagination {
+        @media screen and (max-width:580px) {
+            bottom:12vh!important;
+        }
         .swiper-pagination-bullet {
             height: 5px;
             width: 19.79px;

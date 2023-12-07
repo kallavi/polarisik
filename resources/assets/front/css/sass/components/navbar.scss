@@ -211,6 +211,11 @@ header {
                 font-size: 14px;
                 font-weight: 500;
                 padding: 1.9px 14px;
+                &:hover,
+                &:focus{
+                    background-color: rgba(0,0,0,0);
+                    background: none;
+                }
             }
         }
         ul {
@@ -222,6 +227,9 @@ header {
         }
         .menuBottom {
             position: relative;
+        }
+        .btn{
+            font-size: 14px;
         }
     }
     .menuAnimate {
@@ -254,7 +262,8 @@ header {
         min-height: 100vh;
         &.menuAnimate {
             main{
-                @include scale(0.81);
+                // @include scale(0.71);
+                transform: translateY(-5.5vh) scale(0.81);
                 margin-left: 250px;
                 border-radius: 36px 0 0 36px;
                 overflow: hidden;

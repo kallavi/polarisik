@@ -54,6 +54,11 @@
     bottom: 6.7vh;
   }
 }
+@media screen and (max-width: 580px) {
+  #homeSection .sectionBottom {
+    bottom: 12vh;
+  }
+}
 #homeSection .sectionBottom .socialMedia a + a {
   margin-left: 23px;
 }
