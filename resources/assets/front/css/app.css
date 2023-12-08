@@ -14414,7 +14414,7 @@ form select {
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0);
   height: calc(3.5rem + 2px);
-  padding-left: 32px;
+  padding-left: 30px;
 }
 form input.error,
 form .form-control.error,
@@ -14451,7 +14451,7 @@ form .form-floating label {
   color: rgb(173, 181, 189);
   font-size: 18px;
   font-weight: 400;
-  padding-left: 40px;
+  padding-left: calc(30px + var(--bs-gutter-x) * 0.5);
 }
 @media screen and (max-width: 991.98px) {
   form .form-floating label {
@@ -14462,7 +14462,7 @@ form .form-floating label {
 form .form-floating input,
 form .form-floating .form-control,
 form .form-floating .form-select {
-  padding-left: 24px;
+  padding-left: 30px;
 }
 @media screen and (max-width: 991.98px) {
   form .form-floating input,
@@ -14622,19 +14622,23 @@ form .form-select::-webkit-outer-spin-button {
 
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 1;
-  transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+  transform: translateY(-1rem) translateX(0);
+  font-size: 14px;
 }
 
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
   opacity: 1;
-  transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+  transform: translateY(-1rem) translateX(0);
+  font-size: 14px;
 }
 @media screen and (max-width: 991.98px) {
   .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-    transform: scale(0.85) translateY(-1rem) translateX(0.35rem);
+    font-size: 12px;
+    transform: translateY(-1rem) translateX(0);
   }
   .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > .form-control-plaintext ~ label, .form-floating > .form-select ~ label {
-    transform: scale(0.85) translateY(-1rem) translateX(0.35rem);
+    font-size: 12px;
+    transform: translateY(-1rem) translateX(0);
   }
 }
 
@@ -14676,7 +14680,7 @@ form .form-select::-webkit-outer-spin-button {
   .invalid-tooltip {
     padding: 0 0.5rem;
     margin-top: -0.5rem;
-    padding-left: 17px;
+    padding-left: 15px;
   }
 }
 
