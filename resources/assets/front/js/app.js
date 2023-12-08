@@ -66,3 +66,12 @@ $(document).ready(function(){
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
   });
 })
+
+if (typeof Fancybox !== 'undefined') {
+  Fancybox.bind('[data-fancybox]', {
+      compact: false,
+      Carousel: {},
+      Toolbar: false,
+      Thumbs: false
+  });
+}
