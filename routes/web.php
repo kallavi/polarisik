@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/medya', [CardController::class, 'medyaPhotoCard']);
+Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
+
+
 
 Route::get('/', function () {
     return view('front.home.index');
@@ -53,3 +60,14 @@ Route::get('hizmetlerimiz/vip', function () {
 Route::get('hizmetlerimiz/lcv', function () {
     return view('front.services.lcv');
 })->name('hizmetlerimiz/lcv');
+
+// Route::get('medya/album', function () {
+//     return view('front.media.photo-album');
+// })->name('medya/album');
+
+// Route::get('medya', function () {
+//     return view('front.media.index');
+// })->name('medya');
+
+// routes/web.php
+
