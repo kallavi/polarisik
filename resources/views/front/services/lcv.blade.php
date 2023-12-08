@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Resmi Törenler ve Anma Programları
+    LCV, Sms ve Mailing Hizmetleri
 @endsection
 
 @section('content')

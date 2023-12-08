@@ -1,19 +1,44 @@
+@php
+    $pages = [
+        'festivaller-konserler' => 'Festivaller ve Konserler',
+        'kongre-toplantilar' => 'Kongre ve Toplantılar',
+        'resmi-torenler' => 'Resmi Törenler ve Anma Programları',
+        'tanitimlar-lansmanlar' => 'Tanıtım ve Lansmanlar',
+        'fuar-stand' => 'Fuar ve Standlar',
+        'vip' => 'Vip Karşılama ve Transfer',
+        'lcv' => 'LCV, Sms ve Mailing Hizmetleri',
+    ];
+
+    $currentPageSlug = request()->segment(2); // Şu anki sayfanın slug'ını al
+$currentPageIndex = array_search($currentPageSlug, array_keys($pages));
+
+// Önceki ve sonraki sayfa slug'larını belirle
+    $previousPageSlug = $currentPageIndex > 0 ? array_keys($pages)[$currentPageIndex - 1] : null;
+    $nextPageSlug = $currentPageIndex < count($pages) - 1 ? array_keys($pages)[$currentPageIndex + 1] : null;
+@endphp
+
+
 <div class="leftMenu col-lg-4 col-xxl-3 col-12 pt-lg-2 px-0">
-    <div class="mobileBlock d-flex d-lg-none justify-content-center justify-content-center pt-3 mt-1 px-0 position-relative">
-        <!-- <a class="prevPage disabled" role="button" aria-disabled="true"><span class="icon-right-arrow text-primary"></span></a> -->
+    <div
+        class="mobileBlock d-flex d-lg-none justify-content-center justify-content-center pt-3 mt-1 px-0 position-relative">
+        @if (!is_null($previousPageSlug))
+            <a class="prevPage" href="{{ url('hizmetlerimiz/' . $previousPageSlug) }}"><span
+                    class="icon-right-arrow text-primary"></span></a>
+        @endif
         <h3>@yield('subTitle')</h3>
-        <a class="nextPage" href="kongre-toplantilari.html"><span class="icon-right-arrow text-primary"></span></a>
+        @if (!is_null($nextPageSlug))
+            <a class="nextPage {{ is_null($nextPageSlug) ? 'disabled' : '' }}"
+                href="{{ url('hizmetlerimiz/' . $nextPageSlug) }}">
+                <span class="icon-right-arrow text-primary"></span>
+            </a>
+        @endif
     </div>
     <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
-        <a class="{{ request()->routeIs('hizmetlerimiz/festivaller-konserler') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/festivaller-konserler') }}"><span>Festivaller ve Konserler</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/kongre-toplantilar') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/kongre-toplantilar') }}"><span>Kongre ve Toplantılar</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/resmi-torenler') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/resmi-torenler') }}"><span>Resmi Törenler ve Anma Programları</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/tanitimlar-lansmanlar') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/tanitimlar-lansmanlar') }}"><span>Tanıtım ve Lansmanlar</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/fuar-stand') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/fuar-stand') }}"><span>Fuar ve Standlar</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/vip') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/vip') }}"><span>Vip Karşılama ve Transfer</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz/lcv') ? 'active' : '' }}" href="{{ url('hizmetlerimiz/lcv') }}"><span>LCV, Sms ve Mailing Hizmetleri</span></a>
-        <a class="{{ request()->routeIs('hizmetlerimiz') ? 'active' : '' }}" href="{{ url('hizmetlerimiz') }}"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit...</span></a>
+        @foreach ($pages as $slug => $title)
+            <a class="{{ request()->routeIs('hizmetlerimiz.' . $slug) ? 'active' : '' }}"
+                href="{{ url('hizmetlerimiz/' . $slug) }}">
+                <span>{{ $title }}</span>
+            </a>
+        @endforeach
     </div>
-    
-    
 </div>

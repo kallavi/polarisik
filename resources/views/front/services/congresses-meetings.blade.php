@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Festivaller ve Konserler
+    Kongre ve Toplantılar
 @endsection
 
 @section('content')

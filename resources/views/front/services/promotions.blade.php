@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Resmi Törenler ve Anma Programları
+   Tanıtım ve Lansmanlar
 @endsection
 
 @section('content')

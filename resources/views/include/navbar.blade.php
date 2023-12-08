@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid px-0">
-        <a class="navbar-brand col-lg-2 pe-lg-4" href="index.html">
+        <a class="navbar-brand col-lg-2 pe-lg-4" href="{{url('/')}}">
             <img height="60px" class="w-100" src="{{asset('assets/statics/logo-light.svg') }}" alt="">
             <img height="60px" class="w-100 d-none" src="{{asset('assets/statics/logo-dark.svg') }}" alt="">
         </a>
@@ -31,9 +31,9 @@
                 <a href="https://www.youtube.com/@PolarisInsanKaynaklar?si=crJb8efFssJ-hPcm" target="_blank"><span class="fs-5 icon-youtube"></span></a>
             </div>
             @hasSection('mainContent')
-                <a href="bize-katilin.html" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="{{ url('bize-katil') }}" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
             @else
-                <a href="bize-katilin.html" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="{{ url('bize-katil') }}" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
             @endif
         </div>
     </div>

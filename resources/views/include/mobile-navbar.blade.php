@@ -1,4 +1,4 @@
-<div id="burgerBtn" @hasSection('content') class="primaryBtn" @endif></div>
+<div id="burgerBtn"  class="{{ request()->routeIs('home') ? '' : 'primaryBtn' }}"></div>
 <div id="mobileMenu" class="d-lg-none">
     <div class="menuColumn">
         <ul class="navbar-nav">
@@ -30,7 +30,7 @@
                 <a class="nav-link" href="{{ url('iletisim') }}">İletişim</a>
             </li>
             <li class="nav-item pt-4">
-                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="{{ url('bize-katilin') }}">Bize Katıl</a>
+                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="{{ url('bize-katil') }}">Bize Katıl</a>
             </li>
         </ul>
     </div>

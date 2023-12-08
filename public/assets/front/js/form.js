@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             $.ajax({
                 type: 'POST',
-                url: '../../../action.php',
+                url: 'action.php',
                 data: formData,
                 processData: false,
                 contentType: false,

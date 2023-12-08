@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Resmi Törenler ve Anma Programları
+    Vip Karşılama ve Transfer
 @endsection
 
 @section('content')
