@@ -74,14 +74,19 @@ form .form-floating .form-select {
 }
 form .form-check {
   padding-left: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1460px) {
+  form .form-check {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 991.98px) {
   form .form-check {
     padding-left: 1.3em;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 form .form-check .form-check-label,
@@ -96,15 +101,21 @@ form .form-check a {
   form .form-check .form-check-label,
   form .form-check a {
     font-size: 14px;
-    padding-left: 10px;
   }
+}
+form .form-check .form-check-label {
+  padding-left: 10px;
+}
+form .form-check a {
+  color: var(--gray-900, #ADB5BD);
+  font-weight: 700;
 }
 form .form-check .form-check-input {
   vertical-align: middle;
   width: 16px;
   height: 16px;
   border-radius: 0;
-  margin-left: -1.4em;
+  margin: 0;
   padding-left: 0;
 }
 form .form-check .form-check-input:focus {
@@ -121,7 +132,7 @@ form .form-check .form-check-label ~ .invalid-tooltip {
   margin-top: -0.4rem;
 }
 form .form-check.type2 {
-  padding-left: 53px;
+  padding-left: 23px;
 }
 @media screen and (max-width: 991.98px) {
   form .form-check.type2 {
@@ -130,7 +141,7 @@ form .form-check.type2 {
 }
 @media screen and (max-width: 991.98px) {
   form .form-check.type2 .form-check-input {
-    margin-top: 0.3em;
+    margin-top: 0;
   }
 }
 form button,
@@ -258,6 +269,14 @@ form .form-select::-webkit-outer-spin-button {
   font-weight: 500;
   left: 0;
   font-size: 12px;
+  padding-left: 43px;
+}
+@media screen and (max-width: 991.98px) {
+  .invalid-tooltip {
+    padding: 0 0.5rem;
+    margin-top: -0.5rem;
+    padding-left: 17px;
+  }
 }
 
 .form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .form-control-plaintext:not(:-moz-placeholder-shown) {
@@ -293,6 +312,14 @@ form .form-select::-webkit-outer-spin-button {
 
 .was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
   background-image: url("../images/dd-arrow.svg") !important;
+}
+
+.was-validated .form-control.birthdayMask:valid, .form-control.birthdayMask.is-valid {
+  background-image: none !important;
+}
+
+.was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
+  background-image: none !important;
 }
 
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus,

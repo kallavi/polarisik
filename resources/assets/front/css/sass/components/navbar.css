@@ -114,9 +114,23 @@ header.bgNone .navbar-nav .nav-link.active {
     transform: translateX(-100%);
     transition: all 0.3s ease-in;
   }
-  #mobileMenu > .navbar-nav {
+  #mobileMenu > .menuColumn {
     height: calc(100% - 66px);
     place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #mobileMenu .navbar-nav {
+    height: 100%;
+    overflow-y: auto;
+    max-height: 38vh;
+    padding-bottom: 7.9vh;
+    padding-right: 20px;
+  }
+  #mobileMenu .navbar-nav::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0);
+    width: 0;
   }
   #mobileMenu a {
     text-decoration: none;

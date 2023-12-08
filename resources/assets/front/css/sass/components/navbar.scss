@@ -174,9 +174,23 @@ header {
         justify-content: space-between;
         transform: translateX(-100%);
         @include transition(all 0.3s ease-in);
-        & > .navbar-nav{
+        & > .menuColumn{
             height: calc(100% - 66px);
             place-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar-nav{
+            height: 100%;
+            overflow-y: auto;
+            max-height: 38vh;
+            padding-bottom: 7.9vh;
+            padding-right: 20px;
+            &::-webkit-scrollbar{
+                background-color: rgba(0,0,0,0);
+                width: 0;
+            }
         }
         a {
             text-decoration: none;
