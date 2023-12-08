@@ -1,0 +1,76 @@
+header{
+    transition: all .3s linear;
+    z-index: 9;
+    &.fixed{
+        position: fixed;
+        width: 100vw;
+        background-color: #ffffff!important;
+        padding-top: 0!important;
+        box-shadow: 0 8px 46px #0000001a;
+    }
+    a{
+        text-decoration: none;
+    }
+    &.bgNone,
+    &.fixed{
+        .navbar-brand {
+            img{
+                display: none!important;
+                &.d-none{
+                    display: block!important;
+                }
+            }
+        }
+        .socialMedia{
+            a{
+                span{
+                    &:before{
+                        color:rgba(173, 181, 189, 1)!important;
+                    }
+                }
+                @media screen and (min-width: 992px) {
+                    &:hover {
+                        span{
+                            &:before{
+                                color: var(--primary-color, #4766f4)!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn-light{
+            background: var(--primary-color, #4766F4)!important;
+            color:#ffffff!important;
+        }
+    }
+    @media screen and (max-width:991.98px) {
+        .navbar-brand{
+            width: 160px;
+            padding-right: 12px;
+            padding-top: 0;
+            img{
+                height: auto;
+            }
+        }
+    }
+}
+.socialMedia {
+    a {
+        text-decoration: none;
+        transition: all .3s linear;
+        span{
+            &:before{
+                transition: all .3s linear;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        & + a {
+            margin-left: 18px;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+footer{
+    @media screen and (max-width:991.98px) {
+        background-image: url('../images/mobil-footer-bg.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        padding-top: 37px;
+        &.bg-primary{
+            background-color: rgba(0,0,0,0)!important;
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .container-xxxl{
+        z-index: 1;
+    }
+    .logo{
+        @media screen and (max-width:991.98px) {
+            width: 100px;
+            img{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width:992px) {
+            &:before{
+                content: "";
+                position: absolute;
+                background-image: url('../images/footer-logo-bg.png');
+                background-repeat: no-repeat;
+                background-size:contain;
+                background-position: bottom center;
+                width: 328px;
+                height: 211px;
+                bottom: 0;
+                z-index: -1;
+                left: -156px;
+            }
+        }
+    }
+    .nav{
+        a{
+            color: var(--default-white, #FFF);
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-left: 41px;
+            transition: all .3s linear;
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: var(--gray-900, #ADB5BD)!important;
+                }
+            }
+        }
+    }
+    .adress{
+
+        a{
+            text-align: center;
+            color: #FFF;
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: none;
+            line-height: 19px;
+            @media screen and (max-width:991.98px) {
+                max-width: 80%;
+            }
+        }
+    }
+    .bottom{
+        span{
+            color: var(--primary-color-dark, #3A50B1);
+            font-size: 16px;
+            font-weight: 600;
+            @media screen and (max-width:991.98px) {
+                color: #ffffff;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    .socialMedia{
+        a{
+            & + a{
+                margin-left: 27px;
+                @media screen and (max-width:991.98px) {
+                    margin-left: 12px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    span{
+                        &:before{
+                            color: var(--gray-900, #ADB5BD)!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
