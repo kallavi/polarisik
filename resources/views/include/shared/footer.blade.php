@@ -1,4 +1,4 @@
-<footer class="bg-primary" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease">
+<footer class="bg-primary"@hasSection('mainContent') data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease"@endif>
     <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
             <a href="index.html" class="logo"><img src="{{asset('assets/statics/logo-light-2.svg')}}" alt=""></a>
