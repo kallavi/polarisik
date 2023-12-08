@@ -12909,6 +12909,11 @@ textarea.form-control-lg {
   border-bottom-right-radius: 0 !important;
 }
 
+.rounded-start-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -13041,6 +13046,7 @@ header.bgNone .navbar-nav .nav-link.active {
     z-index: 33;
     left: 40px;
     top: 48px;
+    z-index: 999;
     cursor: pointer;
     transition: all 0.3s ease-in;
   }
@@ -13084,24 +13090,24 @@ header.bgNone .navbar-nav .nav-link.active {
   #mobileMenu {
     position: absolute;
     z-index: 30;
-    padding: 80px 0 9vh 20px;
+    padding: 0 0 9vh 20px;
     overflow: hidden;
-    height: 100%;
+    height: calc(100% - 80px);
+    top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: auto;
     transform: translateX(-100%);
     transition: all 0.3s ease-in;
   }
   #mobileMenu > .menuColumn {
-    height: calc(100% - 66px);
-    place-content: center;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   #mobileMenu .navbar-nav {
-    overflow-y: auto;
     padding-bottom: 7.9vh;
     padding-right: 20px;
   }
@@ -13109,14 +13115,6 @@ header.bgNone .navbar-nav .nav-link.active {
     background-color: rgba(0, 0, 0, 0);
     width: 0;
   }
-}
-@media screen and (max-width: 991.98px) and (max-height: 680px) {
-  #mobileMenu .navbar-nav {
-    height: 100%;
-    max-height: 38vh;
-  }
-}
-@media screen and (max-width: 991.98px) {
   #mobileMenu a {
     text-decoration: none;
   }
@@ -13166,6 +13164,18 @@ header.bgNone .navbar-nav .nav-link.active {
   #mobileMenu .btn {
     font-size: 14px;
   }
+  #mobileMenu .bg-white {
+    position: relative;
+  }
+  #mobileMenu .bg-white:after {
+    content: "";
+    width: 80%;
+    background-color: #ffffff;
+    height: calc(100% + 2px);
+    top: -1px;
+    right: 99%;
+    position: absolute;
+  }
   .menuAnimate #mobileMenu {
     transform: translateX(0);
   }
@@ -13197,6 +13207,7 @@ header.bgNone .navbar-nav .nav-link.active {
     margin-left: 250px;
     border-radius: 36px 0 0 36px;
     overflow: hidden;
+    z-index: 99;
   }
   .menuBottom {
     padding-left: 20px;
@@ -13951,12 +13962,14 @@ footer .socialMedia a + a {
     filter: grayscale(1);
   }
 }
-.center .referans a:hover img {
-  filter: grayscale(1) opacity(0.5);
+@media screen and (min-width: 992px) {
+  .center .referans a:hover img {
+    filter: grayscale(1) opacity(0.5);
+  }
 }
 .center .contact-adress {
   border-radius: 0px 500px 500px 0px;
-  background: radial-gradient(151.07% 139.76% at 77.81% 100%, #F6F6F6 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(151.07% 139.76% at 77.81% 100%, #f6f6f6 0%, rgba(255, 255, 255, 0) 100%);
 }
 .center .contact-adress a,
 .center .contact-adress span,
@@ -14035,7 +14048,7 @@ footer .socialMedia a + a {
 @media screen and (min-width: 992px) {
   .center .map .rounded-pill {
     border-radius: 500px 0px 0px 500px !important;
-    background: var(--default-white, #FFF);
+    background: var(--default-white, #fff);
     padding: 20px;
   }
   .center .map .rounded-pill iframe {

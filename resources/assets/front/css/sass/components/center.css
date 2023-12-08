@@ -52,12 +52,14 @@
     filter: grayscale(1);
   }
 }
-.center .referans a:hover img {
-  filter: grayscale(1) opacity(0.5);
+@media screen and (min-width: 992px) {
+  .center .referans a:hover img {
+    filter: grayscale(1) opacity(0.5);
+  }
 }
 .center .contact-adress {
   border-radius: 0px 500px 500px 0px;
-  background: radial-gradient(151.07% 139.76% at 77.81% 100%, #F6F6F6 0%, rgba(255, 255, 255, 0) 100%);
+  background: radial-gradient(151.07% 139.76% at 77.81% 100%, #f6f6f6 0%, rgba(255, 255, 255, 0) 100%);
 }
 .center .contact-adress a,
 .center .contact-adress span,
@@ -136,7 +138,7 @@
 @media screen and (min-width: 992px) {
   .center .map .rounded-pill {
     border-radius: 500px 0px 0px 500px !important;
-    background: var(--default-white, #FFF);
+    background: var(--default-white, #fff);
     padding: 20px;
   }
   .center .map .rounded-pill iframe {
