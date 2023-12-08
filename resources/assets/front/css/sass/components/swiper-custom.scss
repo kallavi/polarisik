@@ -108,7 +108,7 @@
         transition: all .3s linear;
         height: 100%;
         img{
-            filter:blur(1.6px) opacity(0.5) grayscale(1);
+            filter:opacity(0.5) grayscale(1);
             // transition: all .3s linear;
             transition: filter 0.5s ease;
             max-width: 100%;
@@ -120,7 +120,7 @@
         @media screen and (min-width:992px) {
             &:hover{
                 img{
-                    filter:blur(0) opacity(1) grayscale(1);
+                    filter:opacity(1) grayscale(1);
                 }
             }
         }
