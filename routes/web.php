@@ -61,17 +61,7 @@ Route::get('hizmetlerimiz/lcv', function () {
     return view('front.services.lcv');
 })->name('hizmetlerimiz/lcv');
 
-// Route::get('referanslar', function () {
-//     return view('front.references.index');
-// })->name('referanslar');
 
-// Route::get('medya/album', function () {
-//     return view('front.media.photo-album');
-// })->name('medya/album');
-
-// Route::get('medya', function () {
-//     return view('front.media.index');
-// })->name('medya');
-
-// routes/web.php
-
+Route::get('iletisim', function () {
+    return view('front.contact.index');
+})->name('iletisim');
