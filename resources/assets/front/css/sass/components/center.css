@@ -8,7 +8,7 @@
 }
 @media screen and (min-width: 992px) {
   .center .content {
-    padding-bottom: 80px;
+    padding-bottom: 120px;
   }
 }
 .center .referans a {
@@ -44,7 +44,7 @@
   }
 }
 .center .referans a img {
-  filter: blur(1.5px) grayscale(1) opacity(0.5);
+  filter: grayscale(1) opacity(0.5);
   transition: filter 0.5s ease;
 }
 @media screen and (max-width: 767.98px) {
@@ -53,7 +53,7 @@
   }
 }
 .center .referans a:hover img {
-  filter: blur(0) grayscale(1) opacity(0.5);
+  filter: grayscale(1) opacity(0.5);
 }
 .center .contact-adress {
   border-radius: 0px 500px 500px 0px;
@@ -69,14 +69,20 @@
     justify-content: center;
   }
 }
-.center .contact-adress .socialMedia a + a {
-  margin-left: 22px;
-}
 .center .contact-adress .socialMedia :before {
   color: rgb(108, 117, 125) !important;
 }
+.center .contact-adress .socialMedia a + a {
+  margin-left: 22px;
+}
+@media screen and (min-width: 992px) {
+  .center .contact-adress .socialMedia a:hover span:before {
+    color: var(--primary-color, #4766f4) !important;
+  }
+}
 .center .contact-adress a {
-  letter-spacing: 0.9px;
+  font-size: 18px;
+  transition: all 0.3s linear;
 }
 @media screen and (max-width: 991.98px) {
   .center .contact-adress a {
@@ -85,6 +91,11 @@
     font-size: 14px;
     letter-spacing: 0px;
     line-height: 17px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .center .contact-adress a:hover {
+    color: var(--primary-color, #4766f4) !important;
   }
 }
 @media screen and (min-width: 1921px) {
@@ -205,6 +216,9 @@
 .prevPage,
 .nextPage {
   padding: 0 !important;
+  position: absolute;
+  top: 50%;
+  margin-top: 3px;
 }
 .prevPage span,
 .nextPage span {
@@ -217,7 +231,7 @@
 }
 
 .prevPage {
-  padding-right: 10px !important;
+  left: 0;
 }
 .prevPage .icon-right-arrow {
   display: flex;
@@ -229,8 +243,8 @@
   transform: rotate(-180deg);
 }
 
-.prevNext {
-  padding-left: 10px !important;
+.nextPage {
+  right: 0;
 }
 
 .bizeKatilinBg,

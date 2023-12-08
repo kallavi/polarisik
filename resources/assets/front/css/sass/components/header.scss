@@ -25,8 +25,17 @@ header{
             a{
                 span{
                     &:before{
-                    color:rgba(173, 181, 189, 1)!important;
+                        color:rgba(173, 181, 189, 1)!important;
+                    }
                 }
+                @media screen and (min-width: 992px) {
+                    &:hover {
+                        span{
+                            &:before{
+                                color: var(--primary-color, #4766f4)!important;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -50,8 +59,13 @@ header{
     a {
         text-decoration: none;
         transition: all .3s linear;
-        @media screen and (min-width:992px) {
-            &:hover{
+        span{
+            &:before{
+                transition: all .3s linear;
+            }
+        }
+        @media screen and (min-width: 992px) {
+            &:hover {
                 opacity: 0.8;
             }
         }

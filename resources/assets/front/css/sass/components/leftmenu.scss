@@ -23,7 +23,10 @@
             line-height: normal;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
+            @media screen and (max-width:991.98px) {
+                -webkit-line-clamp: 3;
+            }
         }
         &.active{
             padding: 15px 38px 15px 0;
@@ -31,6 +34,11 @@
             span{
                 color: var(--primary-color, #4766F4);
             }
+        }
+    }
+    .mobileBlock{
+        h3{
+            width: calc(100% - 60px);
         }
     }
 }

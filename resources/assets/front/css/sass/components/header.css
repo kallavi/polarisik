@@ -21,6 +21,11 @@ header.bgNone .navbar-brand img.d-none, header.fixed .navbar-brand img.d-none {
 header.bgNone .socialMedia a span:before, header.fixed .socialMedia a span:before {
   color: rgb(173, 181, 189) !important;
 }
+@media screen and (min-width: 992px) {
+  header.bgNone .socialMedia a:hover span:before, header.fixed .socialMedia a:hover span:before {
+    color: var(--primary-color, #4766f4) !important;
+  }
+}
 header.bgNone .btn-light, header.fixed .btn-light {
   background: var(--primary-color, #4766F4) !important;
   color: #ffffff !important;
@@ -38,6 +43,9 @@ header.bgNone .btn-light, header.fixed .btn-light {
 
 .socialMedia a {
   text-decoration: none;
+  transition: all 0.3s linear;
+}
+.socialMedia a span:before {
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {

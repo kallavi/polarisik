@@ -24,7 +24,12 @@
   line-height: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
+}
+@media screen and (max-width: 991.98px) {
+  .leftMenu a span {
+    -webkit-line-clamp: 3;
+  }
 }
 .leftMenu a.active {
   padding: 15px 38px 15px 0;
@@ -32,4 +37,7 @@
 }
 .leftMenu a.active span {
   color: var(--primary-color, #4766F4);
+}
+.leftMenu .mobileBlock h3 {
+  width: calc(100% - 60px);
 }/*# sourceMappingURL=leftmenu.css.map */

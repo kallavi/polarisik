@@ -12936,6 +12936,11 @@ header.bgNone .navbar-brand img.d-none, header.fixed .navbar-brand img.d-none {
 header.bgNone .socialMedia a span:before, header.fixed .socialMedia a span:before {
   color: rgb(173, 181, 189) !important;
 }
+@media screen and (min-width: 992px) {
+  header.bgNone .socialMedia a:hover span:before, header.fixed .socialMedia a:hover span:before {
+    color: var(--primary-color, #4766f4) !important;
+  }
+}
 header.bgNone .btn-light, header.fixed .btn-light {
   background: var(--primary-color, #4766F4) !important;
   color: #ffffff !important;
@@ -12953,6 +12958,9 @@ header.bgNone .btn-light, header.fixed .btn-light {
 
 .socialMedia a {
   text-decoration: none;
+  transition: all 0.3s linear;
+}
+.socialMedia a span:before {
   transition: all 0.3s linear;
 }
 @media screen and (min-width: 992px) {
@@ -13012,6 +13020,11 @@ header.bgNone .navbar-nav .nav-link {
 }
 header.bgNone .navbar-nav .nav-link.active {
   color: var(--primary-color, #4766f4);
+}
+@media screen and (min-width: 992px) {
+  header.bgNone .navbar-nav .nav-link:hover {
+    color: var(--primary-color, #4766f4);
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -13088,9 +13101,7 @@ header.bgNone .navbar-nav .nav-link.active {
     justify-content: center;
   }
   #mobileMenu .navbar-nav {
-    height: 100%;
     overflow-y: auto;
-    max-height: 38vh;
     padding-bottom: 7.9vh;
     padding-right: 20px;
   }
@@ -13098,6 +13109,14 @@ header.bgNone .navbar-nav .nav-link.active {
     background-color: rgba(0, 0, 0, 0);
     width: 0;
   }
+}
+@media screen and (max-width: 991.98px) and (max-height: 680px) {
+  #mobileMenu .navbar-nav {
+    height: 100%;
+    max-height: 38vh;
+  }
+}
+@media screen and (max-width: 991.98px) {
   #mobileMenu a {
     text-decoration: none;
   }
@@ -13643,6 +13662,12 @@ footer .nav a {
   font-weight: 600;
   text-decoration: none;
   margin-left: 41px;
+  transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  footer .nav a:hover {
+    color: var(--gray-900, #ADB5BD) !important;
+  }
 }
 footer .adress a {
   text-align: center;
@@ -13676,6 +13701,11 @@ footer .socialMedia a + a {
 @media screen and (max-width: 991.98px) {
   footer .socialMedia a + a {
     margin-left: 12px;
+  }
+}
+@media screen and (min-width: 992px) {
+  footer .socialMedia a:hover span:before {
+    color: var(--gray-900, #ADB5BD) !important;
   }
 }
 
@@ -13876,7 +13906,7 @@ footer .socialMedia a + a {
 }
 @media screen and (min-width: 992px) {
   .center .content {
-    padding-bottom: 80px;
+    padding-bottom: 120px;
   }
 }
 .center .referans a {
@@ -13912,7 +13942,7 @@ footer .socialMedia a + a {
   }
 }
 .center .referans a img {
-  filter: blur(1.5px) grayscale(1) opacity(0.5);
+  filter: grayscale(1) opacity(0.5);
   transition: filter 0.5s ease;
 }
 @media screen and (max-width: 767.98px) {
@@ -13921,7 +13951,7 @@ footer .socialMedia a + a {
   }
 }
 .center .referans a:hover img {
-  filter: blur(0) grayscale(1) opacity(0.5);
+  filter: grayscale(1) opacity(0.5);
 }
 .center .contact-adress {
   border-radius: 0px 500px 500px 0px;
@@ -13937,14 +13967,20 @@ footer .socialMedia a + a {
     justify-content: center;
   }
 }
-.center .contact-adress .socialMedia a + a {
-  margin-left: 22px;
-}
 .center .contact-adress .socialMedia :before {
   color: rgb(108, 117, 125) !important;
 }
+.center .contact-adress .socialMedia a + a {
+  margin-left: 22px;
+}
+@media screen and (min-width: 992px) {
+  .center .contact-adress .socialMedia a:hover span:before {
+    color: var(--primary-color, #4766f4) !important;
+  }
+}
 .center .contact-adress a {
-  letter-spacing: 0.9px;
+  font-size: 18px;
+  transition: all 0.3s linear;
 }
 @media screen and (max-width: 991.98px) {
   .center .contact-adress a {
@@ -13953,6 +13989,11 @@ footer .socialMedia a + a {
     font-size: 14px;
     letter-spacing: 0px;
     line-height: 17px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .center .contact-adress a:hover {
+    color: var(--primary-color, #4766f4) !important;
   }
 }
 @media screen and (min-width: 1921px) {
@@ -14073,6 +14114,9 @@ footer .socialMedia a + a {
 .prevPage,
 .nextPage {
   padding: 0 !important;
+  position: absolute;
+  top: 50%;
+  margin-top: 3px;
 }
 .prevPage span,
 .nextPage span {
@@ -14085,7 +14129,7 @@ footer .socialMedia a + a {
 }
 
 .prevPage {
-  padding-right: 10px !important;
+  left: 0;
 }
 .prevPage .icon-right-arrow {
   display: flex;
@@ -14097,8 +14141,8 @@ footer .socialMedia a + a {
   transform: rotate(-180deg);
 }
 
-.prevNext {
-  padding-left: 10px !important;
+.nextPage {
+  right: 0;
 }
 
 .bizeKatilinBg,
@@ -14168,7 +14212,12 @@ footer .socialMedia a + a {
   line-height: normal;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
+}
+@media screen and (max-width: 991.98px) {
+  .leftMenu a span {
+    -webkit-line-clamp: 3;
+  }
 }
 .leftMenu a.active {
   padding: 15px 38px 15px 0;
@@ -14176,6 +14225,9 @@ footer .socialMedia a + a {
 }
 .leftMenu a.active span {
   color: var(--primary-color, #4766F4);
+}
+.leftMenu .mobileBlock h3, .leftMenu .mobileBlock .h3 {
+  width: calc(100% - 60px);
 }
 
 .nav .nav-pills,
@@ -14275,7 +14327,10 @@ footer .socialMedia a + a {
 @media screen and (max-width: 991.98px) {
   .fancybox__nav .f-button {
     width: 60px;
-    height: 49px;
+    height: 44px;
+    top: 50% !important;
+    margin-top: 0;
+    transform: none !important;
   }
 }
 .fancybox__nav .f-button svg {
@@ -15213,4 +15268,9 @@ main {
 }
 .paragraph ul li::marker {
   font-size: 11px;
+}
+
+/*Google maps harita uzerındekı card */
+.gm-style .place-card-large {
+  display: none !important;
 }/*# sourceMappingURL=app.css.map */

@@ -44,6 +44,12 @@ footer{
             font-weight: 600;
             text-decoration: none;
             margin-left: 41px;
+            transition: all .3s linear;
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    color: var(--gray-900, #ADB5BD)!important;
+                }
+            }
         }
     }
     .adress{
@@ -79,6 +85,15 @@ footer{
                 margin-left: 27px;
                 @media screen and (max-width:991.98px) {
                     margin-left: 12px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                &:hover {
+                    span{
+                        &:before{
+                            color: var(--gray-900, #ADB5BD)!important;
+                        }
+                    }
                 }
             }
         }
