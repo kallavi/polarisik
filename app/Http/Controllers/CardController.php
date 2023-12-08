@@ -142,4 +142,101 @@ class CardController extends Controller
 
         return view('front.media.photo-album', compact('albumTitle', 'albumData'));
     }
+
+    public function referencesCard()
+    {
+        $cardReferences = [
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/maruf.svg',
+                'alt' => 'Maruf',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/arma.svg',
+                'alt' => 'arma',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/qualita.svg',
+                'alt' => 'qualita',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/careas.svg',
+                'alt' => 'careas',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/btik.svg',
+                'alt' => 'btik',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/qualita.svg',
+                'alt' => 'qualita',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/careas.svg',
+                'alt' => 'careas',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/btik.svg',
+                'alt' => 'btik',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/qualita.svg',
+                'alt' => 'qualita',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/careas.svg',
+                'alt' => 'careas',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/btik.svg',
+                'alt' => 'btik',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/maruf.svg',
+                'alt' => 'Maruf',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/arma.svg',
+                'alt' => 'arma',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/maruf.svg',
+                'alt' => 'Maruf',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/arma.svg',
+                'alt' => 'arma',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/qualita.svg',
+                'alt' => 'qualita',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/careas.svg',
+                'alt' => 'careas',
+            ],
+            [
+                'url' => 'javascript:;',
+                'image' => 'assets/statics/logos/btik.svg',
+                'alt' => 'btik',
+            ],
+        ];
+        return view('front.references.index', compact('cardReferences'));
+    }
 }
