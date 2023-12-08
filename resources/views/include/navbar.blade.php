@@ -31,9 +31,9 @@
                 <a href="https://www.youtube.com/@PolarisInsanKaynaklar?si=crJb8efFssJ-hPcm" target="_blank"><span class="fs-5 icon-youtube"></span></a>
             </div>
             @hasSection('mainContent')
-                <a href="bize-katilin.html" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="{{ url('bize-katil') }}" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
             @else
-                <a href="bize-katilin.html" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="{{ url('bize-katil') }}" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
             @endif
         </div>
     </div>

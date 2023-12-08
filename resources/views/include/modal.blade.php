@@ -4,7 +4,7 @@
         <div class="modal-body py-lg-5">
             <div class="row py-lg-5">
                 <div class="col-9 mx-auto text-center">
-                <div class="imageWrapper"><img width="113px" src="{{asset('/assets/statics/logo-dark-thumb.png')}}" alt=""></div>
+                <div class="imageWrapper"><img width="113px" src="{{asset('assets/statics/logo-dark-thumb.png')}}" alt=""></div>
                 <div class="successTitle mt-4n">Teşekkürler</div>
                 <p class="successText mb-5">Bilgileriniz firma yetkililerimiz tarafından onaylandıktan sonra mail ile onay verilecektir.
                     İlginiz için teşekkürler</p>
@@ -16,7 +16,24 @@
       </div>
     </div>
   </div>
-<div class="modal fade" id="textModal" tabindex="-1" aria-labelledby="textModalLabel" aria-hidden="true">
+  <div class="modal fade" id="successModal2" tabindex="-1" aria-labelledby="successModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl px-xxl-5">
+      <div class="modal-content py-lg-5">
+        <div class="modal-body py-lg-5">
+            <div class="row py-lg-5">
+                <div class="col-9 mx-auto text-center">
+                <div class="imageWrapper"><img width="113px" src="{{asset('assets/statics/logo-dark-thumb.png')}}" alt=""></div>
+                <div class="title mt-4n">Uyarı</div>
+                <p class="successText text-danger mb-5">20 yaş altı veya 50 yaş üstü seçildi. Lütfen geçerli bir tarih seçin.</p>
+                    <button class="btn btn-primary rounded-pill text-white ms-auto rounded-end-0 close-btn px-4 btn-lg d-inline-flex align-items-center" type="button" data-bs-dismiss="modal" aria-label="Close"> <span class="icon-plus pb-2"></span><span class="d-inline-flex ps-3 fw-semibold fs-6">Kapat</span></button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="textModal" tabindex="-1" aria-labelledby="textModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl px-xxl-5 modal-dialog-scrollable">
       <div class="modal-content py-lg-4">
         <div class="modal-body">

@@ -54,6 +54,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
         <script src="{{asset('assets/front/js/jquery.mask.min.js')}}"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="{{asset('assets/front/js/ui-datepicker-tr.js') }}"></script>
         <script src="{{asset('assets/front/js/form.js')}}"></script>
         @hasSection('mainContent')
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

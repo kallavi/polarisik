@@ -65,3 +65,7 @@ Route::get('hizmetlerimiz/lcv', function () {
 Route::get('iletisim', function () {
     return view('front.contact.index');
 })->name('iletisim');
+
+Route::get('bize-katil', function () {
+    return view('front.contact.join-us');
+})->name('bize-katil');
