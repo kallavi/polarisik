@@ -12,7 +12,7 @@
                 <a class="{{ str_starts_with(request()->path(), 'hizmetlerimiz') ? 'active' : '' }} nav-link" href="{{ url('hizmetlerimiz/festivaller-konserler') }}">Hizmetlerimiz</a>
             </li>
             <li class="nav-item">
-                <a class="{{ request()->is('medya') ? 'active' : '' }} nav-link" href="{{ url('medya') }}">Medya</a>
+                <a class="{{ str_starts_with(request()->path(), 'medya') ? 'active' : '' }} nav-link" href="{{ url('medya') }}">Medya</a>
             </li>
             <li class="nav-item">
                 <a class="{{ request()->is('referanslar') ? 'active' : '' }} nav-link" href="{{ url('referanslar') }}">Referanslar</a>

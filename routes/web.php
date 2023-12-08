@@ -18,7 +18,7 @@ use App\Http\Controllers\CardController;
 Route::get('/medya', [CardController::class, 'medyaPhotoCard']);
 Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
 
-
+Route::get('/referanslar', [CardController::class, 'referencesCard']);
 
 Route::get('/', function () {
     return view('front.home.index');
@@ -60,6 +60,10 @@ Route::get('hizmetlerimiz/vip', function () {
 Route::get('hizmetlerimiz/lcv', function () {
     return view('front.services.lcv');
 })->name('hizmetlerimiz/lcv');
+
+// Route::get('referanslar', function () {
+//     return view('front.references.index');
+// })->name('referanslar');
 
 // Route::get('medya/album', function () {
 //     return view('front.media.photo-album');
