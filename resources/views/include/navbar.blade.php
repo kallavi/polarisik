@@ -6,21 +6,22 @@
         </a>
         <ul class="ps-3 navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
             <li class="nav-item">
-                <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                <a class="{{ request()->is('bizkimiz') ? 'active' : '' }} nav-link" href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="festivaller-konserler.html">Hizmetlerimiz</a>
+                <a class="{{ str_starts_with(request()->path(), 'hizmetlerimiz') ? 'active' : '' }} nav-link" href="{{ url('hizmetlerimiz/festivaller-konserler') }}">Hizmetlerimiz</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="medya.html">Medya</a>
+                <a class="{{ request()->is('medya') ? 'active' : '' }} nav-link" href="{{ url('medya') }}">Medya</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="referanslar.html">Referanslar</a>
+                <a class="{{ request()->is('referanslar') ? 'active' : '' }} nav-link" href="{{ url('referanslar') }}">Referanslar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="iletisim.html">İletişim</a>
+                <a class="{{ request()->is('iletisim') ? 'active' : '' }} nav-link" href="{{ url('iletisim') }}">İletişim</a>
             </li>
         </ul>
+        
         <div class="hstack d-none d-lg-flex">
             <div class="socialMedia pe-xxl-5 pe-3 me-2 hstack">
                 <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>

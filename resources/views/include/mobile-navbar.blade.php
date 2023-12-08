@@ -1,36 +1,36 @@
-<div id="burgerBtn"></div>
+<div id="burgerBtn" @hasSection('content') class="primaryBtn" @endif></div>
 <div id="mobileMenu" class="d-lg-none">
     <div class="menuColumn">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="bizkimiz.html">Biz Kimiz?</a>
+                <a class="nav-link" href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Hizmetlerimiz
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="festivaller-konserler.html">Festivaller ve Konserler</a></li>
-                    <li><a class="dropdown-item" href="kongre-toplantilari.html">Kongre ve Toplantılar</a></li>
-                    <li><a class="dropdown-item" href="resmi-torenler.html">Resmi Törenler ve Anma Programları</a></li>
-                    <li><a class="dropdown-item" href="tanitim-lansmanlar.html">Tanıtım ve Lansmanlar</a></li>
-                    <li><a class="dropdown-item" href="fuar-standlar.html">Fuar ve Standlar</a></li>
-                    <li><a class="dropdown-item" href="vip-karsilama.html">Vip Karşılama ve Transfer</a></li>
-                    <li><a class="dropdown-item" href="lcv-sms-mailing-hizmetleri.html">LCV, Sms ve Mailing Hizmetleri</a></li>
-                    <li><a class="dropdown-item" href="hizmetler-test.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, in ipsum, animi eum accusamus ducimus fugiat repellat est, modi ad quia totam. Earum facilis dicta assumenda repellat molestiae sint sunt?</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/festivaller-konserler') }}">Festivaller ve Konserler</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/kongre-toplantilar') }}">Kongre ve Toplantılar</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/resmi-torenler') }}">Resmi Törenler ve Anma Programları</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/tanitimlar-lansmanlar') }}">Tanıtım ve Lansmanlar</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/fuar-stand') }}">Fuar ve Standlar</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/vip') }}">Vip Karşılama ve Transfer</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/lcv') }}">LCV, Sms ve Mailing Hizmetleri</a></li>
+                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz') }}">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="medya.html">Medya</a>
+                <a class="nav-link" href="{{ url('medya') }}">Medya</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="referanslar.html">Referanslar</a>
+                <a class="nav-link" href="{{ url('referanslar') }}">Referanslar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="iletisim.html">İletişim</a>
+                <a class="nav-link" href="{{ url('iletisim') }}">İletişim</a>
             </li>
             <li class="nav-item pt-4">
-                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="bize-katilin.html">Bize Katıl</a>
+                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="{{ url('bize-katilin') }}">Bize Katıl</a>
             </li>
         </ul>
     </div>
