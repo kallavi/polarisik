@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('front.home.index');
+})->name('home');
+
+Route::get('bizkimiz', function () {
+    return view('front.who-are-we.index');
+})->name('bizkimiz');
