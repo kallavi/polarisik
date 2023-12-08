@@ -1,7 +1,7 @@
 <footer class="bg-primary"@hasSection('mainContent') data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease"@endif>
     <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
-            <a href="index.html" class="logo"><img src="{{asset('assets/statics/logo-light-2.svg')}}" alt=""></a>
+            <a href="{{ url('/') }}" class="logo"><img src="{{asset('assets/statics/logo-light-2.svg')}}" alt=""></a>
             <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
                 <a href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
                 <a href="{{ url('hizmetlerimiz') }}">Hizmetlerimiz</a>

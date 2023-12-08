@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid px-0">
-        <a class="navbar-brand col-lg-2 pe-lg-4" href="index.html">
+        <a class="navbar-brand col-lg-2 pe-lg-4" href="{{url('/')}}">
             <img height="60px" class="w-100" src="{{asset('assets/statics/logo-light.svg') }}" alt="">
             <img height="60px" class="w-100 d-none" src="{{asset('assets/statics/logo-dark.svg') }}" alt="">
         </a>

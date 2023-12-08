@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Festivaller ve Konserler
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, in ipsum, animi eum accusamus ducimus fugiat repellat est, modi ad quia totam. Earum facilis dicta assumenda repellat molestiae sint sunt?
 @endsection
 
 @section('content')

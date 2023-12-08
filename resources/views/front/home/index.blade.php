@@ -54,7 +54,7 @@
                             <p>Sahip olduğumuz genç ve dinamik kadromuz ile firmaların, kurumların ve organizasyonların dönemsel insan kaynakları ihtiyaçlarına, özellikle günlük/part-time insan kaynağı pozisyonlarında yaşadıkları sorunlarına tanıklık etmiş bir ekip olarak bizler, sizlerin işinizi, kültürünüzü, yönetim stratejinizi anlamaya çalışan ve size özel İK hizmetleri üreten bir firmayız.</p>
                             <p>Kadrolarımızda genç arkadaşlara yer vererek onlara istihdam sağlamak, iş hayatına adım atmalarına ve kendilerini geliştirmelerine katkıda bulunmak, ayrıca sektörde yapılan bir organizasyonun her birimini görmüş deneyimli personeller yetiştirmeyi hedeflemekteyiz.</p>
                     </div>
-                    <a href="bizkimiz.html" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
+                    <a href="{{url('bizkimiz')}}" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
                 </div>
                 <div class="col-lg-6 px-0 pe-lg-0 ps-lg-2 pt-4 pt-lg-0" data-aos="fade-left"  data-aos-duration="1000" data-aos-easing="ease">
                     <div class="videoCover ps-lg-1 pt-1 pt-lg-0">
@@ -73,43 +73,43 @@
         <div class="container-xxl">
             <div class="cards row row-cols-4 justify-content-center mx-0 px-4">
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="100" data-aos-easing="ease">
-                    <a href="festivaller-konserler.html">
+                    <a href="{{ url('hizmetlerimiz/festivaller-konserler') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Festival ve Konserler</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="ease">
-                    <a href="kongre-toplantilari.html">
+                    <a href="{{ url('hizmetlerimiz/kongre-toplantilar') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Kongre ve Toplantılar</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="300" data-aos-easing="ease">
-                    <a href="resmi-torenler.html">
+                    <a href="{{ url('hizmetlerimiz/resmi-torenler') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Resmi Törenler ve Anma Programları</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="400" data-aos-easing="ease">
-                    <a href="tanitim-lansmanlar.html">
+                    <a href="{{ url('hizmetlerimiz/tanitimlar-lansmanlar') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Tanıtım ve Lansmanlar</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="500" data-aos-easing="ease">
-                    <a href="fuar-standlar.html">
+                    <a href="{{ url('hizmetlerimiz/fuar-stand') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Fuar ve Standlar</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="600" data-aos-easing="ease">
-                    <a href="vip-karsilama.html">
+                    <a href="{{ url('hizmetlerimiz/vip') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>Vip Karşılama ve Transferler</span>
                     </a>
                 </div>
                 <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="700" data-aos-easing="ease">
-                    <a href="lcv-sms-mailing-hizmetleri.html">
+                    <a href="{{ url('hizmetlerimiz/lcv') }}">
                         <img class="d-lg-none" width="29" src="{{asset('assets/statics/big-logo.png') }}" alt="">
                         <span>LCV, SMS ve Mailing Hizmetleri</span>
                     </a>

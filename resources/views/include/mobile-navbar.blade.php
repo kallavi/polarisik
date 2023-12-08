@@ -1,4 +1,4 @@
-<div id="burgerBtn" @hasSection('content') class="primaryBtn" @endif></div>
+<div id="burgerBtn"  class="{{ request()->routeIs('home') ? '' : 'primaryBtn' }}"></div>
 <div id="mobileMenu" class="d-lg-none">
     <div class="menuColumn">
         <ul class="navbar-nav">

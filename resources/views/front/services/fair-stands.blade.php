@@ -4,7 +4,7 @@
    Hizmetlerimiz
 @endsection
 @section('subTitle')
-    Resmi Törenler ve Anma Programları
+    Fuar ve Standlar
 @endsection
 
 @section('content')
