@@ -4,7 +4,7 @@
             <a href="{{ url('/') }}" class="logo"><img src="{{asset('assets/statics/logo-light-2.svg')}}" alt=""></a>
             <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
                 <a href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
-                <a href="{{ url('hizmetlerimiz') }}">Hizmetlerimiz</a>
+                <a href="{{ url('hizmetlerimiz/festivaller-konserler') }}">Hizmetlerimiz</a>
                 <a href="{{ url('medya') }}">Medya</a>
                 <a href="{{ url('referanslar') }}">Referanslar</a>
                 <a href="{{ url('iletisim') }}">İletişim</a>
