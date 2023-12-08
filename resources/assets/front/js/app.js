@@ -4,6 +4,7 @@ $(window).on('load', function () {
   }
 });
 
+
 var app = document.querySelector('.app');
 var main = document.querySelector('main');
 var menuBtn = document.getElementById("burgerBtn");
