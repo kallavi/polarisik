@@ -3,11 +3,11 @@
         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
             <a href="index.html" class="logo"><img src="{{asset('assets/statics/logo-light-2.svg')}}" alt=""></a>
             <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
-                <a href="bizkimiz.html">Biz Kimiz?</a>
-                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
-                <a href="medya.html">Medya</a>
-                <a href="referanslar.html">Referanslar</a>
-                <a href="iletisim.html">İletişim</a>
+                <a href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
+                <a href="{{ url('hizmetlerimiz') }}">Hizmetlerimiz</a>
+                <a href="{{ url('medya') }}">Medya</a>
+                <a href="{{ url('referanslar') }}">Referanslar</a>
+                <a href="{{ url('iletisim') }}">İletişim</a>
             </div>
             <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
                 <a class="pt-2" href="javascript:;">

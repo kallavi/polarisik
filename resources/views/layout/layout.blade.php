@@ -16,7 +16,20 @@
                 @hasSection('mainContent')
                     @yield('mainContent')
                 @else
-                    @yield('content')
+                    <div class="centerBg">
+                        <img src="{{asset('assets/statics/contentBg.png') }}" alt="">
+                    </div>
+
+                    
+                    <div class="center pt-lg-5 pt-3">
+                        @include('include.content-head')
+                        <div class="content pt-lg-4">
+                            <div class="container-xxxl px-xxxl-0 px-4 px-lg-2">
+                                @yield('content')
+                            </div>
+                        </div>
+                    </div>
+
                 @endif
                 <!--Footer Include-->
                 @include('include.shared.footer')
