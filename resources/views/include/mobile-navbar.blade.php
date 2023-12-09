@@ -17,7 +17,6 @@
                     <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/fuar-stand') }}">Fuar ve Standlar</a></li>
                     <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/vip') }}">Vip Karşılama ve Transfer</a></li>
                     <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/lcv') }}">LCV, Sms ve Mailing Hizmetleri</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz') }}">Lorem ipsum dolor sit amet consectetur adipisicing elit...</a></li>
                 </ul>
             </li>
             <li class="nav-item">
