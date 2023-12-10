@@ -11,7 +11,7 @@
                 <div class="imageWrapper justify-content-start pb-3 ms-xl-n2 d-none d-lg-block">
                     <img src="{{asset('assets/statics/logo-dark-2.svg')}}" alt="">
                 </div>
-                <a class="pt-3 d-flex preLine mt-1 ms-xl-n2 px-2 px-lg-0" href="javascript:;">Soğanlık Yeni Mah. Aliağa Sok. No.:8
+                <a class="pt-3 d-flex preLine mt-1 ms-xl-n2 px-2 px-lg-0" href="https://maps.app.goo.gl/94eCxMBhvph5RZo99" target="_blank">Soğanlık Yeni Mah. Aliağa Sok. No.:8
                     Bumerang Kartal  Kat: 27 D: 140  İstanbul, Türkiye
                 </a>
                 <a class="pt-4 d-flex ms-xl-n2 mt-lg-1" href="callto:02167663187">+90 216 766 3187</a>

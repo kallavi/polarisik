@@ -57,16 +57,20 @@ form{
         }
     }
     .form-check{
-        padding-left: 1.6em;
+        // padding-left: 1.6em;
         display: flex;
         align-items: center;
-        justify-content: center;
-        
+        padding-left: 0;
+        justify-content: flex-start;
+        // justify-content: center;
+
         @media screen and (max-width:1460px) {
             padding-left: 0;
         }
         @media screen and (max-width:991.98px) {
-            padding-left:1.3em;
+            // padding-left:1.3em;
+            padding-left: 0;
+            justify-content: center;
             margin: 0 auto;
      
         }
@@ -100,9 +104,14 @@ form{
             &:focus{
                 box-shadow: none;
             }
+            &:hover{
+                cursor: pointer;
+            }
+            
             @media screen and (max-width:991.98px) {
                 font-size: 14px;
-                margin-left: -1.8em;
+                margin-left: -1.4em;
+                // margin-left: -1.8em;
                 margin-top: 0.1em;
             }
         }
@@ -110,7 +119,7 @@ form{
             margin-top: -0.4rem;
         }
         &.type2{
-            padding-left: 23px;
+            padding-left: 30px;
             @media screen and (max-width:991.98px) {
                 padding-left: 27px;
             }

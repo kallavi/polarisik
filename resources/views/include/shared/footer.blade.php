@@ -10,7 +10,7 @@
                 <a href="{{ url('iletisim') }}">İletişim</a>
             </div>
             <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
-                <a class="pt-2" href="javascript:;">
+                <a class="pt-2" href="https://maps.app.goo.gl/94eCxMBhvph5RZo99" target="_blank">
                     Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul, Türkiye
                 </a>
                 <a class="pt-3" href="callto:02167663187">0 (216) 766 3187</a>

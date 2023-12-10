@@ -73,10 +73,10 @@
                 <div class="custom-file d-flex align-items-center">
                     <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" class="custom-file-input" aria-label="Fotoğraf Yükleyiniz" required style="display: none;" onchange="displayFileName()">
                     <img id="imagePreview" style="max-width: 100px; max-height: 100px; display: none;" />
-                    <label class="custom-file-label" for="fileInput" id="customFileLabel">Dosyanızı Yükleyiniz</label>
+                    <label class="custom-file-label" for="fileInput" id="customFileLabel">Fotoğrafınızı Yükleyiniz</label>
                     <button type="button" id="addButton" class="ms-auto btn" onclick="document.getElementById('fileInput').click()"><span class="icon-plus"></span></button>
                     <button type="button" id="deleteButton" class="ms-auto btn" onclick="deleteImage()" style="display: none;"><span class="icon-plus"></span></button>
-                    <div class="invalid-tooltip">Geçersiz dosya geri bildirimi örneği</div>
+                    <div class="invalid-tooltip">Lütfen Fotoğrafınızı .jpg veya .png Formatındaa Yükleyiniz.</div>
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
@@ -119,7 +119,7 @@
                     <option>F</option>
                 </select>
                 <div class="invalid-tooltip">
-                    Lütfen Seçim Seçiniz
+                    Lütfen Ehliyetinizi Seçiniz
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">

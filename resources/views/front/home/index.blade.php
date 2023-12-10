@@ -2,7 +2,7 @@
 
 @section('mainContent')
     <section id="homeSection" class="vh-100 bg-primary" data-aos="fade-in"  data-aos-duration="1000" data-aos-easing="ease">
-        <div class="swiper carouselSwiper container-xxl px-0">
+        <div class="swiper carouselSwiper container-xxl px-0 px-lg-4 px-xxxl-0">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="container-xxxl ps-2">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination pe-lg-4 pe-xxxl-0"></div>
         </div>
         <div class="fixedBg">
             <img class="d-none d-lg-block" src="{{asset('assets/statics/bg-logo-2.png') }}" alt="">
