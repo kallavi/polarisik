@@ -13,6 +13,14 @@
         display: inline-flex;
         align-items: center;
         padding: 10px 38px 10px 0;
+        transition: all .3s linear;
+        @media screen and (min-width:992px) {
+            &:hover{
+                span{
+                    color: var(--primary-color, #4766F4);
+                }
+            }
+        }
         span{
             overflow: hidden;
             color: var(--gray-500, #ADB5BD);
@@ -24,6 +32,7 @@
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 2;
+            transition: all .3s linear;
             @media screen and (max-width:991.98px) {
                 -webkit-line-clamp: 3;
             }

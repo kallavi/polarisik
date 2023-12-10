@@ -47,7 +47,7 @@ footer{
             transition: all .3s linear;
             @media screen and (min-width: 992px) {
                 &:hover {
-                    color: var(--gray-900, #ADB5BD)!important;
+                    color: var(--gray-500, #ADB5BD)!important;
                 }
             }
         }
@@ -91,7 +91,7 @@ footer{
                 &:hover {
                     span{
                         &:before{
-                            color: var(--gray-900, #ADB5BD)!important;
+                            color: var(--gray-500, #ADB5BD)!important;
                         }
                     }
                 }
