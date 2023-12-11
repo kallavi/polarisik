@@ -76,7 +76,7 @@
                     <label class="custom-file-label" for="fileInput" id="customFileLabel">Fotoğrafınızı Yükleyiniz</label>
                     <button type="button" id="addButton" class="ms-auto btn" onclick="document.getElementById('fileInput').click()"><span class="icon-plus"></span></button>
                     <button type="button" id="deleteButton" class="ms-auto btn" onclick="deleteImage()" style="display: none;"><span class="icon-plus"></span></button>
-                    <div class="invalid-tooltip">Lütfen Fotoğrafınızı .jpg veya .png Formatındaa Yükleyiniz.</div>
+                    <div class="invalid-tooltip">Lütfen Fotoğrafınızı .jpg veya .png Formatında Yükleyiniz.</div>
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
