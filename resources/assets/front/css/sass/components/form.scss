@@ -92,6 +92,13 @@ form{
         a{
             color: var(--gray-900, #ADB5BD);
             font-weight: 700;
+            transition: all .3s linear;
+            @media screen and (min-width:991.98px) {
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
         }
         .form-check-input{
             vertical-align: middle;
