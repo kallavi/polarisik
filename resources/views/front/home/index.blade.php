@@ -4,34 +4,17 @@
     <section id="homeSection" class="vh-100 bg-primary" data-aos="fade-in"  data-aos-duration="1000" data-aos-easing="ease">
         <div class="swiper carouselSwiper container-xxl px-0 px-lg-4 px-xxxl-0">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="container-xxxl ps-2">
-                        <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
-                            Lorem ipsum dolor sit amet elit!
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container-xxxl ps-2">
-                        <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
-                            Lorem ipsum dolor sit amet elit! 2
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container-xxxl ps-2">
-                        <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
-                            Lorem ipsum dolor sit amet elit! 3
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="container-xxxl ps-2">
-                        <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
-                            Lorem ipsum dolor sit amet elit! 4
-                        </div>
-                    </div>
-                </div>
+                @isset($sliders)
+                    @foreach ($sliders as $slider)
+                        <a href="{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
+                            <div class="container-xxxl ps-2">
+                                <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
+                                    {{ $slider->{'name:tr'} }}
+                                </div>
+                            </div>
+                        </a>
+                    @endforeach
+                @endisset
             </div>
             <div class="swiper-pagination pe-lg-4 pe-xxxl-0"></div>
         </div>

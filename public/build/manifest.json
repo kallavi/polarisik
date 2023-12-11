@@ -1,0 +1,44 @@
+{
+  "resources/assets/fonts/iconFont.eot": {
+    "file": "assets/iconFont-1b31303d.eot",
+    "src": "resources/assets/fonts/iconFont.eot"
+  },
+  "resources/assets/fonts/iconFont.svg": {
+    "file": "assets/iconFont-e24e0358.svg",
+    "src": "resources/assets/fonts/iconFont.svg"
+  },
+  "resources/assets/fonts/iconFont.ttf": {
+    "file": "assets/iconFont-9ad18467.ttf",
+    "src": "resources/assets/fonts/iconFont.ttf"
+  },
+  "resources/assets/fonts/iconFont.woff": {
+    "file": "assets/iconFont-81d0d991.woff",
+    "src": "resources/assets/fonts/iconFont.woff"
+  },
+  "resources/assets/front/css/app.scss": {
+    "file": "assets/app-709297c2.css",
+    "isEntry": true,
+    "src": "resources/assets/front/css/app.scss"
+  },
+  "resources/assets/front/images/card-bg.png": {
+    "file": "assets/card-bg-8cdcd14e.png",
+    "src": "resources/assets/front/images/card-bg.png"
+  },
+  "resources/assets/front/images/dd-arrow.svg": {
+    "file": "assets/dd-arrow-420a3c2b.svg",
+    "src": "resources/assets/front/images/dd-arrow.svg"
+  },
+  "resources/assets/front/images/footer-logo-bg.png": {
+    "file": "assets/footer-logo-bg-cadaf1c9.png",
+    "src": "resources/assets/front/images/footer-logo-bg.png"
+  },
+  "resources/assets/front/images/mobil-footer-bg.png": {
+    "file": "assets/mobil-footer-bg-ef21fb97.png",
+    "src": "resources/assets/front/images/mobil-footer-bg.png"
+  },
+  "resources/assets/front/js/app.js": {
+    "file": "assets/app-2891b7e2.js",
+    "isEntry": true,
+    "src": "resources/assets/front/js/app.js"
+  }
+}
