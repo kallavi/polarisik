@@ -87,55 +87,25 @@
 </div>
 @endsection
 @section('script')
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRICctFHMI3ILrEWy-_Ziq0vKSl33FNDA&libraries=places&callback=initMap"></script>
-
-<script>
-        var map;
-        var marker;
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRICctFHMI3ILrEWy-_Ziq0vKSl33FNDA&libraries=places&callback=initMap" async defer></script>
+    <script>
+        var webMap;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 40.9178937, lng: 29.1797971 },
-                zoom: 17,
-                mapTypeControl: false
+            const webMapCenter = { lat: 40.9178937, lng: 29.1797971 };
+            webMap = new google.maps.Map(document.getElementById('map'), {
+                center: webMapCenter,
+                zoom: 16,
+                mapTypeControl: false, // Uydu görünümü yerine ROADMAP (sokak haritası) kullanılır.
+                fullscreenControl: false, // Tam ekran butonunu kaldır
+                streetViewControl: false,
+                zoomControl: false
             });
 
-            marker = new google.maps.Marker({
-                position: { lat: 40.9178977, lng: 29.1772222 },
-                map: map,
-                title: 'Bumerang Kartal Rezidans'
-            });
-
-            map.panTo({ lat: 40.9178977, lng: 29.1772222 });
-
-            google.maps.event.addListener(map, 'click', function (event) {
-                var clickedLocation = event.latLng;
-                var service = new google.maps.places.PlacesService(map);
-
-                service.nearbySearch({
-                    location: clickedLocation,
-                    radius: 50
-                }, function (results, status) {
-                    if (status === google.maps.places.PlacesServiceStatus.OK && results.length > 0) {
-                        var placeId = results[0].place_id;
-
-                        service.getDetails({
-                            placeId: placeId,
-                        }, function (place, status) {
-                            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                                // Sadece infowindow içinde bilgi göstermek için marker'ı kullan
-                                var infowindow = new google.maps.InfoWindow({
-                                    content: '<strong>' + place.name + '</strong><br>' + place.formatted_address
-                                });
-
-                                // Marker'ın yerini değiştirme, sadece infowindow açma
-                                infowindow.setPosition(clickedLocation);
-                                infowindow.open(map);
-                            }
-                        });
-                    }
-                });
+            var webMarker = new google.maps.Marker({
+                position: webMapCenter,
+                map: webMap,
             });
         }
+        initMap();
     </script>
 @endsection
