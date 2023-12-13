@@ -149,8 +149,11 @@
                 border-radius: 500px 0px 0px 500px !important;
                 background: var(--default-white, #fff);
                 padding: 20px;
-                iframe {
+                iframe,
+                #map {
                     border-radius: 500px 0px 0px 500px !important;
+                    filter: grayscale(1);
+                    mix-blend-mode: luminosity;
                 }
             }
         }
