@@ -8,6 +8,7 @@ use App\Http\Controllers\Frontend\HomeController as FrontendHome;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\SomeController;
 use App\Modules\Slug\Backend\Controllers\SlugController;
+use App\Modules\Service\Frontend\Controllers\ServiceController as FrontServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,6 @@ use App\Modules\Slug\Backend\Controllers\SlugController;
 */
 
 Route::controller(LoginRegisterController::class)->group(function () {
-
     Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
     Route::post('/storeAdmin', 'storeAdmin')->name('storeAdmin');
@@ -31,7 +31,6 @@ Route::controller(LoginRegisterController::class)->group(function () {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::get('/logout', 'logout')->name('logout');
 });
-
 
 Route::get('/home', function () {
     return redirect()->route('backoffice.index');
@@ -45,7 +44,6 @@ Route::get(env('ADMIN_PREFIX') . '/home', [HomeController::class, 'index'])->nam
 
 Route::prefix(env('ADMIN_PREFIX'))->middleware(\App\Http\Middleware\BackofficeMiddleware::class)->group(
     function () {
-
         Route::get('/activities', [HomeController::class, 'activity'])->name('activities');
 
         Route::post('/slug-generate', [SlugController::class, 'generate'])->name('slug.generate');
@@ -191,16 +189,16 @@ Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
 Route::get('/referanslar', [CardController::class, 'referencesCard']);
 
 
-Route::group(['prefix' => 'hizmetlerimiz'], function () {
-    Route::get('/', [SomeController::class, 'index'])->name('hizmetlerimiz.index');
-    Route::get('festivaller-konserler', [SomeController::class, 'festivallerKonserler'])->name('hizmetlerimiz.festivaller-konserler');
-    Route::get('kongre-toplantilar', [SomeController::class, 'kongreToplantilar'])->name('hizmetlerimiz.kongre-toplantilar');
-    Route::get('resmi-torenler', [SomeController::class, 'resmiTorenler'])->name('hizmetlerimiz.resmi-torenler');
-    Route::get('tanitimlar-lansmanlar', [SomeController::class, 'tanitimlarLansmanlar'])->name('hizmetlerimiz.tanitimlar-lansmanlar');
-    Route::get('fuar-stand', [SomeController::class, 'fuarStand'])->name('hizmetlerimiz.fuar-stand');
-    Route::get('vip', [SomeController::class, 'vip'])->name('hizmetlerimiz.vip');
-    Route::get('lcv', [SomeController::class, 'lcv'])->name('hizmetlerimiz.lcv');
-});
+// Route::group(['prefix' => 'hizmetlerimiz'], function () {
+//     Route::get('/', [SomeController::class, 'index'])->name('hizmetlerimiz.index');
+//     Route::get('festivaller-konserler', [SomeController::class, 'festivallerKonserler'])->name('hizmetlerimiz.festivaller-konserler');
+//     Route::get('kongre-toplantilar', [SomeController::class, 'kongreToplantilar'])->name('hizmetlerimiz.kongre-toplantilar');
+//     Route::get('resmi-torenler', [SomeController::class, 'resmiTorenler'])->name('hizmetlerimiz.resmi-torenler');
+//     Route::get('tanitimlar-lansmanlar', [SomeController::class, 'tanitimlarLansmanlar'])->name('hizmetlerimiz.tanitimlar-lansmanlar');
+//     Route::get('fuar-stand', [SomeController::class, 'fuarStand'])->name('hizmetlerimiz.fuar-stand');
+//     Route::get('vip', [SomeController::class, 'vip'])->name('hizmetlerimiz.vip');
+//     Route::get('lcv', [SomeController::class, 'lcv'])->name('hizmetlerimiz.lcv');
+// });
 
 Route::get('/', [FrontendHome::class, 'index'])->name('home');
 
@@ -215,3 +213,20 @@ Route::get('iletisim', function () {
 Route::get('bize-katil', function () {
     return view('front.contact.join-us');
 })->name('bize-katil');
+
+Route::get('/hizmetlerimiz', [FrontServiceController::class, 'index'])->name('service.index');
+Route::get('/hizmetlerimiz/{slug}', [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
+Route::group(
+    ['prefix' => '{locale?}', 'middleware' => 'localize'],
+    function () {
+
+       // Route::get(__('sayfa') . '/{category?}/{slug?}', [FrontMenuController::class, 'index'])->name('menu.index');
+
+        Route::get(__('iletisim'), function () {
+            return view('front.contact.index');
+        })->name('iletisim');
+        //Route::get('/changeLang/{local}', [LanguageController::class, 'switch'])->name('change.lang');
+
+    }
+
+);

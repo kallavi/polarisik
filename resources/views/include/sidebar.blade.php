@@ -10,9 +10,9 @@
     ];
 
     $currentPageSlug = request()->segment(2); // Şu anki sayfanın slug'ını al
-$currentPageIndex = array_search($currentPageSlug, array_keys($pages));
+    $currentPageIndex = array_search($currentPageSlug, array_keys($pages));
 
-// Önceki ve sonraki sayfa slug'larını belirle
+    // Önceki ve sonraki sayfa slug'larını belirle
     $previousPageSlug = $currentPageIndex > 0 ? array_keys($pages)[$currentPageIndex - 1] : null;
     $nextPageSlug = $currentPageIndex < count($pages) - 1 ? array_keys($pages)[$currentPageIndex + 1] : null;
 @endphp
@@ -34,11 +34,14 @@ $currentPageIndex = array_search($currentPageSlug, array_keys($pages));
         @endif
     </div>
     <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
-        @foreach ($pages as $slug => $title)
-            <a class="{{ request()->routeIs('hizmetlerimiz.' . $slug) ? 'active' : '' }}"
-                href="{{ url('hizmetlerimiz/' . $slug) }}">
-                <span>{{ $title }}</span>
-            </a>
-        @endforeach
+        
+        @if (request()->segment(1) == 'hizmetlerimiz')
+            @foreach ($services as $service_item)
+                <a class="{!! request()->routeIs('hizmetlerimiz.' . $service_item->{'slug:tr'}) ? 'active' : '' !!}"
+                    href="/hizmetlerimiz/{!! $service_item->{'slug:tr'} !!}">
+                    <span>{!! $service_item->{'name:tr'} !!}</span>
+                </a>
+            @endforeach
+        @endif
     </div>
 </div>

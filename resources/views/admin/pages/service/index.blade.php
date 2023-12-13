@@ -39,7 +39,7 @@
                     @foreach ($services as $service)
                         <tr>
                             <td>
-                                {{ $service->name }}
+                                {!! $service->{'name:tr'} !!}
                             </td>
                             <td class="text-gray-600 fw-medium">
                                 {{ $service->created_at }}

@@ -8,53 +8,23 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-
-
-
-    public function index(string $locale, $slug = null)
+    public function index($locale = null, $slug = null)
     {
-
- 
-
-        $service = Service::translatedIn(app()->getLocale())->paginate(12);
-
+        $service = Service::translatedIn(app()->getLocale());
+        $services = Service::where('status', 'published')->get();
         return view('front.services.index', [
-
             'service' => $service,
-
+            'services' => $services
         ]);
     }
-    public function detail(string $locale, Request $request)
+
+    public function detailPage($slug = null)
     {
- 
-
-        $service = Service::with(['gallery'])->translatedIn($locale)->where('id', $request->id)->first();
-        $html = '';
- 
-        if($service->gallery){
-
-   
-        foreach ($service->gallery as $item) {
-
-            $html .= '<div class="swiper-slide bg-transparent pb-lg-0 pb-4">
-                                <div class="swiper-item">
-                                    <img class="" src="' . asset($item->slug) . '"  alt="">  
-                                </div>
-                            </div>';
-        }
-        }
-
-        return response()->json([
-            'title' => $service->name,
-            'desc' => $service->description,
-            'gallery' => $html
+        $service = Service::with('gallery')->whereTranslation('slug', $slug)->first();
+        $services = Service::where('status', 'published')->get();
+        return view('front.services.detail', [
+            'service' => $service,
+            'services' => $services
         ]);
-
-        // return view('front.service.detail', [
-
-        //     'service' => $service,
-
-
-        // ]);
     }
 }

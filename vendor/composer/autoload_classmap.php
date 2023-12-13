@@ -115,6 +115,7 @@ return array(
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
+    'App\\Providers\\MigrationServiceProvider' => $baseDir . '/app/Providers/MigrationServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'Astrotomic\\Translatable\\Contracts\\Translatable' => $vendorDir . '/astrotomic/laravel-translatable/src/Translatable/Contracts/Translatable.php',
     'Astrotomic\\Translatable\\Exception\\LocalesNotDefinedException' => $vendorDir . '/astrotomic/laravel-translatable/src/Translatable/Exception/LocalesNotDefinedException.php',

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Modules\Menu\Backend\Models\Menu;
+use App\Modules\Service\Backend\Models\Service;
 use App\Modules\Setting\Backend\Models\Setting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\App;
@@ -35,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultSimpleView('shared.front.include.pagination');
         $data['menu'] = Menu::withTranslation()->get();
         $data['setting'] = Setting::withTranslation()->first();
-
+        $data['service'] = Service::withTranslation()->get();
         View::share('data', $data);
         session()->put('customer_id', uniqid());
         $this->loadModuleViews();
