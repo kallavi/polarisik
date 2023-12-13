@@ -13,7 +13,7 @@
                 <a class="pt-2" href="https://maps.app.goo.gl/94eCxMBhvph5RZo99" target="_blank">
                     Soğanlık Yeni Mah. Aliağa Sok. No.:8 Bumerang Kartal Kat: 27 D: 140 İstanbul, Türkiye
                 </a>
-                <a class="pt-3" href="callto:02167663187">0 (216) 766 3187</a>
+                <a class="pt-3" href="tel:02167663187">0 (216) 766 3187</a>
                 <a href="mailto:info@ikpolaris.com">info@ikpolaris.com</a>
             </div>
             <div class="socialMedia pt-3 hstack justify-content-center">

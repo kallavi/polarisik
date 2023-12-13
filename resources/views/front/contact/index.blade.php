@@ -14,7 +14,7 @@
                 <a class="pt-3 d-flex preLine mt-1 ms-xl-n2 px-2 px-lg-0" href="https://maps.app.goo.gl/94eCxMBhvph5RZo99" target="_blank">Soğanlık Yeni Mah. Aliağa Sok. No.:8
                     Bumerang Kartal  Kat: 27 D: 140  İstanbul, Türkiye
                 </a>
-                <a class="pt-4 d-flex ms-xl-n2 mt-lg-1" href="callto:02167663187">+90 216 766 3187</a>
+                <a class="pt-4 d-flex ms-xl-n2 mt-lg-1" href="tel:02167663187">+90 216 766 3187</a>
                 <a class="d-flex ms-xl-n2 pt-lg-2 pb-2 text-decoration-underline" href="mailto:info@ikpolaris.com">info@ikpolaris.com</a>
                 <div class="socialMedia pt-4 hstack ms-xl-n2 pb-3">
                     <a href="javascript:;"><span class="fs-5 icon-instagram"></span></a>
@@ -79,11 +79,67 @@
         <div class="bg-primary mapBg w-100 h-100 top-50 end-0 position-absolute d-none d-lg-block"></div>
         <div class="map position-relative col-lg-10 col offset-lg-2 ps-lg-5 me-n4">
             <div class="w-100 h-100 rounded-pill overflow-hidden pe-0">
-                <!-- <div id="map"></div> -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.9020423198303!2d29.177216812453675!3d40.91789367124389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac460d66610a7%3A0x1a04ceb1a8f48f62!2sBumerang%20Kartal%20Rezidans!5e0!3m2!1str!2str!4v1701443909058!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="map" style="height: 100%; width: 100%;"></div>
+                {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.9020423198303!2d29.177216812453675!3d40.91789367124389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac460d66610a7%3A0x1a04ceb1a8f48f62!2sBumerang%20Kartal%20Rezidans!5e0!3m2!1str!2str!4v1701443909058!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
             </div>
         </div>
     </div>
 </div>
 @endsection
+@section('script')
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRICctFHMI3ILrEWy-_Ziq0vKSl33FNDA&libraries=places&callback=initMap"></script>
 
+<script>
+         function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 40.9178937, lng: 29.1797971 },
+                zoom: 17,
+                mapTypeControl: false
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 40.9178977, lng: 29.1772222 },
+                map: map,
+                title: 'Bumerang Kartal Rezidans'
+            });
+            map.panTo({ lat: 40.9178977, lng: 29.1772222 });
+            google.maps.event.addListener(map, 'click', function (event) {
+                // Tıklanan konumun koordinatlarını al
+                var clickedLocation = event.latLng;
+
+                // Yer detaylarını almak için bir Place Service oluştur
+                var service = new google.maps.places.PlacesService(map);
+
+                // Yakındaki yerleri araştır
+                service.nearbySearch({
+                    location: clickedLocation,
+                    radius: 50 // Yaklaşık 50 metre içindeki yerleri araştır
+                }, function (results, status) {
+                    if (status === google.maps.places.PlacesServiceStatus.OK && results.length > 0) {
+                        var placeId = results[0].place_id;
+
+                        // Place ID ile yer detaylarını al
+                        service.getDetails({
+                            placeId: placeId,
+                        }, function (place, status) {
+                            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                                var infowindow = new google.maps.InfoWindow({
+                                    content: '<strong>' + place.name + '</strong><br>' + place.formatted_address
+                                });
+
+                                var marker = new google.maps.Marker({
+                                    map: map,
+                                    position: place.geometry.location
+                                });
+
+                                marker.addListener('click', function () {
+                                    infowindow.open(map, marker);
+                                });
+                            }
+                        });
+                    }
+                });
+            });
+        }
+    </script>
+@endsection
