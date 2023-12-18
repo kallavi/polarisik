@@ -13,7 +13,7 @@
                     </div>
                     
                     <a class="pt-3 d-flex preLine mt-1 ms-xl-n2 px-2 px-lg-0" href="https://maps.app.goo.gl/94eCxMBhvph5RZo99" target="_blank">
-                        {{ $data['setting']['name'] }}
+                        {{ $data['setting']['address'] }}
                     </a>
                     <a class="pt-4 d-flex ms-xl-n2 mt-lg-1" href="tel:{{ $data['setting']['phone'] }}">{{ $data['setting']['phone'] }}</a>
                     <a class="d-flex ms-xl-n2 pt-lg-2 pb-2 text-decoration-underline"
@@ -102,45 +102,25 @@
     </div>
 @endsection
 @section('script')
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRICctFHMI3ILrEWy-_Ziq0vKSl33FNDA&libraries=places&callback=initMap">
-    </script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRICctFHMI3ILrEWy-_Ziq0vKSl33FNDA&libraries=places&callback=initMap" async defer></script>
     <script>
-        var map;
-        var marker;
-
+        var webMap;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {
-                    lat: 40.9178937,
-                    lng: 29.1797971
-                },
-                zoom: 17,
-                mapTypeControl: false
+            const webMapCenter = { lat: 40.9178937, lng: 29.1797971 };
+            webMap = new google.maps.Map(document.getElementById('map'), {
+                center: webMapCenter,
+                zoom: 16,
+                mapTypeControl: false, // Uydu görünümü yerine ROADMAP (sokak haritası) kullanılır.
+                fullscreenControl: false, // Tam ekran butonunu kaldır
+                streetViewControl: false,
+                zoomControl: false
             });
 
-            // Harita üzerindeki pin konumuna odaklan
-            map.panTo({
-                lat: 40.9178977,
-                lng: 29.1772222
-            });
-
-            // İlk pini oluştur
-            marker = new google.maps.Marker({
-                position: {
-                    lat: 40.9178977,
-                    lng: 29.1772222
-                },
-                map: map,
-                title: 'Bumerang Kartal Rezidans'
-            });
-
-            // Haritaya tıklama olayını ekle
-            google.maps.event.addListener(map, 'click', function(event) {
-                // Pin konumunu güncelle
-                marker.setPosition(event.latLng);
+            var webMarker = new google.maps.Marker({
+                position: webMapCenter,
+                map: webMap,
             });
         }
+        initMap();
     </script>
 @endsection
