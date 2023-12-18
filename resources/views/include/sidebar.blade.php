@@ -34,12 +34,11 @@
         @endif
     </div>
     <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
-        
         @if (request()->segment(1) == 'hizmetlerimiz')
             @foreach ($services as $service_item)
-                <a class="{!! request()->routeIs('hizmetlerimiz.' . $service_item->{'slug:tr'}) ? 'active' : '' !!}"
-                    href="/hizmetlerimiz/{!! $service_item->{'slug:tr'} !!}">
-                    <span>{!! $service_item->{'name:tr'} !!}</span>
+                <a class=""
+                    href="/hizmetlerimiz/{{ $service_item->slug }}">
+                    <span>{{ $service_item->name }}</span>
                 </a>
             @endforeach
         @endif

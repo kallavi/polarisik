@@ -66,7 +66,7 @@
                     @foreach ($services as $service)
                         <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="100"
                             data-aos-easing="ease">
-                            <a href="{{ url('hizmetlerimiz/festivaller-konserler') }}">
+                            <a href="/hizmetlerimiz/{{ $service->slug }}">
                                 <img class="d-lg-none" width="29" src="{{ asset('assets/statics/big-logo.png') }}"
                                     alt="">
                                 <span>{{ $service->name }}</span>

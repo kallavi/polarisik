@@ -10,7 +10,7 @@ class ServiceController extends Controller
 {
     public function index($locale = null, $slug = null)
     {
-        $service = Service::translatedIn(app()->getLocale());
+        $service = Service::with('gallery')->first();
         $services = Service::where('status', 'published')->get();
         return view('front.services.index', [
             'service' => $service,
@@ -18,7 +18,7 @@ class ServiceController extends Controller
         ]);
     }
 
-    public function detailPage($slug = null)
+    public function detailPage($locale = null,$slug = null)
     {
         $service = Service::with('gallery')->whereTranslation('slug', $slug)->first();
         $services = Service::where('status', 'published')->get();

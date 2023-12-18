@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-   Medya
+    Medya
 @endsection
 @section('content')
     <ul class="nav nav-pills mb-3 justify-content-center pt-3 pt-lg-0" id="pills-tab" role="tablist">

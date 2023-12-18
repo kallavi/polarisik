@@ -69,7 +69,7 @@
                                                                     :value="$photo->{'name:tr'}" />
                                                                 <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
                                                                     :labelText="'URL'" :labelClass="'form-label'" :name="'slug:tr'"
-                                                                    :placeholder="'Fotoğraf Galeri Url'" :class="'form-control name-en'"
+                                                                    :placeholder="'Fotoğraf Galeri Url'" :class="'form-control url-tr'"
                                                                     :value="$photo->{'slug:tr'}" />
                                                             </x-slot:gridRow>
                                                         </x-admin.custom-grid>
@@ -343,7 +343,6 @@
                     el.hide();
                 },
             });
-
         });
 
         $('.name-tr').on('keyup', function() {
@@ -358,6 +357,7 @@
                 type: "post",
                 data: fd,
                 success: function(result) {
+                    console.log(result);
                     $('.url-tr').val(result);
                 },
             });

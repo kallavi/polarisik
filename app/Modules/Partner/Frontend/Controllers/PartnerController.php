@@ -1,17 +1,22 @@
 <?php
 
-namespace App\Modules\Partner\Backend\Controllers;
+namespace App\Modules\Partner\Frontend\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Partner\Backend\Models\Partner;
+use Illuminate\Http\Request;
 
 class PartnerController extends Controller
 {
-      /**
+    /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $references = Partner::where('status', 'published')->get();
+        return view('front.references.index', [
+            'references' => $references
+        ]);
     }
 
     /**

@@ -191,7 +191,7 @@
                                                                                                                                                     <option
                                                                                                                                                         @if ($page->id == $sub_menu->{'content:tr'}) selected @endif
                                                                                                                                                         value="{{ $page->id }}">
-                                                                                                                                                        {{ $page->name }}
+                                                                                                                                                        {{ $page->{'name:tr'} }}
                                                                                                                                                     </option>
                                                                                                                                                 @endforeach
                                                                                                                                             </x-slot:customOptions>
@@ -304,7 +304,7 @@
                                                                                                                                                     <option
                                                                                                                                                         @if ($page->id == $sub_menu->{'content:en'}) selected @endif
                                                                                                                                                         value="{{ $page->id }}">
-                                                                                                                                                        {{ $page->name }}
+                                                                                                                                                        {{ $page->{'name:tr'} }}
                                                                                                                                                     </option>
                                                                                                                                                 @endforeach
                                                                                                                                             </x-slot:customOptions>
@@ -355,7 +355,7 @@
                                                                                                                                                     <option
                                                                                                                                                         @if ($page->id == $sub_menu->{'content:ar'}) selected @endif
                                                                                                                                                         value="{{ $page->id }}">
-                                                                                                                                                        {{ $page->name }}
+                                                                                                                                                        {{ $page->{'name:tr'} }}
                                                                                                                                                     </option>
                                                                                                                                                 @endforeach
                                                                                                                                             </x-slot:customOptions>
@@ -731,7 +731,7 @@
                                                                                                                                             <option
                                                                                                                                                 @if ($page->id == $menu->{'content:tr'}) selected @endif
                                                                                                                                                 value="{{ $page->id }}">
-                                                                                                                                                {{ $page->name }}
+                                                                                                                                                {{ $page->{'name:tr'} }}
                                                                                                                                             </option>
                                                                                                                                         @endforeach
                                                                                                                                     </x-slot:customOptions>
@@ -844,7 +844,7 @@
                                                                                                                                             <option
                                                                                                                                                 @if ($page->id == $menu->{'content:en'}) selected @endif
                                                                                                                                                 value="{{ $page->id }}">
-                                                                                                                                                {{ $page->name }}
+                                                                                                                                                {{ $page->{'name:tr'} }}
                                                                                                                                             </option>
                                                                                                                                         @endforeach
                                                                                                                                     </x-slot:customOptions>
@@ -895,7 +895,7 @@
                                                                                                                                             <option
                                                                                                                                                 @if ($page->id == $menu->{'content:ar'}) selected @endif
                                                                                                                                                 value="{{ $page->id }}">
-                                                                                                                                                {{ $page->name }}
+                                                                                                                                                {{ $page->{'name:tr'} }}
                                                                                                                                             </option>
                                                                                                                                         @endforeach
                                                                                                                                     </x-slot:customOptions>
@@ -1288,7 +1288,7 @@
                                                                                                                                         <option
                                                                                                                                             @if ($page->id == $sub_menu->{'content:tr'}) selected @endif
                                                                                                                                             value="{{ $page->id }}">
-                                                                                                                                            {{ $page->name }}
+                                                                                                                                            {{ $page->{'name:tr'} }}
                                                                                                                                         </option>
                                                                                                                                     @endforeach
                                                                                                                                 </x-slot:customOptions>
@@ -1401,7 +1401,7 @@
                                                                                                                                         <option
                                                                                                                                             @if ($page->id == $sub_menu->{'content:en'}) selected @endif
                                                                                                                                             value="{{ $page->id }}">
-                                                                                                                                            {{ $page->name }}
+                                                                                                                                            {{ $page->{'name:tr'} }}
                                                                                                                                         </option>
                                                                                                                                     @endforeach
                                                                                                                                 </x-slot:customOptions>
@@ -1744,7 +1744,7 @@
                                                                                                                                 <option
                                                                                                                                     @if ($page->id == $menu->{'content:tr'}) selected @endif
                                                                                                                                     value="{{ $page->id }}">
-                                                                                                                                    {{ $page->name }}
+                                                                                                                                    {{ $page->{'name:tr'} }}
                                                                                                                                 </option>
                                                                                                                             @endforeach
                                                                                                                         </x-slot:customOptions>
@@ -1857,7 +1857,7 @@
                                                                                                                                 <option
                                                                                                                                     @if ($page->id == $menu->{'content:en'}) selected @endif
                                                                                                                                     value="{{ $page->id }}">
-                                                                                                                                    {{ $page->name }}
+                                                                                                                                    {{ $page->{'name:tr'} }}
                                                                                                                                 </option>
                                                                                                                             @endforeach
                                                                                                                         </x-slot:customOptions>

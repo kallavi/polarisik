@@ -12,23 +12,11 @@ class PageController extends Controller
     public function index($menu = null, $slug = null)
     {
 
-        $getMenu = Menu::withTranslation()->where('slug', $menu)->first();
-        $getPage = Page::whereTranslation('slug', $slug)->first();
+        $getMenu = Menu::whereTranslation('slug', $menu)->first();
+        $getPage = Page::whereTranslation('id', $getMenu->content)->first();
 
-
-        $getMenuList = Page::where('menu', $getMenu->id)->get();
-   
-
-        // $page = Page::withTranslation()->where('status', 'published')->orderBy('date')->first();
-    
-
-
-        return view('front.page.index', [
-
-
+        return view('front.who-are-we.index', [
             'page' => $getPage,
-            'menu' => $getMenuList,
-
         ]);
     }
 }

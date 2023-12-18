@@ -1,4 +1,4 @@
-@foreach($videosData as $video)
+{{--  @foreach($videosData as $video)
     <div class="col-md-4 col-sm-6 col-11">
         <a class="card border-0 p-0" href="{{ $video['url'] }}" data-fancybox="videoGallery">
             <div class="card-top text-bg-light position-relative">
@@ -12,4 +12,4 @@
             </div>
         </a>
     </div>
-@endforeach
+@endforeach  --}}

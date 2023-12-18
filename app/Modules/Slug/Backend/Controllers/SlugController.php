@@ -35,7 +35,6 @@ class SlugController extends Controller
 
     public function generate(Request $request)
     {
-
         return Str::slug($request->name);
     }
 

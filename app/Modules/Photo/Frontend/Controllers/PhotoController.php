@@ -1,19 +1,32 @@
 <?php
 
-namespace App\Modules\Photo\Backend\Controllers;
+namespace App\Modules\Photo\Frontend\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Modules\Photo\Backend\Models\Photo;
+use Illuminate\Http\Request;
 
 class PhotoController extends Controller
 {
-      /**
+    /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($locale = null, $slug = null)
     {
-        //
+        $photos = Photo::where('status', 'published')->get();
+        return view('front.media.index', [
+            'photos' => $photos
+        ]);
     }
 
+    public function detailPage($slug = null)
+    {
+        $photo = Photo::with('gallery')->whereTranslation('slug', $slug)->first();
+        return view('front.media.detail', [
+            'photo' => $photo,
+        ]);
+    }
+    
     /**
      * Show the form for creating a new resource.
      */

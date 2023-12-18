@@ -5,10 +5,11 @@ use App\Http\Controllers\Auth\LoginRegisterController;
 
 use App\Http\Controllers\Backoffice\HomeController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHome;
-use App\Http\Controllers\CardController;
-use App\Http\Controllers\SomeController;
+use App\Modules\Page\Frontend\Controllers\PageController;
+use App\Modules\Partner\Frontend\Controllers\PartnerController as FrontPartnerController;
 use App\Modules\Slug\Backend\Controllers\SlugController;
 use App\Modules\Service\Frontend\Controllers\ServiceController as FrontServiceController;
+use App\Modules\Photo\Frontend\Controllers\PhotoController as FrontPhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -183,10 +184,8 @@ Route::prefix(env('ADMIN_PREFIX'))->middleware(\App\Http\Middleware\BackofficeMi
     }
 );
 
-Route::get('/medya', [CardController::class, 'medyaPhotoCard']);
-Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
-
-Route::get('/referanslar', [CardController::class, 'referencesCard']);
+// Route::get('/medya', [CardController::class, 'medyaPhotoCard']);
+// Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
 
 
 // Route::group(['prefix' => 'hizmetlerimiz'], function () {
@@ -202,9 +201,16 @@ Route::get('/referanslar', [CardController::class, 'referencesCard']);
 
 Route::get('/', [FrontendHome::class, 'index'])->name('home');
 
-Route::get('bizkimiz', function () {
-    return view('front.who-are-we.index');
-})->name('bizkimiz');
+Route::get('/biz-kimiz', [PageController::class, 'index'])->name('about.index');
+
+// Route::get('/hizmetlerimiz', [FrontServiceController::class, 'index'])->name('service.index');
+// Route::get('/hizmetlerimiz/{slug}', [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
+
+Route::get('/medya', [FrontPhotoController::class, 'index'])->name('media.index');
+
+Route::get('/medya/{slug}', [FrontPhotoController::class, 'detailPage'])->name('media.detailPage');
+
+Route::get('/referanslar', [FrontPartnerController::class, 'index'])->name('references.index');
 
 Route::get('iletisim', function () {
     return view('front.contact.index');
@@ -214,11 +220,12 @@ Route::get('bize-katil', function () {
     return view('front.contact.join-us');
 })->name('bize-katil');
 
-Route::get('/hizmetlerimiz', [FrontServiceController::class, 'index'])->name('service.index');
-Route::get('/hizmetlerimiz/{slug}', [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
 Route::group(
     ['prefix' => '{locale?}', 'middleware' => 'localize'],
     function () {
+
+        Route::get(__('/hizmetlerimiz'), [FrontServiceController::class, 'index'])->name('service.index');
+        Route::get(__('/hizmetlerimiz/{slug?}'), [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
 
        // Route::get(__('sayfa') . '/{category?}/{slug?}', [FrontMenuController::class, 'index'])->name('menu.index');
 
