@@ -60,19 +60,19 @@
         @endif
         <div class="socialMedia hstack">
                 @if ($data['setting']['instagram'])
-                    <a href="$data['setting']['instagram']" target="_blank"><span class="fs-5 icon-instagram"></span></a>
+                    <a href="{{ $data['setting']['instagram'] }}" target="_blank"><span class="fs-5 icon-instagram"></span></a>
                 @endif
                 @if ($data['setting']['twitter'])
-                    <a href="$data['setting']['twitter']" target="_blank"><span class="fs-5 icon-twitter"></span></a>
+                    <a href="{{ $data['setting']['twitter'] }}" target="_blank"><span class="fs-5 icon-twitter"></span></a>
                 @endif
                 @if ($data['setting']['linkedin'])
-                    <a href="$data['setting']['linkedin']" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
+                    <a href="{{ $data['setting']['linkedin'] }}" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
                 @endif
                 @if ($data['setting']['facebook'])
-                    <a href="$data['setting']['facebook']" target="_blank"><span class="fs-5 icon-facebook"></span></a>
+                    <a href="{{ $data['setting']['facebook'] }}" target="_blank"><span class="fs-5 icon-facebook"></span></a>
                 @endif
                 @if ($data['setting']['youtube'])
-                    <a href="$data['setting']['youtube']" target="_blank"><span class="fs-5 icon-youtube"></span></a>
+                    <a href="{{ $data['setting']['youtube'] }}" target="_blank"><span class="fs-5 icon-youtube"></span></a>
                 @endif
         </div>
     </div>
