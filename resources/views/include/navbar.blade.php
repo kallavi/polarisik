@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid px-0">
-        <a class="navbar-brand col-lg-2 pe-lg-4" href="/">
+        <a class="navbar-brand col-lg-2 pe-lg-4" href="/{{ request()->segment(1) }}">
             <img height="60px" class="w-100" src="{{asset($data['setting']['logo']) }}" alt="{{ $data['setting']['name'] }}">
             <img height="60px" class="w-100 d-none" src="{{asset($data['setting']['dark_logo']) }}" alt="{{ $data['setting']['name'] }}">
         </a>
@@ -33,9 +33,21 @@
                 @endif
             </div>
             @hasSection('mainContent')
-                <a href="/bize-katil" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="/{{ request()->segment(1) }}/bize-katil" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">
+                    @if (request()->segment(1) == 'tr')
+                        Bize Katılın
+                    @else
+                        Join Us
+                    @endif
+                </a>
             @else
-                <a href="/bize-katil" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">Bize Katılın</a>
+                <a href="/{{ request()->segment(1) }}/bize-katil" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">
+                    @if (request()->segment(1) == 'tr')
+                        Bize Katılın
+                    @else
+                        Join Us
+                    @endif
+                </a>
             @endif
         </div>
     </div>

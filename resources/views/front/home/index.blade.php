@@ -6,7 +6,7 @@
             <div class="swiper-wrapper">
                 @isset($sliders)
                     @foreach ($sliders as $slider)
-                        <a href="{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
+                        <a href="/{{ request()->segment(1) }}/{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
                             <div class="container-xxxl ps-2">
                                 <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
                                     {{ $slider->{'name:tr'} }}
@@ -43,7 +43,16 @@
                             ve kendilerini geliştirmelerine katkıda bulunmak, ayrıca sektörde yapılan bir organizasyonun her
                             birimini görmüş deneyimli personeller yetiştirmeyi hedeflemekteyiz.</p>
                     </div>
-                    <a href="{{ url('bizkimiz') }}" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
+                    @if(request()->segment(1) == 'tr')
+                        @php
+                            $biz = 'biz-kimiz';
+                        @endphp
+                    @else 
+                        @php
+                            $biz = 'who-are-we';
+                        @endphp
+                    @endif
+                    <a href="/{{ request()->segment(1) }}/{{ $biz }}" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
                 </div>
                 <div class="col-lg-6 px-0 pe-lg-0 ps-lg-2 pt-4 pt-lg-0" data-aos="fade-left" data-aos-duration="1000"
                     data-aos-easing="ease">
@@ -63,10 +72,19 @@
         <section>
             <div class="container-xxl">
                 <div class="cards row row-cols-4 justify-content-center mx-0 px-4">
+                    @if(request()->segment(1) == 'tr')
+                        @php
+                            $hizmet = 'hizmetlerimiz';
+                        @endphp
+                    @else 
+                        @php
+                            $hizmet = 'services';
+                        @endphp
+                    @endif
                     @foreach ($services as $service)
                         <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="100"
                             data-aos-easing="ease">
-                            <a href="/hizmetlerimiz/{{ $service->slug }}">
+                            <a href="/{{ request()->segment(1) }}/{{ $hizmet }}/{{ $service->slug }}">
                                 <img class="d-lg-none" width="29" src="{{ asset('assets/statics/big-logo.png') }}"
                                     alt="">
                                 <span>{{ $service->name }}</span>
