@@ -10,21 +10,39 @@ class ServiceController extends Controller
 {
     public function index($locale = null, $slug = null)
     {
-        $service = Service::with('gallery')->first();
+        $service = Service::withTranslation()->with('gallery')->first();
         $services = Service::where('status', 'published')->get();
+
+        $next_id = Service::where('status', "published")->where('id', '>', $service->id)->translatedIn(app()->getLocale())->min('id');
+        $next = Service::where('id', $next_id)->first();
+
+        $prev_id = Service::where('status', "published")->where('id', '<', $service->id)->translatedIn(app()->getLocale())->max('id');
+        $prev = Service::where('id', $prev_id)->first();
+
         return view('front.services.index', [
             'service' => $service,
-            'services' => $services
+            'services' => $services,
+            'next' => $next,
+            'prev' => $prev
         ]);
     }
 
-    public function detailPage($locale = null,$slug = null)
+    public function detailPage($locale = null, $slug = null)
     {
-        $service = Service::with('gallery')->whereTranslation('slug', $slug)->first();
+        $service = Service::withTranslation()->with('gallery')->whereTranslation('slug', $slug)->first();
         $services = Service::where('status', 'published')->get();
+
+        $next_id = Service::where('status', "published")->where('id', '>', $service->id)->translatedIn(app()->getLocale())->min('id');
+        $next = Service::where('id', $next_id)->first();
+
+        $prev_id = Service::where('status', "published")->where('id', '<', $service->id)->translatedIn(app()->getLocale())->max('id');
+        $prev = Service::where('id', $prev_id)->first();
+
         return view('front.services.detail', [
             'service' => $service,
-            'services' => $services
+            'services' => $services,
+            'next' => $next,
+            'prev' => $prev
         ]);
     }
 }

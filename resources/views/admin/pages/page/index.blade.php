@@ -39,7 +39,7 @@
                     @foreach ($pages as $page)
                         <tr>
                             <td>
-                                {{ $page->name }}
+                                {{ $page->{'name:tr'} }}
                             </td>
                             <td class="text-gray-600 fw-medium">
                                 {{ $page->created_at }}

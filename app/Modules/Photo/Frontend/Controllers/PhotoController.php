@@ -4,6 +4,7 @@ namespace App\Modules\Photo\Frontend\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\Photo\Backend\Models\Photo;
+use App\Modules\Video\Backend\Models\Video;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -14,14 +15,16 @@ class PhotoController extends Controller
     public function index($locale = null, $slug = null)
     {
         $photos = Photo::where('status', 'published')->get();
+        $videos = Video::where('status', 'published')->get();
         return view('front.media.index', [
-            'photos' => $photos
+            'photos' => $photos,
+            'videos' => $videos
         ]);
     }
 
-    public function detailPage($slug = null)
+    public function detailPage($locale = null, $slug = null)
     {
-        $photo = Photo::with('gallery')->whereTranslation('slug', $slug)->first();
+        $photo = Photo::withTranslation()->with('gallery')->whereTranslation('slug', $slug)->first();
         return view('front.media.detail', [
             'photo' => $photo,
         ]);

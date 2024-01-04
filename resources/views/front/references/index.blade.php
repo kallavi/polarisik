@@ -1,7 +1,11 @@
 @extends('layout.layout')
 
 @section('title')
-    Referanslar
+    @if (request()->segment(1) == 'tr')
+        Referanslar
+    @else
+        References
+    @endif
 @endsection
 @section('content')
     <div class="row m-0 p-0">

@@ -1,7 +1,11 @@
 @extends('layout.layout')
 
 @section('title')
-    İletişim
+    @if (request()->segment(1) == 'tr')
+        İletişim
+    @else
+        Contact
+    @endif
 @endsection
 @section('fullContain')
     <div class="row hstack">
@@ -39,54 +43,119 @@
             </div>
         </div>
         <div class="col-xxl-5 col-xl-6 col-lg-7 col-11 pb-lg-5 pb-4 pt-3 px-3 px-lg-0 me-lg-auto mobileCenter">
-            <form method="POST" action="#" id="contactForm" class="row g-lg-3 needs-validation px-lg-4" novalidate>
+            <form method="POST" action="{{ route('contact.store') }}" id="contactForm" class="row g-lg-3 needs-validation px-lg-4" novalidate>
+                @csrf
                 <div class="form-floating mb-lg-2 mb-1 col-12">
-                    <input type="text" class="form-control textMask" id="name" placeholder="Adınız" required>
-                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" class="form-control textMask" id="name" placeholder="" name="name_surname" required>
+                    <label for="name">
+                        @if (request()->segment(1) == 'tr')
+                            Adınız Soyadınız
+                        @else
+                            Name Surname
+                        @endif
+                    </label>
                     <div class="invalid-tooltip">
-                        Lütfen Adınızı Soyadınızı Giriniz
+                        @if (request()->segment(1) == 'tr')
+                            Lütfen Adınızı Soyadınızı Giriniz
+                        @else
+                            Please enter your name surname
+                        @endif
                     </div>
                 </div>
                 <div class="form-floating mb-lg-2 mb-1 col-lg-6 col-12">
-                    <input type="text" class="form-control phoneMask" id="phone" placeholder="Telefon Numaranız"
+                    <input type="text" class="form-control phoneMask" name="phone_number" id="phone" placeholder=""
                         required>
-                    <label for="surname">Telefon Numaranız</label>
+                    <label for="surname">
+                        @if (request()->segment(1) == 'tr')
+                            Telefon Numaranız
+                        @else
+                            Phone Number
+                        @endif
+                    </label>
                     <div class="invalid-tooltip">
-                        Lütfen Telefon Numaranızı Giriniz
+                        @if (request()->segment(1) == 'tr')
+                            Lütfen Telefon Numaranızı Giriniz
+                        @else
+                            Please enter your phone number
+                        @endif
                     </div>
                 </div>
                 <div class="form-floating mb-lg-2 mb-1 col-lg-6 col-12">
-                    <input type="email" class="form-control emailMask" id="eposta" placeholder="E-Postanız" required>
-                    <label for="eposta">E-Postanız</label>
+                    <input type="email" class="form-control emailMask" name="e_mail" id="eposta" placeholder="" required>
+                    <label for="eposta">
+                        @if (request()->segment(1) == 'tr')
+                            E-Postanız
+                        @else
+                            E-Mail
+                        @endif
+                    </label>
                     <div class="invalid-tooltip">
-                        Lütfen E-Postanızı Giriniz
+                        @if (request()->segment(1) == 'tr')
+                            Lütfen E-Postanızı Giriniz
+                        @else
+                            Please enter your e-mail
+                        @endif
                     </div>
                 </div>
                 <div class="form-floating mb-lg-2 mb-1 col-12">
-                    <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu"
+                    <input type="text" class="form-control textMask" name="message_subject" id="messageSubject" placeholder=""
                         required>
-                    <label for="messageSubject">Mesaj Konusu</label>
+                    <label for="messageSubject">
+                        @if (request()->segment(1) == 'tr')
+                            Mesaj Konusu
+                        @else
+                            Message Subject
+                        @endif
+                    </label>
                     <div class="invalid-tooltip">
-                        Lütfen Mesaj Konusu Giriniz
+                        @if (request()->segment(1) == 'tr')
+                            Lütfen Mesaj Konusu Giriniz
+                        @else
+                            Please enter your message subject
+                        @endif
                     </div>
                 </div>
                 <div class="form-floating col-12 mb-lg-2 mb-1">
-                    <textarea class="form-control" placeholder="Mesajınız" id="message" rows="5" cols="30" required></textarea>
-                    <label for="message">Mesajınız</label>
+                    <textarea class="form-control" placeholder="" name="message" id="message" rows="5" cols="30" required></textarea>
+                    <label for="message">
+                        @if (request()->segment(1) == 'tr')
+                            Mesajınız
+                        @else
+                            Message
+                        @endif
+                    </label>
                     <div class="invalid-tooltip">
-                        Lütfen Mesajınızı Giriniz
+                        @if (request()->segment(1) == 'tr')
+                            Lütfen Mesajınızı Giriniz
+                        @else
+                            Please enter your message
+                        @endif
                     </div>
                 </div>
                 <div class="position-relative col-lg-7 col-12 hstack pt-lg-2 pt-3 mb-3 mb-lg-0">
                     <div class="form-check w-100">
                         <input class="form-check-input" type="checkbox" value="" id="kvkkCheck" required>
                         <label class="form-check-label d-flex mt-0" for="kvkkCheck">
-                            <a data-bs-toggle="modal" data-bs-target="#textModal">KVKK Aydınlatma Metni</a>'ni Okudum
+                            
+                        @if (request()->segment(1) == 'tr')
+                            <a data-bs-toggle="modal" data-bs-target="#textModal">
+                            KVKK Aydınlatma Metni</a>'ni Okudum
+                        @else
+                            I have read the &nbsp;
+                            <a data-bs-toggle="modal" data-bs-target="#textModal">
+                            PDPL Information Text</a>
+                        @endif
                         </label>
                     </div>
                 </div>
                 <div class="col-lg-4 col-12 ms-auto pt-1">
-                    <button class="btn btn-primary rounded-pill text-white ms-auto" type="submit"> Gönder</button>
+                    <button class="btn btn-primary rounded-pill text-white ms-auto" type="submit">
+                        @if (request()->segment(1) == 'tr')
+                            Gönder
+                        @else
+                            Submit
+                        @endif
+                    </button>
                 </div>
             </form>
         </div>

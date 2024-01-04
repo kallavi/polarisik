@@ -1,11 +1,11 @@
 @foreach ($references as $referans)
     <div class="pb-2 pb-md-0">
         <a
-        @if ($referans['slug:tr'])
-            href="{{ $referans['slug:tr'] }}"
+        @if ($referans->slug)
+            href="{{ $referans->slug }}"
         @endif
         class="text-center pt-2">
-            <img class="img-fluid" src="{{$referans['image']}}" alt="{{$referans['name:tr']}}">
+            <img class="img-fluid" src="/{{ $referans->image }}" alt="{{ $referans->name }}">
         </a>
     </div>
 @endforeach

@@ -15,6 +15,7 @@ return [
     */
 
     "hizmetler" => "services",
+    "referanslar" => "references",
     'blog' => 'blog',
     'iletisim' => 'contact',
     

@@ -101,18 +101,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
             $.ajax({
                 type: 'POST',
-                url: 'action.php',
+                url: $(this).attr('action'),
                 data: formData,
                 processData: false,
                 contentType: false,
                 success: function (response) {
                     if (response === 'ok') {
                         // Eğer cevap 'ok' ise, Bootstrap modal'ı aç
-                        $("#successModal .responseText").text('Form başarıyla gönderildi. Sunucu cevabı: ' + response)
+                        $("#successModal .responseText").text('Form başarıyla gönderildi.')
                         $('#successModal').modal('show');
                     } else {
                         // Diğer başarı durumlarını ele al veya bir uyarı göster
-                        $("#successModal .responseText").text('Form başarıyla gönderildi. Sunucu cevabı Diğer: ' + response)
+                        $("#successModal .responseText").text('Form başarıyla gönderildi.')
                         $('#successModal').modal('show');
                     }
                 },

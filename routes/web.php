@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 
 use App\Http\Controllers\Backoffice\HomeController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHome;
+use App\Http\Controllers\JoinUsController;
 use App\Modules\Page\Frontend\Controllers\PageController;
 use App\Modules\Partner\Frontend\Controllers\PartnerController as FrontPartnerController;
 use App\Modules\Slug\Backend\Controllers\SlugController;
@@ -184,56 +186,33 @@ Route::prefix(env('ADMIN_PREFIX'))->middleware(\App\Http\Middleware\BackofficeMi
     }
 );
 
-// Route::get('/medya', [CardController::class, 'medyaPhotoCard']);
-// Route::get('/medya/album/{slug}', [CardController::class, 'showAlbum']);
 
-
-// Route::group(['prefix' => 'hizmetlerimiz'], function () {
-//     Route::get('/', [SomeController::class, 'index'])->name('hizmetlerimiz.index');
-//     Route::get('festivaller-konserler', [SomeController::class, 'festivallerKonserler'])->name('hizmetlerimiz.festivaller-konserler');
-//     Route::get('kongre-toplantilar', [SomeController::class, 'kongreToplantilar'])->name('hizmetlerimiz.kongre-toplantilar');
-//     Route::get('resmi-torenler', [SomeController::class, 'resmiTorenler'])->name('hizmetlerimiz.resmi-torenler');
-//     Route::get('tanitimlar-lansmanlar', [SomeController::class, 'tanitimlarLansmanlar'])->name('hizmetlerimiz.tanitimlar-lansmanlar');
-//     Route::get('fuar-stand', [SomeController::class, 'fuarStand'])->name('hizmetlerimiz.fuar-stand');
-//     Route::get('vip', [SomeController::class, 'vip'])->name('hizmetlerimiz.vip');
-//     Route::get('lcv', [SomeController::class, 'lcv'])->name('hizmetlerimiz.lcv');
-// });
-
-Route::get('/', [FrontendHome::class, 'index'])->name('home');
-
-Route::get('/biz-kimiz', [PageController::class, 'index'])->name('about.index');
-
-// Route::get('/hizmetlerimiz', [FrontServiceController::class, 'index'])->name('service.index');
-// Route::get('/hizmetlerimiz/{slug}', [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
-
-Route::get('/medya', [FrontPhotoController::class, 'index'])->name('media.index');
-
-Route::get('/medya/{slug}', [FrontPhotoController::class, 'detailPage'])->name('media.detailPage');
-
-Route::get('/referanslar', [FrontPartnerController::class, 'index'])->name('references.index');
-
-Route::get('iletisim', function () {
-    return view('front.contact.index');
-})->name('iletisim');
-
-Route::get('bize-katil', function () {
-    return view('front.contact.join-us');
-})->name('bize-katil');
+Route::post('/contact_form_submit', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/joinus_form_submit', [JoinUsController::class, 'store'])->name('joinus.store');
 
 Route::group(
     ['prefix' => '{locale?}', 'middleware' => 'localize'],
     function () {
+        Route::get('/', [FrontendHome::class, 'index'])->name('home');
+        Route::get(__('biz-kimiz'), [PageController::class, 'index'])->name('about.index');
 
-        Route::get(__('/hizmetlerimiz'), [FrontServiceController::class, 'index'])->name('service.index');
-        Route::get(__('/hizmetlerimiz/{slug?}'), [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
+        Route::get(__('medya'), [FrontPhotoController::class, 'index'])->name('media.index');
 
-       // Route::get(__('sayfa') . '/{category?}/{slug?}', [FrontMenuController::class, 'index'])->name('menu.index');
+        Route::get(__('medya').'/{slug}', [FrontPhotoController::class, 'detailPage'])->name('media.detailPage');
+        
+        Route::get(__('referanslar'), [FrontPartnerController::class, 'index'])->name('references.index');
+
+        
+        Route::get(__('bize-katil'), function () {
+            return view('front.contact.join-us');
+        })->name('bize-katil');
+        
+
+        Route::get(__('hizmetlerimiz'), [FrontServiceController::class, 'index'])->name('service.index');
+        Route::get(__('hizmetlerimiz').'/{slug?}', [FrontServiceController::class, 'detailPage'])->name('service.detailPage');
 
         Route::get(__('iletisim'), function () {
             return view('front.contact.index');
         })->name('iletisim');
-        //Route::get('/changeLang/{local}', [LanguageController::class, 'switch'])->name('change.lang');
-
     }
-
 );

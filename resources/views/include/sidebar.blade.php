@@ -21,23 +21,23 @@
 <div class="leftMenu col-lg-4 col-xxl-3 col-12 pt-lg-2 px-0">
     <div
         class="mobileBlock d-flex d-lg-none justify-content-center justify-content-center pt-3 mt-1 px-0 position-relative">
-        @if (!is_null($previousPageSlug))
-            <a class="prevPage" href="{{ url('hizmetlerimiz/' . $previousPageSlug) }}"><span
+        @if ($prev)
+            <a class="prevPage" href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $prev->slug }}"><span
                     class="icon-right-arrow text-primary"></span></a>
         @endif
         <h3>@yield('subTitle')</h3>
-        @if (!is_null($nextPageSlug))
-            <a class="nextPage {{ is_null($nextPageSlug) ? 'disabled' : '' }}"
-                href="{{ url('hizmetlerimiz/' . $nextPageSlug) }}">
+        @if ($next)
+            <a class="nextPage {{ is_null($next->slug) ? 'disabled' : '' }}"
+                href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $next->slug }}">
                 <span class="icon-right-arrow text-primary"></span>
             </a>
         @endif
     </div>
     <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
-        @if (request()->segment(1) == 'hizmetlerimiz')
+        @if (request()->segment(2) == 'hizmetlerimiz' || request()->segment(2) == 'services')
             @foreach ($services as $service_item)
                 <a class=""
-                    href="/hizmetlerimiz/{{ $service_item->slug }}">
+                    href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $service_item->slug }}">
                     <span>{{ $service_item->name }}</span>
                 </a>
             @endforeach

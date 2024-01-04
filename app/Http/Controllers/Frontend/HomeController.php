@@ -9,7 +9,7 @@ use App\Modules\Slider\Backend\Models\Slider;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(String $locale)
     {
         $service = Service::withTranslation()->where('status', 'published')->get();
         $partner = Partner::withTranslation()->where('status', 'published')->get();

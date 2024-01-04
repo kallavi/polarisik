@@ -1,10 +1,14 @@
 @extends('layout.layout')
 
 @section('title')
-    Hizmetlerimiz
+    @if(request()->segment('1') == 'tr')
+        Hizmetlerimiz
+    @else
+        Services
+    @endif
 @endsection
 @section('subTitle')
-    {!! $service->{'name:tr'} !!}
+    {!! $service->name !!}
 @endsection
 
 @section('content')
@@ -15,7 +19,7 @@
                 @if ($service->image)
                     <img src="/{{ $service->image }}" alt="" style="width: 100%; height: auto;">
                 @endif
-                {!! $service->{'description:tr'} !!}
+                {!! $service->description !!}
             </div>
         </div>
     </div>

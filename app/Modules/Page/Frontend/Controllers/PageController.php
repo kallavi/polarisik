@@ -8,15 +8,14 @@ use App\Modules\Page\Backend\Models\Page;
 
 class PageController extends Controller
 {
-
     public function index($menu = null, $slug = null)
     {
-
-        $getMenu = Menu::whereTranslation('slug', $menu)->first();
-        $getPage = Page::whereTranslation('id', $getMenu->content)->first();
+        $getMenu = Menu::withTranslation()->whereTranslation('slug', 'biz-kimiz')->first();
+        $getPage = Page::withTranslation()->where('id', $getMenu->content)->first();
 
         return view('front.who-are-we.index', [
             'page' => $getPage,
+            'menu' => $getMenu
         ]);
     }
 }

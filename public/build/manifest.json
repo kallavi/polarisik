@@ -1,4 +1,9 @@
 {
+  "resources/assets/css/app.scss": {
+    "file": "assets/app-27626bef.css",
+    "isEntry": true,
+    "src": "resources/assets/css/app.scss"
+  },
   "resources/assets/fonts/iconFont.eot": {
     "file": "assets/iconFont-1b31303d.eot",
     "src": "resources/assets/fonts/iconFont.eot"
@@ -16,7 +21,7 @@
     "src": "resources/assets/fonts/iconFont.woff"
   },
   "resources/assets/front/css/app.scss": {
-    "file": "assets/app-709297c2.css",
+    "file": "assets/app-71a95025.css",
     "isEntry": true,
     "src": "resources/assets/front/css/app.scss"
   },
@@ -40,5 +45,9 @@
     "file": "assets/app-2891b7e2.js",
     "isEntry": true,
     "src": "resources/assets/front/js/app.js"
+  },
+  "resources/assets/images/checkbox-tick.svg": {
+    "file": "assets/checkbox-tick-31943c5d.svg",
+    "src": "resources/assets/images/checkbox-tick.svg"
   }
 }

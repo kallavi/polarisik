@@ -50,9 +50,7 @@
 		<script src="{{ asset('assets/js/custom/authentication/sign-in/general.js')}}"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
-		     
-       @yield('script')
-     
+		@yield('script')
 	</body>
 	<!--end::Body-->
 </html>

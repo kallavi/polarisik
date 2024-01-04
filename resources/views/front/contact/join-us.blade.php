@@ -8,16 +8,17 @@
 <div class="bizeKatilinBgSmall d-none d-lg-block"><img src="{{asset('assets/statics/logo-dark-thumb.png') }}" alt=""></div>
 <div class="row pb-lg-2 pt-1 pt-lg-0 mx-auto">
     <div class="col-xxxl-5 col-xxl-6 col-xl-7 col-lg-8 mx-auto px-4 pb-lg-0 pb-2 pt-1 pt-lg-0">
-        <form method="POST" action="#" id="bizeKatilimForm" class="row type2 g-lg-4 g-0 needs-validation px-lg-4 px-3 mt-lg-0 pb-4 pbb-lg-0 mt-3" novalidate>
+        <form method="POST" action="{{ route('joinus.store') }}" id="bizeKatilimForm" class="row type2 g-lg-4 g-0 needs-validation px-lg-4 px-3 mt-lg-0 pb-4 pbb-lg-0 mt-3" novalidate>
+            @csrf
             <div class="form-floating col-12 mb-2 mb-lg-0">
-                <input type="text" class="form-control textMask" id="name" placeholder="Adınız Soyadınız" required>
+                <input type="text" class="form-control textMask" id="name" name="name_surname" placeholder="Adınız Soyadınız" required>
                 <label for="namesurname">Adınız Soyadınız</label>
                 <div class="invalid-tooltip">
                     Lütfen Adınızı Soyadınızı Giriniz
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-                <select class="form-select" id="gender" required>
+                <select class="form-select" id="gender" name="gender" required>
                     <option selected disabled value="">Cinsiyet Seçiniz</option>
                     <option>Kadın</option>
                     <option>Erkek</option>
@@ -27,7 +28,7 @@
                   </div>
             </div>
             <div class="form-floating col-lg-6 custom-birthday mb-2 mb-lg-0">
-                <input type="text" class="form-control birthdayMask datepicker" id="birthday" placeholder="Doğum Tarihi (GG/AA/YY)" required>
+                <input type="text" name="birthday" class="form-control birthdayMask datepicker" id="birthday" placeholder="Doğum Tarihi (GG/AA/YY)" required>
                 <label for="birthday">Doğum Tarihi (GG/AA/YY)</label>
                 <div class="invalid-tooltip">
                     Doğum Tarihi Giriniz
@@ -36,7 +37,7 @@
                 <div id="ageWarning" style="color: red;"></div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control phoneMask" id="phone" placeholder="Telefon Numaranız" required>
+                <input type="text" name="phone_number" class="form-control phoneMask" id="phone" placeholder="Telefon Numaranız" required>
                 <label for="surname">Telefon</label>
                 <div class="invalid-tooltip">
                     Lütfen Telefon Numaranızı Giriniz
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="email" class="form-control emailMask" id="eposta" placeholder="E-Postanız" required>
+                <input type="email" name="e_mail" class="form-control emailMask" id="eposta" placeholder="E-Postanız" required>
                 <label for="eposta">E-Posta</label>
                 <div class="invalid-tooltip">
                     Lütfen E-Postanızı Giriniz
@@ -56,14 +57,14 @@
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control allNumber" id="messageSubject" placeholder="Mesaj Konusu" required>
+                <input type="text" name="height" class="form-control allNumber" id="messageSubject" placeholder="Mesaj Konusu" required>
                 <label for="messageSubject">Boy Giriniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Boy Giriniz
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control allNumber" id="messageSubject" placeholder="Mesaj Konusu" required>
+                <input type="text" name="weight" class="form-control allNumber" id="messageSubject" placeholder="Mesaj Konusu" required>
                 <label for="messageSubject">Kilo Giriniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Kilo Giriniz
@@ -71,7 +72,7 @@
             </div>
             <div class="position-relative col-12 mb-2 mb-lg-0">
                 <div class="custom-file d-flex align-items-center">
-                    <input type="file" id="fileInput" accept=".jpg, .jpeg, .png" class="custom-file-input" aria-label="Fotoğraf Yükleyiniz" required style="display: none;" onchange="displayFileName()">
+                    <input type="file" name="image" id="fileInput" accept=".jpg, .jpeg, .png" class="custom-file-input" aria-label="Fotoğraf Yükleyiniz" required style="display: none;" onchange="displayFileName()">
                     <img id="imagePreview" style="max-width: 100px; max-height: 100px; display: none;" />
                     <label class="custom-file-label" for="fileInput" id="customFileLabel">Fotoğrafınızı Yükleyiniz</label>
                     <button type="button" id="addButton" class="ms-auto btn" onclick="document.getElementById('fileInput').click()"><span class="icon-plus"></span></button>
@@ -80,14 +81,14 @@
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                <input type="text" name="language" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
                 <label for="messageSubject">Yabancı Dil Giriniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Yabancı Dil Giriniz
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-                <select class="form-select" id="gender" required>
+                <select name="language_level" class="form-select" id="gender" required>
                     <option selected disabled value="">Yabancı Dil Seviyeniz</option>
                     <option>Başlangıç</option>
                     <option>Orta</option>
@@ -98,7 +99,7 @@
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-                <select class="form-select" id="gender" required>
+                <select name="driving_licence" class="form-select" id="gender" required>
                     <option selected disabled value="">Ehliyetiniz Var mı?</option>
                     <option>Ehliyetim Yok</option>
                     <option>M</option>
@@ -123,7 +124,7 @@
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-                <select class="form-select" id="gender" required>
+                <select class="form-select" name="dwelling" id="gender" required>
                     <option selected disabled value="">Konaklama Durumu</option>
                     <option>Ev</option>
                     <option>Öğrenci Yurdu</option>
@@ -133,7 +134,7 @@
                   </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-                <select class="form-select" id="gender" required>
+                <select class="form-select" name="is_suit" id="gender" required>
                     <option selected disabled value="">Takım Elbiseniz Var mı?</option>
                     <option>Evet</option>
                     <option>Hayır</option>
@@ -144,14 +145,14 @@
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
+                <input type="text" name="missing_piece" class="form-control textMask" id="messageSubject" placeholder="Mesaj Konusu" required>
                 <label for="messageSubject">Eksik Parça Belirtiniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Eksik Parça Giriniz
                 </div>
             </div>
             <div class="position-relative col-lg-6 mb-2 mb-lg-0">
-            <select class="form-select" id="gender" required>
+            <select class="form-select" name="district" id="gender" required>
                 <option selected disabled value="">Semt Seçiniz</option>
                 <option>Sarıyer</option>
                 <option>Beşiktaş</option>
@@ -163,7 +164,7 @@
                 </div>
             </div>
             <div class="form-floating col-lg-6 mb-2 mb-lg-0">
-                <input type="text" class="form-control tcNo" id="messageSubject" placeholder="Mesaj Konusu" required>
+                <input type="text" name="identity_number" class="form-control tcNo" id="messageSubject" placeholder="Mesaj Konusu" required>
                 <label for="messageSubject">T.C. Kimlik No</label>
                 <div class="invalid-tooltip">
                     Lütfen T.C. Kimlik No Giriniz
@@ -173,14 +174,14 @@
                 </div>
             </div>
             <div class="form-floating col-12 mb-2 mb-lg-0">
-                <input type="text" class="form-control textMask" id="ibanName" placeholder="Hesap Adı Giriniz" required>
+                <input type="text" name="account_name" class="form-control textMask" id="ibanName" placeholder="Hesap Adı Giriniz" required>
                 <label for="ibanName">Hesap Adı Giriniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Hesap Adı
                 </div>
             </div>
             <div class="form-floating col-12 mb-2 mb-lg-0">
-                <input type="text" class="form-control ibanMask" id="ibanNo" placeholder="IBAN Giriniz" required>
+                <input type="text" name="iban" class="form-control ibanMask" id="ibanNo" placeholder="IBAN Giriniz" required>
                 <label for="ibanNo">IBAN Giriniz</label>
                 <div class="invalid-tooltip">
                     Lütfen Iban Giriniz

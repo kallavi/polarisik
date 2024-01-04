@@ -103,12 +103,19 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.partner.create'" :title="'Yeni Ekle'" :segment1="'backoffice'" :segment2="'partners'" :segment3="'create'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-slider-horizontal-2 fs-2'" :class="'menu-accordion'"
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-picture fs-2'" :class="'menu-accordion'"
             :title="'Fotoğraf Galerileri'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'" :segment2Acc="'photo'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.photo.index'" :title="'Galeri Liste'" :segment1="'backoffice'"  :segment2="'photo'" :segment3="''"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.photo.create'" :title="'Yeni Ekle'" :segment1="'backoffice'" :segment2="'photo'" :segment3="'create'"></x-admin.menu-item>
+            </x-slot:subMenu>
+        </x-admin.menu-item>
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-picture fs-2'" :class="'menu-accordion'" :title="'Video Galerileri'" :data-kt-menu-trigger="'click'" :segment1Acc="'video-gallery'">
+            <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
+            <x-slot:subMenu>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.video.index'" :title="'Galeri Liste'" :segment1="'video-gallery'" :segment2="''"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.video.create'" :title="'Yeni Ekle'" :segment1="'video-gallery'" :segment2="'create'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>
         {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-picture fs-2'" :class="'menu-accordion'"
@@ -129,14 +136,16 @@
         </x-admin.menu-item>  --}}
         <x-admin.menu-item :menuHeading="'AYARLAR'" />
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-burger-menu-3 fs-2'" :link="''" :menuItemRoot="'menus.index'" :title="'Menüler'" :segment1="'backoffice'" :segment2="'menus'"  />
+        
         {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-element-12 fs-2'" :class="'menu-accordion'"
             :title="'Formlar'" :data-kt-menu-trigger="'click'" :segment1Acc="'forms'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
                 <x-admin.menu-item :linkClass="'ps-0'" :title="'İletişim'"></x-admin.menu-item>
-                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'forms'" :title="'İstek, Öneri ve Şikayet Formu'" :segment1="'forms'"></x-admin.menu-item>
+                //<x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'forms'" :title="'İstek, Öneri ve Şikayet Formu'" :segment1="'forms'"></x-admin.menu-item>
             </x-slot:subMenu>
         </x-admin.menu-item>  --}}
+
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-setting-3 fs-2'" :link="'/backoffice/setting/1/edit'" :title="'Site Ayarları'" :segment1="'backoffice'" :segment2="'setting'"/>
 
 

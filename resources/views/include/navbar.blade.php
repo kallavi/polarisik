@@ -7,7 +7,7 @@
         <ul class="ps-3 navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
             @foreach ($data['menu']->where('parent', 1)->where('child', null) as $menu_item)
                 <li class="nav-item">
-                    <a class="{{ request()->segment(1) == $menu_item->slug ? 'active' : '' }} nav-link" href="/{{ $menu_item->slug }}">
+                    <a class="{{ request()->segment(2) == $menu_item->slug ? 'active' : '' }} nav-link" href="/{{ request()->segment(1) }}/{{ $menu_item->slug }}">
                         {{ $menu_item->name }}
                     </a>
                 </li>
