@@ -529,7 +529,7 @@
         @if ($message = Session::get('message'))
             <script>
                 $('body').append(`
-        <div class="toast align-items-center show bg-{{ $status }} position-absolute py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" style="right: 10px; bottom: 10px;">
+        <div class="toast align-items-center show bg-{{ $status }} position-fixed py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" style="right: 10px; bottom: 10px;">
             <div class="d-flex">
                 <img class="me-3" src="../../assets/images/{{ $status }}.svg" alt="">
             <div class="toast-body text-white fw-medium fs-6">
@@ -556,7 +556,7 @@
                 $('.kaydet-button').trigger('click');
             } else {
                 $('body').append(`
-                    <div class="toast align-items-center show bg-danger position-absolute py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" style="right: 10px; bottom: 10px;">
+                    <div class="toast align-items-center show bg-danger position-fixed py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" style="right: 10px; bottom: 10px;">
                         <div class="d-flex">
                             <img class="me-3" src="../../assets/images/danger.svg" alt="">
                         <div class="toast-body text-white fw-medium fs-6">
