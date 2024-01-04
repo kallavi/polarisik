@@ -26,7 +26,7 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :title="'Yeni Ekle'" :link="''" :menuItemRoot="'pages.create'" :segment1="'backoffice'" :segment2="'pages'" :segment3="'create'"/>
             </x-slot:subMenu>
         </x-admin.menu-item>
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
+        {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
             :title="'Haberler'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'" :segment2Acc="'news'" >
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
@@ -34,7 +34,7 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'news.create'" :title="'Yeni Haber'" :segment1="'backoffice'" :segment2="'news'" :segment3="'create'"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'newscategories.index'" :title="'Haber Kategorileri'" :segment1="'backoffice'" :segment2="'news'" :segment3="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
-        </x-admin.menu-item>
+        </x-admin.menu-item>  --}}
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-some-files fs-2'"
             :title="'Hizmetler'" :data-kt-menu-trigger="'click'" :class="'menu-accordion'" :segment1Acc="'backoffice'" :segment2Acc="'services'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
@@ -43,7 +43,7 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :title="'Yeni Ekle'" :link="''" :menuItemRoot="'services.create'" :segment1="'backoffice'" :segment2="'services'" :segment3="'create'"/>
             </x-slot:subMenu>
         </x-admin.menu-item>
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
+        {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
             :title="'Projeler'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'"  :segment2Acc="'projects'" >
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
@@ -51,8 +51,8 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'projects.create'" :title="'Yeni Proje'" :segment1="'backoffice'" :segment2="'projects'" :segment3="'create'"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'projectcategories.index'" :title="'Proje Kategorileri'" :segment1="'backoffice'" :segment2="'projects'" :segment3="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
-        </x-admin.menu-item>
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
+        </x-admin.menu-item>  --}}
+        {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
             :title="'Bloglar'" :data-kt-menu-trigger="'click'" :segment1Acc="'backoffice'"  :segment2Acc="'blogs'" >
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
@@ -60,8 +60,8 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogs.create'" :title="'Yeni Blog'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'create'"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.blogcategories.index'" :title="'Blog Kategorileri'" :segment1="'backoffice'" :segment2="'blogs'" :segment3="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
-        </x-admin.menu-item>
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
+        </x-admin.menu-item>  --}}
+        {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-pin fs-2'" :class="'menu-accordion'"
             :title="'Portfolyolar'" :data-kt-menu-trigger="'click'" :segment1Acc="'portfolio'">
             <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
             <x-slot:subMenu>
@@ -69,7 +69,7 @@
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.portfolio.create'" :title="'Yeni Ekle'" :segment1="'portfolio'" :segment2="'create'"></x-admin.menu-item>
                 <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'admin.portfoliocategory.index'" :title="'Portfolyo Kategorileri'" :segment1="'portfolio'" :segment2="'categories'"></x-admin.menu-item>
             </x-slot:subMenu>
-        </x-admin.menu-item>
+        </x-admin.menu-item>  --}}
         {{--
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-notification-status fs-2'" :class="'menu-accordion'"
             :title="'Duyurular'" :data-kt-menu-trigger="'click'" :segment1Acc="'announcements'">
