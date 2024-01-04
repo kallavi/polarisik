@@ -8,49 +8,38 @@
 @section('app')
     <x-admin.wrapper-container>
         <x-slot:content>
-
-
-
-
-
             <x-admin.card :class="'card-xl-stretch mb-xl-8 border-0'" :cardHeaderClass="'align-items-center border-0 mt-4'" :cardBodyClass="'pt-5 bg-gray-300 bg-opacity-20 rounded'">
                 <x-slot:cardBody>
-                    @foreach ($q as $key => $date)
-                        <x-admin.timeline-item :timelineHead="\Carbon\Carbon::parse($key)->format('d/m/Y')" />
-                        <x-admin.timeline-item :parentClass="'mb-8'">
-                            <x-slot:item>
-                                @foreach ($date as $item)
-                                    @if ($item->event == 'created')
-                                        <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'success'" :text="$item->description" :textBold="'fw-bold text-gray-800'" />
-                                    @elseif($item->event == 'deleted')
-                                        <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'danger'" :textBold="'fw-bold text-gray-800'">
-                                            <x-slot:text>
-                                                {{$item->description}}
-                                            </x-slot:text>
-                                        </x-admin.timeline-item>
-                                    @elseif($item->event == 'updated')
-                                        <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'primary'" :text="$item->description" />
-                                    @endif
-
-                                    {{-- <x-admin.timeline-item
-                                            :labelClass="'fw-bold text-gray-800 fs-6'"
-                                            :time="'08:42'"
-                                            :color="'warning'"
-                                            :text="'Outlines keep you honest. And keep structure'" 
-                                        /> --}}
-                                @endforeach
-                                 </x-slot:item>
-                </x-admin.timeline-item>
-                    @endforeach
-               
-        </x-slot:cardBody>
-        </x-admin.card>
-
-        {{-- <x-admin.pagination :type2="''" /> --}}
-  
-
-
-        {{ $activity->links() }}
+                    @if(count($q) > 0)
+                        @foreach ($q as $key => $date)
+                            <x-admin.timeline-item :timelineHead="\Carbon\Carbon::parse($key)->format('d/m/Y')" />
+                            <x-admin.timeline-item :parentClass="'mb-8'">
+                                <x-slot:item>
+                                    @foreach ($date as $item)
+                                        @if ($item->event == 'created')
+                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'success'"
+                                                :text="$item->description" :textBold="'fw-bold text-gray-800'" />
+                                        @elseif($item->event == 'deleted')
+                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'danger'"
+                                                :textBold="'fw-bold text-gray-800'">
+                                                <x-slot:text>
+                                                    {{ $item->description }}
+                                                </x-slot:text>
+                                            </x-admin.timeline-item>
+                                        @elseif($item->event == 'updated')
+                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'primary'"
+                                                :text="$item->description" />
+                                        @endif
+                                    @endforeach
+                                </x-slot:item>
+                            </x-admin.timeline-item>
+                        @endforeach
+                    @else
+                        Kayıtlı aktivite bulunamadı.
+                    @endif
+                </x-slot:cardBody>
+            </x-admin.card>
+            {{ $activity->links() }}
         </x-slot:content>
     </x-admin.wrapper-container>
 @endsection

@@ -5,7 +5,7 @@
             {{ request()->segment(1)=='' ? 'active':'' }}
         </x-slot:linkClass>
     </x-admin.menu-item>
-    <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-chart-line fs-2'" :link="''" :menuItemRoot="'activities'" :title="'Aktiviteler'" :badge="'24'" >
+    <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-chart-line fs-2'" :link="''" :menuItemRoot="'activities'" :title="'Aktiviteler'" >
         <x-slot:linkClass>
             {{ request()->segment(1)=='activities' ? 'active':'' }}
         </x-slot:linkClass>

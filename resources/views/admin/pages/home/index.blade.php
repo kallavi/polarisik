@@ -258,27 +258,23 @@ Başlangıç
                         <x-slot:cardBody>
                             <x-admin.timeline-item :parentClass="''">
                                 <x-slot:item>
-
-                                    @foreach ($activity as $item)
-                                        @if ($item->event == 'created')
-                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'success'" :text="$item->description" :textBold="'fw-bold text-gray-800'" />
-                                        @elseif($item->event == 'deleted')
-                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'danger'" :textBold="'fw-bold text-gray-800'">
-                                                <x-slot:text>
-                                                    {{$item->created_at}}
-                                                </x-slot:text>
-                                            </x-admin.timeline-item>
-                                        @elseif($item->event == 'deleted')
-                                            <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="$item->description" :color="'primary'" :text="$item->description" />
-                                        @endif
-
-                                        {{-- <x-admin.timeline-item
-                                            :labelClass="'fw-bold text-gray-800 fs-6'"
-                                            :time="'08:42'"
-                                            :color="'warning'"
-                                            :text="'Outlines keep you honest. And keep structure'"
-                                        /> --}}
-                                    @endforeach
+                                    @if (count($activity) > 0)
+                                        @foreach ($activity as $item)
+                                            @if ($item->event == 'created')
+                                                <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'success'" :text="$item->description" :textBold="'fw-bold text-gray-800'" />
+                                            @elseif($item->event == 'deleted')
+                                                <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->created_at)->format('H:i')" :color="'danger'" :textBold="'fw-bold text-gray-800'">
+                                                    <x-slot:text>
+                                                        {{$item->created_at}}
+                                                    </x-slot:text>
+                                                </x-admin.timeline-item>
+                                            @elseif($item->event == 'updated')
+                                                <x-admin.timeline-item :labelClass="'fw-bold text-gray-800 fs-6'" :time="\Carbon\Carbon::parse($item->updated_at)->format('H:i')" :color="'primary'" :text="$item->description" />
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        Kayıtlı aktivite bulunamadı.
+                                    @endif
                                 </x-slot:item>
                             </x-admin.timeline-item>
                         </x-slot:cardBody>
