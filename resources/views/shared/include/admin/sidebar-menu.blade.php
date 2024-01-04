@@ -164,7 +164,7 @@
 
 
         {{--  <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-rescue fs-2'" :link="''" :menuItemRoot="'support-request'" :title="'Destek Talebi'" :segment1="'support-request'" />
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-folder-down fs-2'" :link="''" :menuItemRoot="'documents'" :title="'Dökümanlar'" :segment1="'documents'" />  --}}
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-folder-down fs-2'" :link="''" :menuItemRoot="'documents'" :title="'Dokümanlar'" :segment1="'documents'" />  --}}
 
     </x-slot:menuColumn>
 </x-admin.menu-column>

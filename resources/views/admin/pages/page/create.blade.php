@@ -41,7 +41,7 @@
             <x-admin.tab :tabsType1="'true'" :class="'nav-custom nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8'" :tabNavs="'true'" :tabItem="[
                 'kt_customer_view_overview_tab' => 'Türkçe',
                 'kt_customer_view_overview_events_and_logs_tab' => 'İngilizce',
-                'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',
+                {{--  'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',  --}}
             ]" />
             <x-admin.form id="'kt_ecommerce_add_product_form'" :action="route('pages.store')" :method="'POST'" :class="'create_form'"
                 :dataKt="[
@@ -64,12 +64,9 @@
                                                     <x-slot:cardBody>
                                                         <x-admin.custom-grid>
                                                             <x-slot:gridRow>
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-12'" :labelTag="'label'"
                                                                     :labelText="'Başlık'" :labelClass="'form-label required'" :placeholder="'Sayfa Başlık'"
                                                                     :class="'form-control name-tr'" :name="'name:tr'" />
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
-                                                                    :labelText="'Url'" :labelClass="'form-label'" :placeholder="'Sayfa Url'"
-                                                                    :class="'form-control url-tr'" :name="'slug:tr'" />
                                                             </x-slot:gridRow>
                                                         </x-admin.custom-grid>
                                                     </x-slot:cardBody>
@@ -86,7 +83,7 @@
                                                             :resizeNone="''" :id="'description-tr'" :name="'description:tr'" />
                                                     </x-slot:cardBody>
                                                 </x-admin.card>
-                                                <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
+                                                {{--  <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
                                                     <x-slot:cardHeader>
                                                         <div class="card-title m-0">
                                                             <h2>Medya Galeri</h2>
@@ -110,36 +107,30 @@
                                                                     :labelText="'Video Linki'" :labelClass="'form-label required'"
                                                                     :placeholder="'Youtube Linki Giriniz'" :class="'form-control'"
                                                                     :name="'video'" />
-
-                                                                <!--Dropzone -->
-                                                                {{--  <x-admin.form-dropzone :parentClass="'fv-row mb-2 mt-5'" :messageClass="'align-items-center'"
-                                                                        :fontClass="'text-gray-800 fw-medium fs-4'" :notSumTitle="''" :labelTag="'label'"
-                                                                        :labelText="'Video Cover Görseli'" :labelClass="'form-label required'" :id="'testDropzone2'" />  --}}
-
                                                             </x-slot:tagsWrapper>
                                                         </x-admin.tags-wrapper>
                                                         <x-admin.image-input :changeAvatar="''" :name="'cover'"
                                                             :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'"
                                                             :textMuted="'Sadece *.png, *.jpg veya *.jpeg uzantılı görsel yükleyebilirsiniz'" />
                                                     </x-slot:cardBody>
-                                                </x-admin.card>
+                                                </x-admin.card>  --}}
                                                 {{--  <x-admin.form-input :type="'file'" :id="'file'" :accept="'video/'"
                                                         onchange="checkFileType(this)" />  --}}
-                                                <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
+                                                {{--  <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
                                                     <x-slot:cardHeader>
                                                         <div class="card-title m-0">
-                                                            <h2>Dökümanlar</h2>
+                                                            <h2>Dokümanlar</h2>
                                                         </div>
                                                     </x-slot:cardHeader>
                                                     <x-slot:cardBody>
                                                         <x-admin.form-dropzone :class="'fv-row mb-2 mt-5'" :name="'documents[]'" :id="'kt_ecommerce_add_product_media'" />
                                                     </x-slot:cardBody>
-                                                </x-admin.card>
+                                                </x-admin.card>  --}}
                                             </div>
                                         </div>
                                         <div
                                             class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px min-w-lg-300px mb-7 ms-lg-10">
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
+                                            {{--  <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
                                                         <h2>Görsel</h2>
@@ -150,11 +141,11 @@
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg veya *.jpeg uzantılı görsel yükleyebilirsiniz'"
                                                         :name="'image'" />
                                                 </x-slot:cardBody>
-                                            </x-admin.card>
+                                            </x-admin.card>  --}}
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
-                                                        <h2>Status</h2>
+                                                        <h2>Durum</h2>
                                                     </div>
                                                     <div class="card-toolbar">
                                                         <div class="rounded-circle bg-success w-15px h-15px"
@@ -230,14 +221,10 @@
                                                     <x-slot:cardBody>
                                                         <x-admin.custom-grid>
                                                             <x-slot:gridRow>
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-12'" :labelTag="'label'"
                                                                     :labelText="'Başlık'" :labelClass="'form-label required'"
                                                                     :placeholder="'Sayfa Başlık'" :class="'form-control name-en'"
                                                                     :name="'name:en'" />
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
-                                                                    :labelText="'Url'" :labelClass="'form-label'"
-                                                                    :placeholder="'Sayfa Url'" :class="'form-control url-en'"
-                                                                    :name="'slug:en'" />
                                                             </x-slot:gridRow>
                                                         </x-admin.custom-grid>
                                                     </x-slot:cardBody>
@@ -310,7 +297,7 @@
                                                 {{--  <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
                                                         <x-slot:cardHeader>
                                                             <div class="card-title m-0">
-                                                                <h2>Dökümanlar</h2>
+                                                                <h2>Dokümanlar</h2>
                                                             </div>
                                                         </x-slot:cardHeader>
                                                         <x-slot:cardBody>
@@ -367,7 +354,7 @@
                                             {{--  <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
                                             <x-slot:cardHeader>
                                                 <div class="card-title">
-                                                    <h2>Status</h2>
+                                                    <h2>Durum</h2>
                                                 </div>
                                                 <div class="card-toolbar">
                                                     <div class="rounded-circle bg-success w-15px h-15px" id="kt_ecommerce_add_product_status"></div>
@@ -462,6 +449,7 @@
                             </x-admin.tab>
                         </x-slot:tabsContent>
                     </x-admin.tab>
+                    <button type="submit" style="display: none" class="kaydet-button"></button>
                 </x-slot:form>
             </x-admin.form>
         </x-slot:content>
@@ -480,7 +468,21 @@
         new Tagify(seo_ar);
 
         $('.btn-create').click(function() {
-            $('.create_form').trigger('submit');
+            if ($('.name-tr').val() != '' || $('.name-en').val() != '') {
+                $('.kaydet-button').trigger('click');
+            } else {
+                $('body').append(`
+                    <div class="toast align-items-center show bg-danger position-absolute py-3 px-3" role="alert" aria-live="assertive" aria-atomic="true" style="right: 10px; bottom: 10px;">
+                        <div class="d-flex">
+                            <img class="me-3" src="../../assets/images/danger.svg" alt="">
+                        <div class="toast-body text-white fw-medium fs-6">
+                            * ile işaretli alanların doldurulması zorunludur. 
+                        </div>
+                            <button type="button" style="filter:invert(1)" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                    </div>
+                `);
+            }
         });
 
         $('.btn-reset').click(function() {

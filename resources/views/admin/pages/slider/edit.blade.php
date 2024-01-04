@@ -39,7 +39,7 @@
             <x-admin.tab :tabsType1="'true'" :class="'nav-custom nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8'" :tabNavs="'true'" :tabItem="[
                 'kt_customer_view_overview_tab' => 'Türkçe',
                 'kt_customer_view_overview_events_and_logs_tab' => 'İngilizce',
-                'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',
+       {{--  'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',  --}}
             ]">
             </x-admin.tab>
 

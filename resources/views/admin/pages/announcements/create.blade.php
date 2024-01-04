@@ -143,7 +143,7 @@
                                         <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
                                             <x-slot:cardHeader>
                                                 <div class="card-title m-0">
-                                                    <h2>Dökümanlar</h2>
+                                                    <h2>Dokümanlar</h2>
                                                 </div>
                                             </x-slot:cardHeader>
                                             <x-slot:cardBody>
@@ -387,7 +387,7 @@
                                         <x-admin.card :class="'card-flush border-0 bg-gray-300 bg-opacity-20 pt-12'" :cardHeaderClass="'min-h-25px'">
                                             <x-slot:cardHeader>
                                                 <div class="card-title m-0">
-                                                    <h2>Dökümanlar</h2>
+                                                    <h2>Dokümanlar</h2>
                                                 </div>
                                             </x-slot:cardHeader>
                                             <x-slot:cardBody>

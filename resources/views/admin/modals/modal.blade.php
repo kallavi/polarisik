@@ -14,7 +14,7 @@
                     :labelText="'Video Galeri Modülü'" />
                 <x-admin.form-input :inputParentClass="'form-check form-switch form-check-custom form-check-solid my-3 col-6'" :id="'status'" :type="'checkbox'" :name="'status'"
                     :checked="'checked'" :class="'form-check-input'" :labelTag="'label'" :labelRight="'true'" :labelClass="'form-check-label ms-3 text-gray-500 fs-5 fw-medium'"
-                    :labelText="'Döküman Modülü'" />
+                    :labelText="'Doküman Modülü'" />
                 <x-admin.form-input :inputParentClass="'form-check form-switch form-check-custom form-check-solid my-3 col-6'" :id="'status'" :type="'checkbox'" :name="'status'"
                     :checked="'checked'" :class="'form-check-input'" :labelTag="'label'" :labelRight="'true'" :labelClass="'form-check-label ms-3 text-gray-500 fs-5 fw-medium'"
                     :labelText="'Kısa Açıklama'" />
@@ -111,7 +111,7 @@
 
 
 
-<!---Dökümanlar Modal--->
+<!---Dokümanlar Modal--->
 <x-admin.modal :id="'dokumanlarModal'" :lg="''">
     <x-slot:modalBody>
         <x-admin.form-dropzone :parentClass="'fv-row mb-2 mt-5'" :messageClass="'align-items-center'" :fontClass="'text-gray-800 fw-medium fs-4'" :notSumTitle="''"
