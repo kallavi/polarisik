@@ -89,7 +89,7 @@
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :name="'image'"
                                                         :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'"
-                                                        :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'" :imgUrl="'/' . $partner->image" />
+                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" :imgUrl="'/' . $partner->image" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">

@@ -12,12 +12,15 @@ class ServiceController extends Controller
     {
         $service = Service::withTranslation()->with('gallery')->first();
         $services = Service::where('status', 'published')->get();
-
-        $next_id = Service::where('status', "published")->where('id', '>', $service->id)->translatedIn(app()->getLocale())->min('id');
-        $next = Service::where('id', $next_id)->first();
-
-        $prev_id = Service::where('status', "published")->where('id', '<', $service->id)->translatedIn(app()->getLocale())->max('id');
-        $prev = Service::where('id', $prev_id)->first();
+        $next = '';
+        $prev = '';
+        if ($service != null) {
+            $next_id = Service::where('status', "published")->where('id', '>', $service->id)->translatedIn(app()->getLocale())->min('id');
+            $next = Service::where('id', $next_id)->first();
+    
+            $prev_id = Service::where('status', "published")->where('id', '<', $service->id)->translatedIn(app()->getLocale())->max('id');
+            $prev = Service::where('id', $prev_id)->first();
+        }
 
         return view('front.services.index', [
             'service' => $service,

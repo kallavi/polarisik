@@ -89,7 +89,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:tr'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -101,7 +101,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:tr'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -170,7 +170,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:en'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -182,7 +182,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:en'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -251,7 +251,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:ar'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -263,7 +263,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:ar'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
