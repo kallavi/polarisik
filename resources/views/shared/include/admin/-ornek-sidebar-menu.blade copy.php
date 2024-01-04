@@ -109,7 +109,7 @@
             </x-slot:subMenu>
         </x-admin.menu-item>
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-rescue fs-2'" :link="''" :menuItemRoot="'destek-talebi'" :title="'Destek Talebi'" />
-        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-folder-down fs-2'" :link="''" :menuItemRoot="'dokumanlar'" :title="'Dökümanlar'" />
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-folder-down fs-2'" :link="''" :menuItemRoot="'dokumanlar'" :title="'Dokümanlar'" />
 
     </x-slot:menuColumn>
 </x-admin.menu-column>

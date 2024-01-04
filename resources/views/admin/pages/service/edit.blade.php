@@ -40,7 +40,7 @@
             <x-admin.tab :tabsType1="'true'" :class="'nav-custom nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8'" :tabNavs="'true'" :tabItem="[
                 'kt_customer_view_overview_tab' => 'Türkçe',
                 'kt_customer_view_overview_events_and_logs_tab' => 'İngilizce',
-                'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',
+       {{--  'kt_customer_view_overview_events_and_logs_tab2' => 'Arapça',  --}}
             ]" />
             <x-admin.form id="'kt_ecommerce_add_product_form'" :action="route('services.update', $service->id)" :method="'POST'" :class="'create_form'">
                 <x-slot:form>
@@ -126,7 +126,7 @@
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
-                                                        <h2>Status</h2>
+                                                        <h2>Durum</h2>
                                                     </div>
                                                     <div class="card-toolbar">
                                                         <div class="rounded-circle bg-success w-15px h-15px"

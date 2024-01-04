@@ -1,6 +1,6 @@
 @extends('layout.admin.layout')
 @section('pageTitle')
-    Dökümanlar
+    Dokümanlar
 @endsection
 @section('rightContent')
     <x-admin.tags-wrapper :class="'d-flex align-items-center'">
