@@ -1,13 +1,13 @@
 <footer class="bg-primary"@hasSection('mainContent') data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease"@endif>
     <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
-            <a href="/" class="logo">
+            <a href="/{{ request()->segment(1) }}" class="logo">
                 {{--  <img src="{{asset($data['setting']['logo'])}}" alt="{{ $data['setting']['name'] }}">  --}}
                 <img src="{{asset('assets/statics/logo-light-2.svg')}}" alt="{{ $data['setting']['name'] }}">
             </a>
             <div class="nav hstack pt-3 ps-3 d-none d-lg-flex">
                 @foreach ($data['menu']->where('parent', 1)->where('child', null) as $menu)
-                    <a href="/{{ $menu->slug }}">{{ $menu->name }}</a>
+                    <a href="/{{ request()->segment(1) }}/{{ $menu->slug }}">{{ $menu->name }}</a>
                 @endforeach
             </div>
             <div class="adress d-lg-none d-flex flex-column align-items-center text-center px-4 pt-4 pb-1">
