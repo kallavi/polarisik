@@ -1,5 +1,5 @@
 <a href="{{ route('backoffice.index') }}" class="pb-4 pt-4 mx-auto">
-    <img width="148px" alt="Logo" src="{{asset($data['setting']['dark_logo']) }}" />
+    <img width="128px" alt="Logo" src="/uploads/setting/657757d2cec9a.svg" />
 </a>
 <div class="app-sidebar-header px-9" id="kt_app_sidebar_header">
     <x-admin.tags-wrapper :class="'w-100 d-flex flex-stack bg-black bg-opacity-20 py-3 rounded-2'">
