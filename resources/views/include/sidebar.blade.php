@@ -33,13 +33,15 @@
             </a>
         @endif
     </div>
-    <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
+    <div class="leftMenuList pt-3 d-lg-flex d-none ps-4 ps-xxxl-3" style="flex-direction: column">
         @if (request()->segment(2) == 'hizmetlerimiz' || request()->segment(2) == 'services')
             @foreach ($services as $service_item)
-                <a class=""
-                    href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $service_item->slug }}">
-                    <span>{{ $service_item->name }}</span>
-                </a>
+                @if ($service_item->name)
+                    <a class=""
+                        href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $service_item->slug }}">
+                        <span>{{ $service_item->name }}</span>
+                    </a>
+                @endif
             @endforeach
         @endif
     </div>
