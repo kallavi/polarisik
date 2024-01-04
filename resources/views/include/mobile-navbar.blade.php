@@ -2,45 +2,78 @@
 <div id="mobileMenu" class="d-lg-none">
     <div class="menuColumn">
         <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('bizkimiz') }}">Biz Kimiz?</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hizmetlerimiz
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/festivaller-konserler') }}">Festivaller ve Konserler</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/kongre-toplantilar') }}">Kongre ve Toplantılar</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/resmi-torenler') }}">Resmi Törenler ve Anma Programları</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/tanitimlar-lansmanlar') }}">Tanıtım ve Lansmanlar</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/fuar-stand') }}">Fuar ve Standlar</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/vip') }}">Vip Karşılama ve Transfer</a></li>
-                    <li><a class="dropdown-item" href="{{ url('hizmetlerimiz/lcv') }}">LCV, Sms ve Mailing Hizmetleri</a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('medya') }}">Medya</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('referanslar') }}">Referanslar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('iletisim') }}">İletişim</a>
-            </li>
+        
+                    @if (request()->segment(1) == 'tr')
+                        @php
+                        $hizmet = 'hizmetlerimiz';
+                        @endphp
+                    @else
+                        @php
+                        $hizmet = 'services';
+                        @endphp
+                    @endif
+            @foreach ($data['menu']->where('parent', 1)->where('child', null) as $menu_item)
+                @if ($menu_item->slug == 'hizmetlerimiz' || $menu_item->slug == 'services')
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle {{ request()->segment(2) == $menu_item->slug ? 'active' : '' }} nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ $menu_item->name }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach ($data['service'] as $service_item)
+                                <li><a class="dropdown-item" href="/{{ request()->segment(1) }}/{{ $hizmet }}/{{ $service_item['slug'] }}">{{ $service_item['name'] }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+                @else
+                    <li class="nav-item">
+                        <a class="{{ request()->segment(2) == $menu_item->slug ? 'active' : '' }} nav-link" href="/{{ request()->segment(1) }}/{{ $menu_item->slug }}">
+                            {{ $menu_item->name }}
+                        </a>
+                    </li>
+                @endif
+            @endforeach
             <li class="nav-item pt-4">
-                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="{{ url('bize-katil') }}">Bize Katıl</a>
+                    @if (request()->segment(1) == 'tr')
+                        @php
+                        $join = 'bize-katil';
+                        @endphp
+                    @else
+                        @php
+                        $join = 'join-us';
+                        @endphp
+                    @endif
+                <a class="btn bg-white text-primary rounded-pill px-5 ps-2 fw-semibold rounded-start-0" href="/{{ request()->segment(1) }}/{{ $join }}">
+                    @if (request()->segment(1) == 'tr')
+                        Bize Katılın
+                    @else
+                        Join Us
+                    @endif
+                </a>
             </li>
         </ul>
     </div>
     <div class="menuBottom">
-        <a href="javascript:;" class="language nav-link">ENGLISH</a>
+        @if (request()->segment(1) == 'tr')
+            <a href="/en" class="language nav-link">ENGLISH</a>
+        @else
+            <a href="/tr" class="language nav-link">TÜRKÇE</a>
+        @endif
         <div class="socialMedia hstack">
-            <a href="javascript:;"><span class="fs-6 icon-instagram"></span></a>
-            <a href="javascript:;"><span class="fs-6 icon-twitter"></span></a>
-            <a href="https://www.linkedin.com/company/ikpolaris/?originalSubdomain=tr" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
-            <a href="javascript:;"><span class="fs-6 icon-facebook"></span></a>
-            <a href="https://www.youtube.com/@PolarisInsanKaynaklar?si=crJb8efFssJ-hPcm" target="_blank"><span class="fs-6 icon-youtube"></span></a>
+                @if ($data['setting']['instagram'])
+                    <a href="$data['setting']['instagram']" target="_blank"><span class="fs-5 icon-instagram"></span></a>
+                @endif
+                @if ($data['setting']['twitter'])
+                    <a href="$data['setting']['twitter']" target="_blank"><span class="fs-5 icon-twitter"></span></a>
+                @endif
+                @if ($data['setting']['linkedin'])
+                    <a href="$data['setting']['linkedin']" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
+                @endif
+                @if ($data['setting']['facebook'])
+                    <a href="$data['setting']['facebook']" target="_blank"><span class="fs-5 icon-facebook"></span></a>
+                @endif
+                @if ($data['setting']['youtube'])
+                    <a href="$data['setting']['youtube']" target="_blank"><span class="fs-5 icon-youtube"></span></a>
+                @endif
         </div>
     </div>
 </div>
