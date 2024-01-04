@@ -2,6 +2,12 @@
 
 namespace App\Providers;
 
+use App\Modules\Menu\Backend\Models\Menu;
+use App\Modules\Service\Backend\Models\Service;
+use App\Modules\Setting\Backend\Models\Setting;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +25,44 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($this->app->environment('production')) {
+            //$this->app['request']->server->set('HTTPS', 'on');
+            //URL::forceScheme('https');
+        }
+        if (request()->segment(1)) {
+            App::setLocale(request()->segment(1));
+        } else {
+            App::setLocale('tr');
+        }
+        Paginator::defaultView('shared.front.include.pagination');
+        Paginator::defaultSimpleView('shared.front.include.pagination');
+        $data['menu'] = Menu::withTranslation()->get();
+        //$data['menu'] = Menu::translatedIn('en')->get();
+      //  dd($data['menu'][3]->name);
+        $data['setting'] = Setting::withTranslation()->first();
+        $data['service'] = Service::withTranslation()->get();
+        View::share('data', $data);
+        session()->put('customer_id', uniqid());
+        $this->loadModuleViews();
+    }
+
+    private function loadModuleViews()
+    {
+        $modulePath = app_path('Modules');
+        if (file_exists($modulePath)) {
+            $modules = scandir($modulePath);
+            foreach ($modules as $module) {
+                if ($module !== '.' && $module !== '..') {
+                    $viewsAdminPath = $modulePath . '/' . $module . '/Backend/Views';
+                    $viewsPath = $modulePath . '/' . $module . '/Frontend/Views';
+                    if (is_dir($viewsAdminPath)) {
+                        $this->loadViewsFrom($viewsAdminPath, $module . "-Backend");
+                    }
+                    if (is_dir($viewsPath)) {
+                        $this->loadViewsFrom($viewsPath, $module . "-Frontend");
+                    }
+                }
+            }
+        }
     }
 }

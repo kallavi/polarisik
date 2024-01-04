@@ -10,9 +10,9 @@
     ];
 
     $currentPageSlug = request()->segment(2); // Şu anki sayfanın slug'ını al
-$currentPageIndex = array_search($currentPageSlug, array_keys($pages));
+    $currentPageIndex = array_search($currentPageSlug, array_keys($pages));
 
-// Önceki ve sonraki sayfa slug'larını belirle
+    // Önceki ve sonraki sayfa slug'larını belirle
     $previousPageSlug = $currentPageIndex > 0 ? array_keys($pages)[$currentPageIndex - 1] : null;
     $nextPageSlug = $currentPageIndex < count($pages) - 1 ? array_keys($pages)[$currentPageIndex + 1] : null;
 @endphp
@@ -21,24 +21,26 @@ $currentPageIndex = array_search($currentPageSlug, array_keys($pages));
 <div class="leftMenu col-lg-4 col-xxl-3 col-12 pt-lg-2 px-0">
     <div
         class="mobileBlock d-flex d-lg-none justify-content-center justify-content-center pt-3 mt-1 px-0 position-relative">
-        @if (!is_null($previousPageSlug))
-            <a class="prevPage" href="{{ url('hizmetlerimiz/' . $previousPageSlug) }}"><span
+        @if ($prev)
+            <a class="prevPage" href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $prev->slug }}"><span
                     class="icon-right-arrow text-primary"></span></a>
         @endif
         <h3>@yield('subTitle')</h3>
-        @if (!is_null($nextPageSlug))
-            <a class="nextPage {{ is_null($nextPageSlug) ? 'disabled' : '' }}"
-                href="{{ url('hizmetlerimiz/' . $nextPageSlug) }}">
+        @if ($next)
+            <a class="nextPage {{ is_null($next->slug) ? 'disabled' : '' }}"
+                href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $next->slug }}">
                 <span class="icon-right-arrow text-primary"></span>
             </a>
         @endif
     </div>
     <div class="leftMenuList pt-3 d-lg-inline-block d-none ps-4 ps-xxxl-3">
-        @foreach ($pages as $slug => $title)
-            <a class="{{ request()->routeIs('hizmetlerimiz.' . $slug) ? 'active' : '' }}"
-                href="{{ url('hizmetlerimiz/' . $slug) }}">
-                <span>{{ $title }}</span>
-            </a>
-        @endforeach
+        @if (request()->segment(2) == 'hizmetlerimiz' || request()->segment(2) == 'services')
+            @foreach ($services as $service_item)
+                <a class=""
+                    href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $service_item->slug }}">
+                    <span>{{ $service_item->name }}</span>
+                </a>
+            @endforeach
+        @endif
     </div>
 </div>

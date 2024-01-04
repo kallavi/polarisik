@@ -35,6 +35,36 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            $this->loadModuleRoutes();
         });
+    }
+
+    private function loadModuleRoutes()
+    {
+        $modulePath = app_path('Modules');
+
+        if (file_exists($modulePath)) {
+            $modules = scandir($modulePath);
+
+            foreach ($modules as $module) {
+                if ($module !== '.' && $module !== '..') {
+                    $routesBackendPath = $modulePath . '/' . $module . '/Backend/Routes/web.php';
+                    $routesPath = $modulePath . '/' . $module . '/Frontend/Routes/web.php';
+
+                    if (file_exists($routesPath)) {
+                        //$this->loadRoutesFrom($routesPath);
+                        Route::middleware('web')
+                            ->group($routesPath);
+                    }
+
+                    if (file_exists($routesBackendPath)) {
+                        //$this->loadRoutesFrom($routesBackendPath);
+                        Route::middleware('web')
+                            ->group($routesBackendPath);
+                    }
+                }
+            }
+        }
     }
 }

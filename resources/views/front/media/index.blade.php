@@ -1,15 +1,31 @@
 @extends('layout.layout')
 
 @section('title')
-   Medya
+    @if(request()->segment('1') == 'tr')
+        Medya
+    @else
+        Media
+    @endif
 @endsection
 @section('content')
     <ul class="nav nav-pills mb-3 justify-content-center pt-3 pt-lg-0" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="pills-photos-tab" data-bs-toggle="pill" data-bs-target="#pills-photos" type="button" role="tab" aria-controls="pills-photos" aria-selected="true">Fotoğraflar</button>
+            <button class="nav-link active" id="pills-photos-tab" data-bs-toggle="pill" data-bs-target="#pills-photos" type="button" role="tab" aria-controls="pills-photos" aria-selected="true">
+                @if(request()->segment('1') == 'tr')
+                    Fotoğraflar
+                @else
+                    Photos
+                @endif
+            </button>
         </li>
         <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-videos-tab" data-bs-toggle="pill" data-bs-target="#pills-videos" type="button" role="tab" aria-controls="pills-videos" aria-selected="false">Videolar</button>
+            <button class="nav-link" id="pills-videos-tab" data-bs-toggle="pill" data-bs-target="#pills-videos" type="button" role="tab" aria-controls="pills-videos" aria-selected="false">
+                @if(request()->segment('1') == 'tr')
+                    Videolar
+                @else
+                    Videos
+                @endif
+            </button>
         </li>
     </ul>
     <div class="tab-content px-xxxl-3 px-lg-5 px-3" id="pills-tabContent">
