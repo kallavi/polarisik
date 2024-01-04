@@ -27,7 +27,6 @@
         <x-slot:content>
             <x-admin.data-table :search="''" :export="''" :searchNone="''" :exportNone="''">
                 <x-slot:columns>
-                    <th class="fw-bolder text-gray-600 w-125px">GÖRSEL</th>
                     <th class="fw-bolder text-gray-600 col-5">BAŞLIK</th>
                     <th class="fw-bolder text-gray-600">OLUŞTURMA</th>
                     <th class="fw-bolder text-gray-600">SON GÜNCELLEME</th>
@@ -37,9 +36,6 @@
                 <x-slot:rows>
                     @foreach ($sliders as $slider)
                         <tr>
-                            <td>
-                                <x-admin.img-wrapper :imgPath="$slider->image" />
-                            </td>
                             <td>
                                 {{ $slider->{'name:tr'} }}
                             </td>
