@@ -32,8 +32,17 @@
                     <a href="$data['setting']['youtube']" target="_blank"><span class="fs-5 icon-youtube"></span></a>
                 @endif
             </div>
+                    @if (request()->segment(1) == 'tr')
+                        @php
+                        $join = 'bize-katil';
+                        @endphp
+                    @else
+                        @php
+                        $join = 'join-us';
+                        @endphp
+                    @endif
             @hasSection('mainContent')
-                <a href="/{{ request()->segment(1) }}/bize-katil" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">
+                <a href="/{{ request()->segment(1) }}/{{ $join }}" class="btn btn-light text-primary rounded-pill d-flex align-items-center justify-content-center">
                     @if (request()->segment(1) == 'tr')
                         Bize Katılın
                     @else
@@ -41,7 +50,7 @@
                     @endif
                 </a>
             @else
-                <a href="/{{ request()->segment(1) }}/bize-katil" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">
+                <a href="/{{ request()->segment(1) }}/{{ $join }}" class="btn btn-primary rounded-pill d-flex align-items-center justify-content-center">
                     @if (request()->segment(1) == 'tr')
                         Bize Katılın
                     @else
