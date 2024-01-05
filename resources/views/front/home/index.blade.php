@@ -105,7 +105,7 @@
                         @foreach ($partners as $partner)
                             <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="100"
                                 data-aos-easing="ease">
-                                <a @if ($partner->slug) href="{{ $partner->slug }}" @endif target="_blank">
+                                <a @if ($partner->slug) href="{{ $partner->slug }}" @endif target="_blank" class="px-0 px-lg-3">
                                     <div class="imageWrapper">
                                         <img src="{{ asset($partner->image) }}" alt="{{ $partner->name }}">
                                     </div>

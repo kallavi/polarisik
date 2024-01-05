@@ -4,7 +4,7 @@
         @if ($referans->slug)
             href="{{ $referans->slug }}"
         @endif
-        class="text-center pt-lg-2">
+        class="text-center pt-lg-2 px-0 px-lg-3">
             <img class="img-fluid" src="/{{ $referans->image }}" alt="{{ $referans->name }}">
         </a>
     </div>
