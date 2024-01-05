@@ -9,7 +9,7 @@
                     @if($slider->name)
                         <a href="/{{ request()->segment(1) }}/{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
                             <div class="container-xxxl ps-2">
-                                <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
+                                <div class="slide-caption col-xxl-5 col-lg-6 col">
                                     {{ $slider->name }}
                                 </div>
                             </div>
@@ -99,7 +99,7 @@
                         @foreach ($partners as $partner)
                             <div class="swiper-slide" data-aos="fade" data-aos-duration="1000" data-aos-delay="100"
                                 data-aos-easing="ease">
-                                <a @if ($partner->slug) href="{{ $partner->slug }}" @endif target="_blank">
+                                <a @if ($partner->slug) href="{{ $partner->slug }}" @endif target="_blank" class="px-0 px-lg-3">
                                     <div class="imageWrapper">
                                         <img src="{{ asset($partner->image) }}" alt="{{ $partner->name }}">
                                     </div>
