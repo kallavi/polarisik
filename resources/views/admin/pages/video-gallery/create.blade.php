@@ -115,7 +115,7 @@
                                     </x-slot:cardHeader>
                                     <x-slot:cardBody>
                                         <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'"
-                                            :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                            :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                     </x-slot:cardBody>
                                 </x-admin.card>
 
@@ -246,7 +246,7 @@
                                     </x-slot:cardHeader>
                                     <x-slot:cardBody>
                                         <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'"
-                                            :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                            :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                     </x-slot:cardBody>
                                 </x-admin.card>
 
