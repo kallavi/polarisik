@@ -67,11 +67,11 @@
                                                                     :labelText="'Slider Başlık'" :labelClass="'form-label required'" :class="'form-control'"
                                                                     :name="'name:tr'" :value="$slider->{'name:tr'}" />
 
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                {{--  <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
                                                                     :labelText="'Slider Alt Başlık'" :labelClass="'form-label required'" :class="'form-control'"
-                                                                    :name="'sub_title:tr'" :value="$slider->{'sub_title:tr'}" />
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-12'" :labelTag="'label'"
-                                                                    :labelText="'Slider Linki(URL)'" :labelClass="'form-label required'" :class="'form-control'"
+                                                                    :name="'sub_title:tr'" :value="$slider->{'sub_title:tr'}" />  --}}
+                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                    :labelText="'Slider Linki (URL)'" :labelClass="'form-label required'" :class="'form-control'"
                                                                     :name="'slug:tr'" :value="$slider->{'slug:tr'}" />
                                                             </x-slot:gridRow>
                                                         </x-admin.custom-grid>
@@ -81,7 +81,7 @@
                                         </div>
                                         <div
                                             class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px min-w-lg-300px mb-7 ms-lg-10">
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
+                                            {{--  <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
                                                         <h2>Görsel</h2>
@@ -89,7 +89,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:tr'" :imgUrl="'/' . $slider->{'image:tr'}" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -101,10 +101,10 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:tr'" :imgUrl="'/' . $slider->{'mobil_image:tr'}" />
                                                 </x-slot:cardBody>
-                                            </x-admin.card>
+                                            </x-admin.card>  --}}
 
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
                                                 <x-slot:cardHeader>
@@ -148,11 +148,11 @@
                                                                     :labelText="'Slider Başlık'" :labelClass="'form-label required'" :class="'form-control'"
                                                                     :name="'name:en'" :value="$slider->{'name:en'}" />
 
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                {{--  <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
                                                                     :labelText="'Slider Alt Başlık'" :labelClass="'form-label required'" :class="'form-control'"
-                                                                    :name="'sub_title:en'" :value="$slider->{'sub_title:en'}" />
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-12'" :labelTag="'label'"
-                                                                    :labelText="'Slider Linki(URL)'" :labelClass="'form-label required'"
+                                                                    :name="'sub_title:en'" :value="$slider->{'sub_title:en'}" />  --}}
+                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                    :labelText="'Slider Linki (URL)'" :labelClass="'form-label required'"
                                                                     :class="'form-control'" :name="'slug:en'"
                                                                     :value="$slider->{'slug:en'}" />
                                                             </x-slot:gridRow>
@@ -163,7 +163,7 @@
                                         </div>
                                         <div
                                             class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px min-w-lg-300px mb-7 ms-lg-10">
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
+                                            {{--  <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
                                                         <h2>Görsel</h2>
@@ -171,7 +171,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:en'" :imgUrl="'/' . $slider->{'image:en'}" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -183,30 +183,10 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:en'" :imgUrl="'/' . $slider->{'mobil_image:en'}" />
                                                 </x-slot:cardBody>
-                                            </x-admin.card>
-
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
-                                                <x-slot:cardHeader>
-                                                    <div class="card-title">
-                                                        <h2>Durum</h2>
-                                                    </div>
-                                                    <div class="card-toolbar">
-                                                        <div class="rounded-circle bg-success w-15px h-15px"
-                                                            id="kt_ecommerce_add_product_status"></div>
-                                                    </div>
-
-                                                </x-slot:cardHeader>
-                                                <x-slot:cardBody>
-                                                    <x-admin.form-select :defaultValue="'$slider->status'" :name="'status'"
-                                                        :options="[
-                                                            'published' => 'Yayınlanmış',
-                                                            'draft' => 'Pasif',
-                                                        ]" />
-                                                </x-slot:cardBody>
-                                            </x-admin.card>
+                                            </x-admin.card>  --}}
 
                                         </div>
                                     </div>
@@ -231,12 +211,12 @@
                                                                     :class="'form-control text-end'" :name="'name:ar'"
                                                                     :value="$slider->{'name:ar'}" />
 
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                {{--  <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
                                                                     :labelText="'Slider Alt Başlık'" :labelClass="'form-label required'"
                                                                     :class="'form-control text-end'" :name="'sub_title:ar'"
-                                                                    :value="$slider->{'sub_title:ar'}" />
-                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-12'" :labelTag="'label'"
-                                                                    :labelText="'Slider Linki(URL)'" :labelClass="'form-label required'"
+                                                                    :value="$slider->{'sub_title:ar'}" />  --}}
+                                                                <x-admin.form-input :inputParentClass="'input-group-lg mb-6 fv-row col-6'" :labelTag="'label'"
+                                                                    :labelText="'Slider Linki (URL)'" :labelClass="'form-label required'"
                                                                     :class="'form-control text-end'" :name="'slug:ar'"
                                                                     :value="$slider->{'slug:ar'}" />
                                                             </x-slot:gridRow>
@@ -247,7 +227,7 @@
                                         </div>
                                         <div
                                             class="d-flex flex-column gap-7 gap-lg-10 w-100 w-lg-300px min-w-lg-300px mb-7 ms-lg-10">
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
+                                            {{--  <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
                                                 <x-slot:cardHeader>
                                                     <div class="card-title">
                                                         <h2>Görsel</h2>
@@ -255,7 +235,7 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'image:ar'" :imgUrl="'/' . $slider->{'image:ar'}" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
@@ -267,30 +247,10 @@
                                                 </x-slot:cardHeader>
                                                 <x-slot:cardBody>
                                                     <x-admin.image-input :changeAvatar="''" :size="'w-150px h-150px'"
-                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"
+                                                        :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"
                                                         :name="'mobil_image:ar'" :imgUrl="'/' . $slider->{'mobil_image:ar'}" />
                                                 </x-slot:cardBody>
-                                            </x-admin.card>
-
-                                            <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20 py-4'" :cardBodyClass="'pt-0'">
-                                                <x-slot:cardHeader>
-                                                    <div class="card-title">
-                                                        <h2>Durum</h2>
-                                                    </div>
-                                                    <div class="card-toolbar">
-                                                        <div class="rounded-circle bg-success w-15px h-15px"
-                                                            id="kt_ecommerce_add_product_status"></div>
-                                                    </div>
-
-                                                </x-slot:cardHeader>
-                                                <x-slot:cardBody>
-                                                    <x-admin.form-select :defaultValue="'$slider->status'" :name="'status'"
-                                                        :options="[
-                                                            'published' => 'Yayınlanmış',
-                                                            'draft' => 'Pasif',
-                                                        ]" />
-                                                </x-slot:cardBody>
-                                            </x-admin.card>
+                                            </x-admin.card>  --}}
 
                                         </div>
                                     </div>

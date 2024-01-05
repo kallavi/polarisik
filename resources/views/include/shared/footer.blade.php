@@ -17,29 +17,29 @@
                 <a class="pt-3" href="tel:{{ $data['setting']['phone'] }}">{{ $data['setting']['phone'] }}</a>
                 <a href="mailto:{{ $data['setting']['e_mail'] }}">{{ $data['setting']['e_mail'] }}</a>
             </div>
+            
+            <div class="socialMedia pt-3 hstack justify-content-center">
+                @if ($data['setting']['instagram'])
+                    <a href="/https://www.instagram.com/{{ $data['setting']['instagram'] }}" target="_blank"><span class="fs-5 icon-instagram"></span></a>
+                @endif
+                @if ($data['setting']['twitter'])
+                    <a href="/https://www.twitter.com/{{ $data['setting']['twitter'] }}" target="_blank"><span class="fs-5 icon-twitter"></span></a>
+                @endif
+                @if ($data['setting']['linkedin'])
+                    <a href="/https://www.linkedin.com/company/{{ $data['setting']['linkedin'] }}" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
+                @endif
+                @if ($data['setting']['facebook'])
+                    <a href="/https://www.facebook.com/{{ $data['setting']['facebook'] }}" target="_blank"><span class="fs-5 icon-facebook"></span></a>
+                @endif
+                @if ($data['setting']['youtube'])
+                    <a href="/https://www.youtube.com/{{ $data['setting']['youtube'] }}" target="_blank"><span class="fs-5 icon-youtube"></span></a>
+                @endif
+            </div>
             <div>
-
-                <div class="socialMedia pt-3 hstack justify-content-center">
-                    @if ($data['setting']['instagram'])
-                        <a href="$data['setting']['instagram']" target="_blank"><span class="fs-6 icon-instagram"></span></a>
-                    @endif
-                    @if ($data['setting']['twitter'])
-                        <a href="$data['setting']['twitter']" target="_blank"><span class="fs-6 icon-twitter"></span></a>
-                    @endif
-                    @if ($data['setting']['linkedin'])
-                        <a href="$data['setting']['linkedin']" target="_blank"><span class="fs-6 icon-linkedin"></span></a>
-                    @endif
-                    @if ($data['setting']['facebook'])
-                        <a href="$data['setting']['facebook']" target="_blank"><span class="fs-6 icon-facebook"></span></a>
-                    @endif
-                    @if ($data['setting']['youtube'])
-                        <a href="$data['setting']['youtube']" target="_blank"><span class="fs-6 icon-youtube"></span></a>
-                    @endif
-                </div>
                 @if (request()->segment(1) == 'tr')
-                <a href="/en" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>ENGLISH</span></a>
+                    <a href="/en" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>ENGLISH</span></a>
                 @else
-               <a href="/tr" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>TÜRKÇE</span></a>
+                    <a href="/tr" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>TÜRKÇE</span></a>
                 @endif
             </div>
         </div>

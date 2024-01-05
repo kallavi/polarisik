@@ -7,7 +7,7 @@
         <x-slot:item>
             <x-admin.breadcrumb-item :icon="'true'" :fontSize="'fs-6'" :link="route('backoffice.index')" :iconName="'ki-home'" />
             <x-admin.breadcrumb-item :icon="'true'" />
-            <x-admin.breadcrumb-item :title="'Blog'"  :link="route('admin.partner.index')" :class="'text-gray-600 fw-bold lh-1'" />
+            <x-admin.breadcrumb-item :title="'Partner'"  :link="route('admin.partner.index')" :class="'text-gray-600 fw-bold lh-1'" />
 
 
         </x-slot:item>

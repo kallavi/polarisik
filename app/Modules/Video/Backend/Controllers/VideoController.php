@@ -85,6 +85,7 @@ class VideoController extends Controller
      */
     public function update(Request $request, Video $video)
     {
+        $old_image = $video->image;
         $video->fill($request->all());
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -93,7 +94,7 @@ class VideoController extends Controller
             $image = 'uploads/video/' . $file_name;
             $video->image = $image;
         } else {
-            $video->image = $video->image;
+            $video->image = $old_image;
         }
 
         try {

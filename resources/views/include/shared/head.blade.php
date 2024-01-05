@@ -1,7 +1,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0">
-    <title>Polaris IK</title>
+    <title>{{ $data['setting']['name'] }}</title>
+    <meta name="description" content="{{ $data['setting']['description'] }}">
+    <meta name="keywords" content="{{ $data['setting']['name'] }}">
+    <meta name="author" content="{{ $data['setting']['name'] }}">
+    <meta name="robots" content="all">
+    <link rel="canonical" href=""/>
+    <meta name="publisher" content="VS CODE">
+    <meta property="og:title" content="{{ $data['setting']['name'] }}">  
+    <meta property="og:description" content="{{ $data['setting']['description'] }}">  
+    <meta property="og:url" content="">  
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $data['setting']['name'] }}">
+    <meta name="twitter:description" content="{{ $data['setting']['description'] }}">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:image" content="">
     <!--Favicon start-->
     <link rel="shortcut icon" href="{{asset('favicon.ico" type="image/x-icon') }}">
     <link rel="icon" href="{{asset('favicon.ico" type="image/x-icon') }}">

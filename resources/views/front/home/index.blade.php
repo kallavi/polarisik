@@ -6,13 +6,15 @@
             <div class="swiper-wrapper">
                 @isset($sliders)
                     @foreach ($sliders as $slider)
+                    @if($slider->name)
                         <a href="/{{ request()->segment(1) }}/{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
                             <div class="container-xxxl ps-2">
                                 <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
-                                    {{ $slider->{'name:tr'} }}
+                                    {{ $slider->name }}
                                 </div>
                             </div>
                         </a>
+                        @endif
                     @endforeach
                 @endisset
             </div>

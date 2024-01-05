@@ -37,7 +37,7 @@
         @if (request()->segment(2) == 'hizmetlerimiz' || request()->segment(2) == 'services')
             @foreach ($services as $service_item)
                 @if ($service_item->name)
-                    <a class=""
+                    <a class="@if (request()->segment(3) == $service_item->slug) active @endif"
                         href="/{{ request()->segment(1) }}/{{ request()->segment(2) }}/{{ $service_item->slug }}">
                         <span>{{ $service_item->name }}</span>
                     </a>

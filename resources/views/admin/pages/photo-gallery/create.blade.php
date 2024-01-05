@@ -94,7 +94,7 @@
                                             </div>
                                         </x-slot:cardHeader>
                                         <x-slot:cardBody>
-                                        <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"/>
+                                        <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"/>
                                         </x-slot:cardBody>
                                     </x-admin.card>
                         
@@ -199,7 +199,7 @@
                                             </div>
                                         </x-slot:cardHeader>
                                         <x-slot:cardBody>
-                                        <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Set the product thumbnail image. Only *.png, *.jpg and *.jpeg image files are accepted'"/>
+                                        <x-admin.image-input :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'" :class="'mb-3'" :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'"/>
                                         </x-slot:cardBody>
                                     </x-admin.card>
                         

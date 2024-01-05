@@ -1,12 +1,5 @@
 @extends('layout.layout')
 
-@section('title')
-    @if(request()->segment('1') == 'tr')
-        Medya
-    @else
-        Media
-    @endif
-@endsection
 @section('title2')
     {{ $photo->name }}
 @endsection
