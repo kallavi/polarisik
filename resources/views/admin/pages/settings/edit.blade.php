@@ -229,8 +229,8 @@
                                                                     :labelTag="'label'" :labelText="'Twitter Kullanıcı Adı'"
                                                                     :labelClass="'form-label'" :placeholder="'twitter'"
                                                                     :class="'form-control'" :inputRow="''"
-                                                                    :iconTag="'i'" :iconType="'outline'"
-                                                                    :iconName="'twitter'" :iconFix="''"
+                                                                    :iconTag="'i'" :iconType="''"
+                                                                    :iconName="' bi bi-twitter-x'" :iconFix="''"
                                                                     :iconFixed="''" :name="'twitter'"
                                                                     :value="$setting->twitter" />
 
@@ -247,8 +247,8 @@
                                                                     :labelTag="'label'" :labelText="'Linkedin Kullanıcı Adı'"
                                                                     :labelClass="'form-label'" :placeholder="'#linkedin'"
                                                                     :class="'form-control'" :inputRow="''"
-                                                                    :iconTag="'i'" :iconType="'outline'"
-                                                                    :iconName="'linkedin'" :iconFix="''"
+                                                                    :iconTag="'i'" :iconType="''"
+                                                                    :iconName="' bi bi-linkedin'" :iconFix="''"
                                                                     :iconFixed="''" :name="'linkedin'"
                                                                     :value="$setting->linkedin" />
                                                             </x-slot:gridRow>

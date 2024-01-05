@@ -84,14 +84,18 @@ class PhotoController extends Controller
      */
     public function update(Request $request, Photo $photo)
     {
+        $old_image = $photo->image;
         $photo->fill($request->all());
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image') == true) {
             $file = $request->file('image');
             $file_name = uniqid() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('uploads/photo'), $file_name);
             $image = 'uploads/photo/' . $file_name;
             $photo->image = $image;
+        } else {
+            $photo->image = $old_image;
         }
+        
         try {
             $photo->save();
             return response()->json(['status' => "success", 'message' => 'Fotoğraf Galeri Güncellendi.', 'photo_id' => $photo->id]);
