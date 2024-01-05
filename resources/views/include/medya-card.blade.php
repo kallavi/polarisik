@@ -7,7 +7,7 @@
                     <span class="icon-plus"></span>
                 </div>
             </div>
-            <div class="card-body"
+            <div class="card-body">
                 <h5 class="card-title">{!! $card->name !!}</h5>
             </div>
         </a>

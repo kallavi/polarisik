@@ -4,6 +4,11 @@
         min-height: calc(100vh - 98px - 360px);
     }
     .content {
+        &.contactContent{
+            @media screen and (min-width: 992px) {
+                padding-bottom: 0;
+            }
+        }
         @media screen and (min-width: 992px) {
             padding-bottom: 120px;
         }
@@ -115,7 +120,15 @@
                 }
             }
         }
+        .contactInfoWrapper{
+            @media screen and (min-width:992px) {
+                justify-content: flex-end;
+            }
+        }
         .contactInfo {
+            @media screen and (min-width:992px) {
+                max-width:380px;
+            }
             @media screen and (min-width: 1921px) {
                 padding-left: 1rem !important;
                 padding-right: 1rem !important;

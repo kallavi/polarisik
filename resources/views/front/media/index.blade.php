@@ -30,12 +30,12 @@
     </ul>
     <div class="tab-content px-xxxl-3 px-lg-5 px-3" id="pills-tabContent">
         <div class="tab-pane fade show active pt-lg-4" id="pills-photos" role="tabpanel" aria-labelledby="pills-photos-tab" tabindex="0">
-            <div class="row gx-4 cards type2 mt-0 pt-lg-4 pt-1">
+            <div class="row gx-4 cards type2 mt-0 pt-lg-4 pt-1 justify-content-center justify-content-sm-start">
                 @include('include.medya-card')
             </div>
         </div>
         <div class="tab-pane fade pt-lg-4" id="pills-videos" role="tabpanel" aria-labelledby="pills-videos-tab" tabindex="0">
-            <div class="row gx-4 cards type2 effect2 mt-0 pt-lg-4 pt-1">
+            <div class="row gx-4 cards type2 effect2 mt-0 pt-lg-4 pt-1 justify-content-center justify-content-sm-start">
                 @include('include.video-card')
             </div>
         </div>

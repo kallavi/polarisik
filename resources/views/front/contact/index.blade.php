@@ -10,7 +10,7 @@
 @section('fullContain')
     <div class="row hstack">
         <div class="col-lg-5 contact-adress pe-xl-5 pb-lg-5 pt-lg-5 pe-lg-3 pt-2 ms-n4 ms-lg-0">
-            <div class="row pe-lg-2 text-lg-start text-center pb-2 px-lg-4 ps-5 pe-4">
+            <div class="contactInfoWrapper row pe-lg-2 text-lg-start text-center pb-2 px-lg-4 ps-5 pe-4">
                 <div class="contactInfo col-xxl-6 col-xl-8 col-lg-11 col-12 ms-lg-auto px-4 px-lg-0">
                     <div class="imageWrapper justify-content-start pb-3 ms-xl-n2 d-none d-lg-block">
                         <img src="{{ asset('assets/statics/logo-dark-2.svg') }}" alt="">
