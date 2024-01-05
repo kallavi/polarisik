@@ -37,9 +37,9 @@
                     @endif
                 </div>
                 @if (request()->segment(1) == 'tr')
-                <a href="/en" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block">ENGLISH</a>
+                <a href="/en" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>ENGLISH</span></a>
                 @else
-                    <a href="/tr" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block">TÜRKÇE</a>
+               <a href="/tr" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>TÜRKÇE</span></a>
                 @endif
             </div>
         </div>
