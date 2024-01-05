@@ -326,7 +326,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :imgUrl="'/' . $setting->{'logo:tr'}" :removaAvatar="''" :size="'w-150px h-150px'"
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :name="'logo:tr'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
@@ -339,7 +339,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'"
                                                         :imgUrl="'/' . $setting->{'dark_logo:tr'}" :class="'mb-3'" :name="'dark_logo:tr'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
@@ -352,7 +352,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :removaAvatar="''" :size="'w-150px h-150px'" :parentClass="'my-3 text-center'"
                                                         :imgUrl="'/' . $setting->favicon" :class="'mb-3'" :name="'favicon'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'card-flush py-4 bg-gray-300 bg-opacity-20 border-0'">
@@ -427,7 +427,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :imgUrl="'/' . $setting->{'logo:en'}" :removaAvatar="''" :size="'w-150px h-150px'"
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :name="'logo:en'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
@@ -440,7 +440,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :imgUrl="'/' . $setting->{'dark_logo:en'}" :removaAvatar="''" :size="'w-150px h-150px'"
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :name="'dark_logo:en'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'card-flush py-4 bg-gray-300 bg-opacity-20 border-0'">
@@ -515,7 +515,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :imgUrl="'/' . $setting->{'logo:ar'}" :removaAvatar="''" :size="'w-150px h-150px'"
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :name="'logo:ar'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'border-0 card-flush bg-gray-300 bg-opacity-20'">
@@ -528,7 +528,7 @@
                                                     <x-admin.image-input :positionCB="''" :changeAvatar="''"
                                                         :imgUrl="'/' . $setting->{'dark_logo:ar'}" :removaAvatar="''" :size="'w-150px h-150px'"
                                                         :parentClass="'my-3 text-center'" :class="'mb-3'" :name="'dark_logo:ar'"
-                                                        :textMuted="'Sadece *.png, *.jpg ve *.jpeg resim dosyaları yükleyebilirsiniz.'" />
+                                                        :textMuted="'Sadece *.png, *.jpg, *.jpeg ve *.svg resim dosyaları yükleyebilirsiniz.'" />
                                                 </x-slot:cardBody>
                                             </x-admin.card>
                                             <x-admin.card :class="'card-flush py-4 bg-gray-300 bg-opacity-20 border-0'">
