@@ -37,13 +37,7 @@
                         <img src="{{ asset('assets/statics/logo-dark.svg') }}" alt="">
                     </div>
                     <div class="paragraph">
-                        <p>Sahip olduğumuz genç ve dinamik kadromuz ile firmaların, kurumların ve organizasyonların dönemsel
-                            insan kaynakları ihtiyaçlarına, özellikle günlük/part-time insan kaynağı pozisyonlarında
-                            yaşadıkları sorunlarına tanıklık etmiş bir ekip olarak bizler, sizlerin işinizi, kültürünüzü,
-                            yönetim stratejinizi anlamaya çalışan ve size özel İK hizmetleri üreten bir firmayız.</p>
-                        <p>Kadrolarımızda genç arkadaşlara yer vererek onlara istihdam sağlamak, iş hayatına adım atmalarına
-                            ve kendilerini geliştirmelerine katkıda bulunmak, ayrıca sektörde yapılan bir organizasyonun her
-                            birimini görmüş deneyimli personeller yetiştirmeyi hedeflemekteyiz.</p>
+                        {!! $page->description !!}
                     </div>
                     @if(request()->segment(1) == 'tr')
                         @php
@@ -60,8 +54,8 @@
                     data-aos-easing="ease">
                     <div class="videoCover ps-lg-1 pt-1 pt-lg-0">
                         <div class="imageWrapper">
-                            <img class="img-fluid w-100" src="{{ asset('assets/statics/video-cover.jpg') }}" alt="">
-                            <a href="https://www.youtube.com/watch?v=z2X2HaTvkl8" data-fancybox class="playButton">
+                            <img class="img-fluid w-100" src="/{{ $page->cover }}" alt="">
+                            <a href="{{ $page->video }}" data-fancybox class="playButton">
                                 <span class="icon-play"></span>
                             </a>
                         </div>

@@ -25,19 +25,19 @@
             
             <div class="socialMedia pt-3 d-flex align-items-center  justify-content-center">
                 @if ($data['setting']['instagram'])
-                    <a href="/https://www.instagram.com/{{ $data['setting']['instagram'] }}" target="_blank"><span class="fs-5 icon-instagram"></span></a>
+                    <a href="https://www.instagram.com/{{ $data['setting']['instagram'] }}" target="_blank"><span class="fs-5 icon-instagram"></span></a>
                 @endif
                 @if ($data['setting']['twitter'])
-                    <a href="/https://www.twitter.com/{{ $data['setting']['twitter'] }}" target="_blank"><span class="fs-5 icon-twitter"></span></a>
+                    <a href="https://www.twitter.com/{{ $data['setting']['twitter'] }}" target="_blank"><span class="fs-5 icon-twitter"></span></a>
                 @endif
                 @if ($data['setting']['linkedin'])
-                    <a href="/https://www.linkedin.com/company/{{ $data['setting']['linkedin'] }}" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
+                    <a href="https://www.linkedin.com/company/{{ $data['setting']['linkedin'] }}" target="_blank"><span class="fs-5 icon-linkedin"></span></a>
                 @endif
                 @if ($data['setting']['facebook'])
-                    <a href="/https://www.facebook.com/{{ $data['setting']['facebook'] }}" target="_blank"><span class="fs-5 icon-facebook"></span></a>
+                    <a href="https://www.facebook.com/{{ $data['setting']['facebook'] }}" target="_blank"><span class="fs-5 icon-facebook"></span></a>
                 @endif
                 @if ($data['setting']['youtube'])
-                    <a href="/https://www.youtube.com/{{ $data['setting']['youtube'] }}" target="_blank"><span class="fs-5 icon-youtube"></span></a>
+                    <a href="https://www.youtube.com/{{ $data['setting']['youtube'] }}" target="_blank"><span class="fs-5 icon-youtube"></span></a>
                 @endif
             </div>
             <div>

@@ -146,6 +146,7 @@
             </x-slot:subMenu>
         </x-admin.menu-item>  --}}
 
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-setting-3 fs-2'" :link="''" :menuItemRoot="'anasayfaicerik.index'" :title="'Anasayfa'" :segment1="'backoffice'" :segment2="'anasayfaicerik'"/>
         <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-setting-3 fs-2'" :link="'/backoffice/setting/1/edit'" :title="'Site Ayarları'" :segment1="'backoffice'" :segment2="'setting'"/>
 
 

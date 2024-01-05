@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
 
 use App\Http\Controllers\Backoffice\HomeController;
+use App\Http\Controllers\Backoffice\HomePageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Frontend\HomeController as FrontendHome;
 use App\Http\Controllers\JoinUsController;
@@ -103,6 +104,8 @@ Route::prefix(env('ADMIN_PREFIX'))->middleware(\App\Http\Middleware\BackofficeMi
             ]
         );
         Route::get('projects/delete/{id}', [App\Modules\Project\Backend\Controllers\ProjectController::class, 'delete'])->name('admin.projects.delete');
+        Route::get('anasayfaicerik', [HomePageController::class, 'index'])->name('anasayfaicerik.index');
+        Route::put('anasayfaicerik/update', [HomePageController::class, 'update'])->name('anasayfaicerik.update');
 
         /* Project Categories */
         Route::resource(

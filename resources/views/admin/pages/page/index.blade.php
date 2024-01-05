@@ -37,6 +37,7 @@
                 </x-slot:columns>
                 <x-slot:rows>
                     @foreach ($pages as $page)
+                        @if ($page->{'name:tr'} != 'anasayfa-metin-1')
                         <tr>
                             <td>
                                 {{ $page->{'name:tr'} }}
@@ -74,6 +75,7 @@
                                 </x-admin.form>
                             </td>
                         </tr>
+                        @endif
                     @endforeach
                 </x-slot:rows>
             </x-admin.data-table>
