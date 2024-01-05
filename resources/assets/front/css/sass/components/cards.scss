@@ -3,6 +3,10 @@
         width: calc(270.761px + 37px);
         height: calc(148.482px + 37px);
         padding: 18.5px;
+        .imageWrapper{
+            will-change: transform;
+            will-change: transform!important;
+        }
         @media screen and (max-width:991.98px) {
             width: 100%;
             height: calc(55px + 12px);
