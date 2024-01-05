@@ -36,6 +36,18 @@
             }
         }
     }
+    @media screen and (max-width:991.98px) {
+        .show{
+            & > .nav-link{
+                color: #ffffff!important;
+            }
+        }
+        .nav-link{
+            &.active{
+                color: #ffffff!important;
+            }
+        }
+    }
 }
 
 header {
