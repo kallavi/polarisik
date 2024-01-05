@@ -9,7 +9,7 @@
                     @if($slider->name)
                         <a href="/{{ request()->segment(1) }}/{{ $slider->slug }}" alt="{{ $slider->name }}" class="swiper-slide">
                             <div class="container-xxxl ps-2">
-                                <div class="slide-caption col-xxl-5 col-lg-6 col line-clamp-3">
+                                <div class="slide-caption col-xxl-5 col-lg-6 col">
                                     {{ $slider->name }}
                                 </div>
                             </div>
