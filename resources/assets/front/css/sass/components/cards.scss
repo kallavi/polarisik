@@ -3,6 +3,14 @@
         width: calc(270.761px + 37px);
         height: calc(148.482px + 37px);
         padding: 18.5px;
+        .imageWrapper{
+            will-change: transform;
+            will-change: transform!important;
+        }
+        .card-top{
+            will-change: transform;
+            will-change: transform!important;
+        }
         @media screen and (max-width:991.98px) {
             width: 100%;
             height: calc(55px + 12px);
@@ -124,7 +132,7 @@
                     border-radius: 15px;
                 }
                 img{
-                    transform: scale(1.1);
+                    
                     transition: all .7s ease;
                     width: 100%;
                     height: 100%;
@@ -140,7 +148,7 @@
                     }
                     .card-top{
                         img{
-                            transform: scale(1);
+                            transform: scale(1.1);
                         }
                     }
                     .card-title{

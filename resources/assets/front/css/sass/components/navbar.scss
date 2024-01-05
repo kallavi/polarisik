@@ -36,6 +36,18 @@
             }
         }
     }
+    @media screen and (max-width:991.98px) {
+        .show{
+            & > .nav-link{
+                color: #ffffff!important;
+            }
+        }
+        .nav-link{
+            &.active{
+                color: #ffffff!important;
+            }
+        }
+    }
 }
 
 header {
@@ -299,8 +311,8 @@ header {
         &.menuAnimate {
             main{
                 // @include scale(0.71);
-                transform: translateY(-5.5vh) scale(0.81);
-                margin-left: 250px;
+                transform: translateY(-5.5vh) translateX(250px) scale(0.81);
+                // margin-left: 250px;
                 border-radius: 36px 0 0 36px;
                 overflow: hidden;
                 z-index: 99;

@@ -1,5 +1,5 @@
 <footer class="bg-primary"@hasSection('mainContent') data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease"@endif>
-    <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3">
+    <div class="container-xxxl px-xxxl-0 position-relative pb-2 pt-3 ps-5 pe-5">
         <div class="d-flex align-items-center flex-column flex-lg-row  w-100 justify-content-between">
             <a href="/{{ request()->segment(1) }}" class="logo">
                 {{--  <img src="{{asset($data['setting']['logo'])}}" alt="{{ $data['setting']['name'] }}">  --}}
@@ -17,6 +17,7 @@
                 <a class="pt-3" href="tel:{{ $data['setting']['phone'] }}">{{ $data['setting']['phone'] }}</a>
                 <a href="mailto:{{ $data['setting']['e_mail'] }}">{{ $data['setting']['e_mail'] }}</a>
             </div>
+            
             <div class="socialMedia pt-3 hstack justify-content-center">
                 @if ($data['setting']['instagram'])
                     <a href="/https://www.instagram.com/{{ $data['setting']['instagram'] }}" target="_blank"><span class="fs-5 icon-instagram"></span></a>
@@ -32,6 +33,13 @@
                 @endif
                 @if ($data['setting']['youtube'])
                     <a href="/https://www.youtube.com/{{ $data['setting']['youtube'] }}" target="_blank"><span class="fs-5 icon-youtube"></span></a>
+                @endif
+            </div>
+            <div>
+                @if (request()->segment(1) == 'tr')
+                    <a href="/en" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>ENGLISH</span></a>
+                @else
+                    <a href="/tr" class="language nav-link mx-auto text-center mt-2 text-white d-none d-lg-block"><img src="{{ asset('assets/images/world.svg') }}" alt=""><span>TÜRKÇE</span></a>
                 @endif
             </div>
         </div>
