@@ -24,8 +24,12 @@ window.addEventListener('resize', function() {
   if (isMenuOpen) {
     if (isMobile) {
       app.style.height = '100vh';
+      document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.height = '-webkit-fill-available';
     } else {
       app.style.height = 'auto';
+      document.documentElement.style.overflow = 'auto';
+     document.documentElement.style.height = 'auto';
     }
   }
 
@@ -46,13 +50,18 @@ menuBtn.addEventListener('click', function() {
   // Adjust app styles based on isMenuOpen and isMobile
   if (isMenuOpen && isMobile) {
     app.style.height = '100vh';
+    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.height = '-webkit-fill-available';
   } else {
     setTimeout(function() {
       app.style.height = 'auto';
+      document.documentElement.style.overflow = 'auto';
+     document.documentElement.style.height = 'auto';
     }, 300);
   }
 });
 
+ 
 $(document).ready(function(){
 
   $('.dropdown').off('show.bs.dropdown').on('show.bs.dropdown', function () {
