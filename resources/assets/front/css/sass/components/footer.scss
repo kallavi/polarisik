@@ -11,11 +11,14 @@ footer{
             z-index: 2;
         }
     }
+    @media screen and (min-width:992px) {
+        height: 183px;
+    }
     .container-xxxl{
         z-index: 1;
     }
     .logo{
-        
+        margin-top: -32px;
         @media screen and (max-width:991.98px) {
             width: 100px;
             img{
@@ -55,6 +58,9 @@ footer{
                 }
             }
         }
+    }
+    .copyRight{ 
+        margin-left: 41px;
     }
     .adress{
 
@@ -125,4 +131,5 @@ footer{
             }
         }
     }
+    
 }
