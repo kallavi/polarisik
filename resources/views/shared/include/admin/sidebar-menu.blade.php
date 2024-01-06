@@ -160,6 +160,15 @@
             </x-slot:subMenu>
         </x-admin.menu-item>
 
+        <x-admin.menu-item :iconTag="'i'" :iconClass="'ki-outline ki-element-12 fs-2'" :class="'menu-accordion'"
+            :title="'Formlar'" :data-kt-menu-trigger="'click'" :segment1Acc="'forms'">
+            <x-slot:arrow></x-slot:arrow><!--Accordion menu ok-->
+            <x-slot:subMenu>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'contactform.index'" :title="'İletişim Formu'" :segment1="'create'"></x-admin.menu-item>
+                <x-admin.menu-item :linkClass="'ps-0'" :link="''" :menuItemRoot="'joinform.index'" :title="'Bize Katılın Formu'" :segment1="'create'"></x-admin.menu-item>
+            </x-slot:subMenu>
+        </x-admin.menu-item>
+
 
 
 

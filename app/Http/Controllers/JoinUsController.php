@@ -30,6 +30,13 @@ class JoinUsController extends Controller
     {
         $join_us = new JoinUsForm();
         $join_us->fill($request->all());
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $file_name = uniqid() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads/join_us'), $file_name);
+            $image = 'uploads/join_us/' . $file_name;
+            $join_us->image = $image;
+        }
         $join_us->save();
     }
 

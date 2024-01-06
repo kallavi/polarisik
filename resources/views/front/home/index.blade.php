@@ -48,7 +48,13 @@
                             $biz = 'who-are-we';
                         @endphp
                     @endif
-                    <a href="/{{ request()->segment(1) }}/{{ $biz }}" class="btn btn-primary rounded-pill btn-lg px-4">Devamı</a>
+                    <a href="/{{ request()->segment(1) }}/{{ $biz }}" class="btn btn-primary rounded-pill btn-lg px-4">
+                        @if(request()->segment(1) == 'tr')
+                            Devamı
+                        @else 
+                            More
+                        @endif
+                    </a>
                 </div>
                 <div class="col-lg-6 px-0 pe-lg-0 ps-lg-2 pt-4 pt-lg-0" data-aos="fade-left" data-aos-duration="1000"
                     data-aos-easing="ease">
@@ -78,14 +84,17 @@
                         @endphp
                     @endif
                     @foreach ($services as $service)
+                        @if ($service->name != null)
                         <div class="card border-0" data-aos="fade" data-aos-duration="1000" data-aos-delay="100"
                             data-aos-easing="ease">
-                            <a href="/{{ request()->segment(1) }}/{{ $hizmet }}/{{ $service->slug }}">
+                            {{--  <a href="/{{ request()->segment(1) }}/{{ $hizmet }}/{{ $service->slug }}">  --}}
+                                <a href="">
                                 <img class="d-lg-none" width="29" src="{{ asset('assets/statics/big-logo.png') }}"
                                     alt="">
                                 <span>{{ $service->name }}</span>
                             </a>
                         </div>
+                        @endif
                     @endforeach
                 </div>
             </div>
