@@ -60,7 +60,7 @@
 
 
 <!---Formlar Detay Modal--->
-<x-admin.modal :id="'istekoneriform'" :lg="''" :footerClass="'me-auto px-18'" :headerClass="'px-18'" :modalTitle="'İstek Öneri ve Şikayet #324523'"
+{{--  <x-admin.modal :id="'istekoneriform'" :lg="''" :footerClass="'me-auto px-18'" :headerClass="'px-18'" :modalTitle="'İstek Öneri ve Şikayet #324523'"
     :headerNotBorder="''" :footerNotBorder="''">
     <x-slot:modalBody>
         <x-admin.custom-grid>
@@ -107,7 +107,7 @@
     <x-slot:modalFooter>
         <x-admin.button :title="'Kapat'" :type="'button'" :color="'danger'" :data="['bs-dismiss' => 'modal']" />
     </x-slot:modalFooter>
-</x-admin.modal>
+</x-admin.modal>  --}}
 
 
 
