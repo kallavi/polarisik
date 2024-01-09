@@ -60,7 +60,7 @@
                     data-aos-easing="ease">
                     <div class="videoCover ps-lg-1 pt-1 pt-lg-0">
                         <div class="imageWrapper">
-                            <img class="img-fluid w-100" src="/{{ $page->cover }}" alt="">
+                            {{-- <img class="img-fluid w-100" src="/{{ $page->cover }}" alt=""> --}}
                             <a href="{{ $page->video }}" data-fancybox class="playButton">
                                 <span class="icon-play"></span>
                             </a>
