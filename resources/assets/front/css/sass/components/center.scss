@@ -41,8 +41,11 @@
                     height: 80px;
                 }
                 @media screen and (max-width: 767.98px) {
-                    filter: grayscale(1);
-                }
+                    filter: grayscale(1); 
+                    max-width: 70%; 
+                    max-height: 70%; 
+                    object-fit: contain;
+                } 
             }
             @media screen and (min-width: 992px) {
                 &:hover {
